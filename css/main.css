@@ -5,6 +5,14 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+@font-face {
+  font-family: Arista Pro Alternate;
+  src: url("../path/Zetafonts - AristaProAlternate-ExtraLight.otf") format("opentype"); }
+
+@font-face {
+  font-family: Arista Pro;
+  src: url("../path/Zetafonts - AristaPro-Fat.otf") format("opentype"); }
+
 body,
 html {
   font-size: 24px;
@@ -120,7 +128,8 @@ header {
 .section {
   height: 100vh;
   width: 100%;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
   .section > * {
     text-align: center; }
 
@@ -179,7 +188,7 @@ header {
     width: 150px; }
 
 .section3 {
-  background: 50% 50% url("../img/section2.png");
+  background-image: url("../img/section2.png");
   background-size: cover; }
   .section3 .brand {
     text-align: center; }
@@ -189,7 +198,7 @@ header {
     width: 150px; }
 
 .section4 {
-  background: 50% 50% url("../img/section3.png");
+  background-image: url("../img/section3.png");
   background-size: cover; }
   .section4 .contact-form {
     padding: 20px 0;
