@@ -50,7 +50,7 @@ a {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-.section2, .section3, .section4 {
+.section, .section2, .section3, .section4 {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -168,8 +168,7 @@ header {
       transform: translateY(-4px); }
 
 .section2 {
-  background: 50% 50% url("../img/section1.png");
-  background-size: cover; }
+  background-image: 50% 50% url("../img/section1.png"); }
   .section2 .story {
     text-align: center; }
     .section2 .story h2 {
@@ -284,3 +283,12 @@ header {
     top: calc(40% + 120px); }
     #scrollbar .dot3.active:after {
       content: 'Contact'; }
+
+footer {
+  position: fixed;
+  bottom: 20px;
+  right: 50px; }
+  footer li {
+    display: inline-block; }
+    footer li img {
+      width: 30px; }

@@ -130,6 +130,7 @@
                 height: 100vh;
                 width: 100%;
                 background-size: cover;
+                @extend %innerCenter;
             }
             
             .section1 {
@@ -177,8 +178,7 @@
             }
             
             .section2 {
-                background: 50% 50% url('../img/section1.png');
-                background-size: cover;
+                background-image: 50% 50% url('../img/section1.png');
                 @extend %innerCenter;
                 .story {
                     text-align: center;
@@ -329,6 +329,18 @@
                         &:after {
                             content: 'Contact';
                         }
+                    }
+                }
+            }
+            
+            footer {
+                position: fixed;
+                bottom: 20px;
+                right: 50px;
+                li {
+                    display: inline-block;
+                    img {
+                        width: 30px;
                     }
                 }
             }
