@@ -121,6 +121,8 @@ header {
   height: 100vh;
   width: 100%;
   background-size: cover; }
+  .section > * {
+    text-align: center; }
 
 .section1 {
   -webkit-box-pack: center;

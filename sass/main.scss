@@ -131,6 +131,9 @@
                 width: 100%;
                 background-size: cover;
                 @extend %innerCenter;
+                &>* {
+                    text-align: center;
+                }
             }
             
             .section1 {
