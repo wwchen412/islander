@@ -7,12 +7,38 @@
 
 body,
 html {
+    font-size: 24px;
     font-family: Arista Pro Alternate;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(#000, .3);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+h2 {
+    font-family: Arista Pro;
+}
+
+h3 {
+    color: #fff;
+}
+
+.mb-3 {
+    margin-bottom: 30px;
 }
 
 .d-flex {
     display: flex;
     flex-wrap: wrap;
+}
+
+%innerCenter {
+    justify-content: center;
+    align-items: center;
 }
 
 .img-fluid {
@@ -31,7 +57,7 @@ header {
     width: 100%;
     .img-navbg {
         position: absolute;
-        top: 40px;
+        top: 50px;
         left: 0;
         width: 100%;
         z-index: 1;
@@ -43,6 +69,7 @@ header {
         z-index: 2;
         li {
             margin: 0 20px;
+            color: #000;
             &:first-child {
                 margin-right: auto;
             }
@@ -54,6 +81,7 @@ header {
 .section {
     height: 100vh;
     width: 100%;
+    background-size: cover;
 }
 
 .section1 {
@@ -73,9 +101,9 @@ header {
             max-width: 300px;
         }
     }
-    .video-bg {}
     video {
         position: fixed;
+        // position: absolute;
         right: 0;
         bottom: 0;
         min-width: 100%;
@@ -85,8 +113,111 @@ header {
         z-index: -100;
         display: block;
     }
+    .scorll-down {
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+        &>* {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        h3 {
+            transform: translateY(-4px);
+        }
+    }
 }
 
-.section {
-    background-color: #ff0;
+.section2 {
+    background: 50% 50% url('../img/section1.png');
+    background-size: cover;
+    @extend %innerCenter;
+    .story {
+        text-align: center;
+        h2 {
+            font-weight: bold;
+        }
+    }
+    .more {
+        img {
+            width: 150px;
+        }
+    }
+}
+
+.section3 {
+    background: 50% 50% url('../img/section2.png');
+    background-size: cover;
+    @extend %innerCenter;
+    .brand {
+        text-align: center;
+        h2 {
+            font-weight: bold;
+        }
+    }
+    .more {
+        img {
+            width: 150px;
+        }
+    }
+}
+
+.section4 {
+    background: 50% 50% url('../img/section3.png');
+    background-size: cover;
+    @extend %innerCenter;
+    .contact-form {
+        padding: 20px 0;
+        text-align: center;
+        font-family: sans-serif;
+        width: 100%;
+        max-width: 460px;
+        h2 {
+            font-weight: bold;
+        }
+    }
+    form {
+        .form-group {
+            margin: 15px 0;
+            font-size: 0;
+            transform: translateX(-80px);
+            &>* {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            label {
+                width: 150px;
+                text-align: left;
+                font-size: 1rem;
+            }
+            input,
+            textarea {
+                width: calc(100% - 160px);
+                appearance: none;
+                background: rgba(#fff, .5);
+                border: 2px solid #fff;
+                border-radius: 1rem;
+                font-size: 1rem;
+                padding: 5px 20px;
+                color: rgb(63, 63, 63);
+            }
+        }
+        button {
+            margin-top: 30px;
+            appearance: none;
+            border: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            padding: 0px 15px;
+            font-size: 1rem;
+            border-radius: 2rem;
+            pointer-events: cursor;
+            &:hover,
+            &:active {
+                background-color: #fff;
+                color: #ccc;
+                pointer-events: cursor;
+            }
+        }
+    }
 }
