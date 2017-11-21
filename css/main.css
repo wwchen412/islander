@@ -31,9 +31,10 @@ html {
       overflow: auto; } }
 
 p {
-  font-size: 1rem;
-  line-height: 150%;
-  color: #fff; }
+  font-size: .9rem;
+  line-height: 180%;
+  color: #fff;
+  font-weight: 100; }
 
 h2 {
   font-family: Arista Pro; }

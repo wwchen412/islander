@@ -124,6 +124,12 @@ function scrollLogic() {
     if (counter == 4) {
         $('#scrollbar').fadeIn().find('.dot').eq(2).addClass('active').siblings().removeClass('active');
     }
+    if (counter == 5) {
+        $('#scrollbar').fadeIn().find('.dot').eq(3).addClass('active').siblings().removeClass('active');
+    }
+    if (counter == 6) {
+        $('#scrollbar').fadeIn().find('.dot').eq(4).addClass('active').siblings().removeClass('active');
+    }
 };
 
 // creates a global "addWheelListener" method
