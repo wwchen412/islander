@@ -204,17 +204,17 @@ $(window).keydown(function(e) {
 });
 
 // Swipe Support
-// $('#wrapper').swipe({
-//     swipe: function(event, direction, distance, duration, fingerCount) {
+$('#wrap').swipe({
+    swipe: function(event, direction, distance, duration, fingerCount) {
 
-//         if (direction == "up") {
-//             scrollDirection = "down";
-//         } else if (direction == "down") {
-//             scrollDirection = "up";
-//         };
+        if (direction == "up") {
+            scrollDirection = "down";
+        } else if (direction == "down") {
+            scrollDirection = "up";
+        };
 
-//         scrollLogic();
+        scrollLogic();
 
-//     },
-//     threshold: 100
-// });
+    },
+    threshold: 100
+});
