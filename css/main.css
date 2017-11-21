@@ -1,4 +1,42 @@
 @charset "UTF-8";
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  display: none; }
+  #lightbox.active {
+    display: block; }
+  #lightbox > * {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    height: 100%; }
+  #lightbox .iframe-wrapper {
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    position: relative;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+    #lightbox .iframe-wrapper iframe {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%; }
+
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +70,7 @@ html {
 
 p {
   font-size: .9rem;
-  line-height: 180%;
+  line-height: 200%;
   color: #fff;
   font-weight: 100; }
 
@@ -49,12 +87,19 @@ a {
   a:visited {
     color: #ddd; }
 
+.mb-1 {
+  margin-bottom: .5rem; }
+
 .mb-3 {
-  margin-bottom: 30px; }
+  margin-bottom: 1rem; }
+
+.mb-5 {
+  margin-bottom: 1.5rem; }
 
 .container {
   max-width: 1170px;
-  padding: 0 15px; }
+  padding: 0 15px;
+  margin: 0 auto; }
 
 .d-flex {
   display: -webkit-box;
@@ -64,6 +109,10 @@ a {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+
+.box-shadow {
+  -webkit-box-shadow: 0px 0px 30px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 30px 0 rgba(0, 0, 0, 0.6); }
 
 .section, .section2, .section3, .section4 {
   -webkit-box-pack: center;
@@ -79,6 +128,9 @@ a {
   width: 100%;
   height: auto;
   display: block; }
+
+.align-left {
+  text-align: left; }
 
 .islander-row {
   font-size: 0; }
@@ -342,3 +394,7 @@ footer {
     display: inline-block; }
     footer li img {
       width: 30px; }
+
+.vdo-link > * {
+  display: inline-block;
+  vertical-align: middle; }

@@ -1,44 +1,10 @@
-// function fullPage() {
-//     // section 區塊數目
-//     var section = document.querySelectorAll('.section');
-//     var sectionIndex = section.length;
-//     var scrollDirection;
-//     // 設定每一塊的高
-//     var window_Width = $(window).width();
-//     var window_Height = $(window).height();
-//     $('.section').css('width', window_Width);
-//     $('.section').css('height', window_Height);
-
-//     var counter = 0;
-//     window.addEventListener('wheel', function(evt) {
-
-
-
-//         console.log(scrollDirection);
-//     })
-
-
-// }
-
-
-
-// window.addEventListener('resize', fullPage);
-
-// fullPage();
-
-
 // VARIABLES
 var counter = 1;
 var scrollDirection;
 var slides = $('.full-page .section');
 var slidesLength = slides.length;
 var inTransition = false;
-// var window_Width = $(window).width();
-// var window_Height = $(window).height();
-// $('.section').css('width', window_Width);
-// $('.section').css('height', window_Height);
-// var window_Height = $(window).height();
-// SCROLL DISTANCES
+
 
 
 function scrollAnimate(distance) {
@@ -235,18 +201,26 @@ $(window).keydown(function(e) {
 
 });
 
-// Swipe Support
-// $('#wrap').swipe({
-//     swipe: function(event, direction, distance, duration, fingerCount) {
 
-//         if (direction == "up") {
-//             scrollDirection = "down";
-//         } else if (direction == "down") {
-//             scrollDirection = "up";
-//         };
 
-//         scrollLogic();
 
-//     },
-//     threshold: 100
-// });
+// light box
+
+var vdo_link = document.querySelectorAll('.vdo-link');
+var lightboxActive = document.querySelector('#lightbox.active');
+
+for (i = 0; i < vdo_link.length; i++) {
+    vdo_link[i].addEventListener('click', lightbox, false)
+}
+
+function lightbox() {
+    $('#lightbox').addClass('active');
+    event.preventDefault();
+}
+
+$('#lightbox').click(function() {
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+    }
+
+})
