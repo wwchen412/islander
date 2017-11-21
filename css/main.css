@@ -276,7 +276,13 @@ header {
     width: 20px;
     height: 20px;
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%; }
+    border-radius: 50%;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
     #scrollbar .dot:before {
       content: '';
       display: block;
@@ -298,29 +304,32 @@ header {
       -o-transition: .5s;
       transition: .5s; }
     #scrollbar .dot.active {
-      border: #fff solid 1px; }
+      border: #fff solid 1px;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
   #scrollbar .dot1 {
-    top: 40%; }
+    top: 30%; }
     #scrollbar .dot1.active:after {
       content: 'Islander';
       opacity: 1; }
   #scrollbar .dot2 {
-    top: calc(40% + 60px); }
+    top: calc(30% + 60px); }
     #scrollbar .dot2.active:after {
       content: 'Story';
       opacity: 1; }
   #scrollbar .dot3 {
-    top: calc(40% + 120px); }
+    top: calc(30% + 120px); }
     #scrollbar .dot3.active:after {
       content: 'Coffee Academy';
       opacity: 1; }
   #scrollbar .dot4 {
-    top: calc(40% + 180px); }
+    top: calc(30% + 180px); }
     #scrollbar .dot4.active:after {
       content: 'Shop';
       opacity: 1; }
   #scrollbar .dot5 {
-    top: calc(40% + 240px); }
+    top: calc(30% + 240px); }
     #scrollbar .dot5.active:after {
       content: 'Contact';
       opacity: 1; }

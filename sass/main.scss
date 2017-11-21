@@ -310,6 +310,8 @@
                     height: $dotwidth;
                     background: rgba(#fff, .5);
                     border-radius: 50%;
+                    transform: scale(0.8);
+                    transition: .5s;
                     &:before {
                         content: '';
                         display: block;
@@ -332,10 +334,11 @@
                     }
                     &.active {
                         border: #fff solid 1px;
+                        transform: scale(1);
                     }
                 }
                 .dot1 {
-                    top: 40%;
+                    top: 30%;
                     &.active {
                         &:after {
                             content: 'Islander';
@@ -344,7 +347,7 @@
                     }
                 }
                 .dot2 {
-                    top: calc(40% + 60px);
+                    top: calc(30% + 60px);
                     &.active {
                         &:after {
                             content: 'Story';
@@ -353,7 +356,7 @@
                     }
                 }
                 .dot3 {
-                    top: calc(40% + 120px);
+                    top: calc(30% + 120px);
                     &.active {
                         &:after {
                             content: 'Coffee Academy';
@@ -362,7 +365,7 @@
                     }
                 }
                 .dot4 {
-                    top: calc(40% + 180px);
+                    top: calc(30% + 180px);
                     &.active {
                         &:after {
                             content: 'Shop';
@@ -371,7 +374,7 @@
                     }
                 }
                 .dot5 {
-                    top: calc(40% + 240px);
+                    top: calc(30% + 240px);
                     &.active {
                         &:after {
                             content: 'Contact';
@@ -379,6 +382,15 @@
                         }
                     }
                 }
+                // .dot6 {
+                //     top: calc(20% + 300px);
+                //     &.active {
+                //         &:after {
+                //             content: 'Contact';
+                //             opacity: 1;
+                //         }
+                //     }
+                // }
             }
             
             footer {
