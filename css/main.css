@@ -22,7 +22,9 @@ html {
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3); }
 
 #wrap {
-  position: relative; }
+  position: relative;
+  height: 100vh;
+  overflow: hidden; }
 
 p {
   font-size: 1rem;
@@ -125,11 +127,25 @@ header {
         header ul li a:visited {
           color: #000; }
 
+.full-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400vh;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  -o-transition: transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease; }
+
 .section {
-  height: 100vh;
+  height: 25%;
   width: 100%;
   background-size: cover;
-  background-attachment: fixed; }
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }
   .section > * {
     text-align: center; }
 
@@ -179,7 +195,8 @@ header {
       transform: translateY(-4px); }
 
 .section2 {
-  background-image: 50% 50% url("../img/section1.png"); }
+  background-image: 50% 50% url("../img/section1.png");
+  z-index: 2; }
   .section2 .story {
     text-align: center; }
     .section2 .story h2 {
@@ -189,7 +206,8 @@ header {
 
 .section3 {
   background-image: url("../img/section2.png");
-  background-size: cover; }
+  background-size: cover;
+  z-index: 3; }
   .section3 .brand {
     text-align: center; }
     .section3 .brand h2 {
@@ -199,7 +217,8 @@ header {
 
 .section4 {
   background-image: url("../img/section3.png");
-  background-size: cover; }
+  background-size: cover;
+  z-index: 4; }
   .section4 .contact-form {
     padding: 20px 0;
     text-align: center;

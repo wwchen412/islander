@@ -28,67 +28,71 @@
         </nav>
     </header>
     <div id="wrap">
-        <!-- 第一區塊 影片 -->
-        <div id="section1" class="section section1 d-flex">
-            <div class="logo">
-                <img src="img/logo.svg" alt="">
+        <div class="full-page">
+            <!-- 第一區塊 影片 -->
+            <div id="section1" class="section section1 d-flex">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="">
+                </div>
+
+                <video src="img/bg.mp4" autoplay loop></video>
+
+                <div class="scorll-down">
+                    <img src="img/arrow.svg" alt="" style="width:30px">
+                    <h3>SCROLL</h3>
+                </div>
+            </div>
+            <!-- 第二區塊 -->
+            <div class="section2 section d-flex" style="background-image:url('img/section1.png')">
+                <div class="story">
+                    <h2 class="mb-3">Who we are ?<br><br> ISLANDER,
+                        <br> a brand originated from Big Island, Hawai’i
+                    </h2>
+                    <p class="mb-3">Born to Dare! Brave to Challenge !! <br> We are paradiser, adventure lover and fun goer.<br> Share the spirits of ISLANDER from the ocean.</p>
+                    <a href="story.html" class="more">
+                        <img src="img/more.svg" alt="">
+                    </a>
+                </div>
             </div>
 
-            <video src="img/bg.mp4" autoplay loop></video>
+            <!-- 第三區塊 -->
+            <div class="section3 section d-flex">
+                <div class="brand">
+                    <h2 class="mb-3">Who we are ?<br><br> ISLANDER,
+                        <br> a brand originated from Big Island, Hawai’i
+                    </h2>
+                    <p class="mb-3">Born to Dare! Brave to Challenge !! <br> We are paradiser, adventure lover and fun goer.<br> Share the spirits of ISLANDER from the ocean.</p>
+                    <a href="brand.html" class="more">
+                        <img src="img/more.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- 第四區塊 -->
+            <div class="section4 section d-flex">
+                <div class="contact-form">
+                    <h2 style="margin-bottom:50px">
+                        <big>CONTACT</big></h2>
+                    <form action="">
+                        <div class="form-group">
+                            <label for="">Name</label><input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Tel</label><input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mail</label><input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Qusection</label>
+                            <textarea name="" id="" rows="5"></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
 
-            <div class="scorll-down">
-                <img src="img/arrow.svg" alt="" style="width:30px">
-                <h3>SCROLL</h3>
-            </div>
-        </div>
-        <!-- 第二區塊 -->
-        <div class="section2 section d-flex" style="background-image:url('img/section1.png')">
-            <div class="story">
-                <h2 class="mb-3">Who we are ?<br><br> ISLANDER,
-                    <br> a brand originated from Big Island, Hawai’i
-                </h2>
-                <p class="mb-3">Born to Dare! Brave to Challenge !! <br> We are paradiser, adventure lover and fun goer.<br> Share the spirits of ISLANDER from the ocean.</p>
-                <a href="story.html" class="more">
-                    <img src="img/more.svg" alt="">
-                </a>
             </div>
         </div>
 
-        <!-- 第三區塊 -->
-        <div class="section3 section d-flex">
-            <div class="brand">
-                <h2 class="mb-3">Who we are ?<br><br> ISLANDER,
-                    <br> a brand originated from Big Island, Hawai’i
-                </h2>
-                <p class="mb-3">Born to Dare! Brave to Challenge !! <br> We are paradiser, adventure lover and fun goer.<br> Share the spirits of ISLANDER from the ocean.</p>
-                <a href="brand.html" class="more">
-                    <img src="img/more.svg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="section4 section d-flex">
-            <div class="contact-form">
-                <h2 style="margin-bottom:50px">
-                    <big>CONTACT</big></h2>
-                <form action="">
-                    <div class="form-group">
-                        <label for="">Name</label><input type="text">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Tel</label><input type="text">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Mail</label><input type="text">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Qusection</label>
-                        <textarea name="" id="" rows="5"></textarea>
-                    </div>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-
-        </div>
         <div id="scrollbar">
             <div class="dot dot1 active"></div>
             <div class="dot dot2"></div>
@@ -108,6 +112,10 @@
             </ul>
         </footer>
     </div>
+
+    <!-- jQuery JS 3.1.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/all.js"></script>
 </body>
 
 </html>

@@ -26,6 +26,9 @@
             
             #wrap {
                 position: relative;
+                height: 100vh;
+                overflow: hidden;
+                // overflow: hidden
             }
             
             p {
@@ -136,11 +139,23 @@
                 }
             }
             
+            .full-page {
+                // height: 400vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 400vh;
+                width: 100%;
+                overflow: hidden;
+                transition: transform 1s ease;
+            }
+            
             .section {
-                height: 100vh;
+                height: 25%;
                 width: 100%;
                 background-size: cover;
-                background-attachment: fixed;
+                // background-attachment: fixed;
+                transform: translateZ(0);
                 @extend %innerCenter;
                 &>* {
                     text-align: center;
@@ -193,6 +208,7 @@
             
             .section2 {
                 background-image: 50% 50% url('../img/section1.png');
+                z-index: 2;
                 @extend %innerCenter;
                 .story {
                     text-align: center;
@@ -210,6 +226,7 @@
             .section3 {
                 background-image: url('../img/section2.png');
                 background-size: cover;
+                z-index: 3;
                 @extend %innerCenter;
                 .brand {
                     text-align: center;
@@ -227,6 +244,7 @@
             .section4 {
                 background-image: url('../img/section3.png');
                 background-size: cover;
+                z-index: 4;
                 @extend %innerCenter;
                 .contact-form {
                     padding: 20px 0;
