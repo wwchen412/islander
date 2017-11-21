@@ -278,7 +278,8 @@ header {
   top: 20%;
   height: 60%;
   width: 2px;
-  background-color: #fff; }
+  background-color: #fff;
+  display: none; }
   #scrollbar .dot {
     position: absolute;
     left: -9px;

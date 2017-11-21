@@ -44,9 +44,6 @@ var inTransition = false;
 function scrollAnimate(distance) {
     inTransition = true;
     console.log(distance);
-
-    // $('.section').eq(counter).css('margin-top', distance);
-
     $('.full-page').css('transform', 'translate3d(0,' + distance + '%,0)');
     setTimeout(function() {
         inTransition = false;
@@ -64,6 +61,7 @@ function scrollLogic() {
     // SLIDE 2 --> SLIDE 3
     else if (counter == 2 && scrollDirection == "down") {
         scrollAnimate(-25 * 2);
+
     }
 
     // SLIDE 3 --> SLIDE 4
@@ -98,6 +96,20 @@ function scrollLogic() {
         counter--;
     };
     console.log(counter);
+
+    // scrollbar
+    if (counter == 1) {
+        $('#scrollbar').fadeOut().find('.dot').removeClass('active');
+    }
+    if (counter == 2) {
+        $('#scrollbar').fadeIn().find('.dot').eq(0).addClass('active').siblings().removeClass('active');
+    }
+    if (counter == 3) {
+        $('#scrollbar').fadeIn().find('.dot').eq(1).addClass('active').siblings().removeClass('active');
+    }
+    if (counter == 4) {
+        $('#scrollbar').fadeIn().find('.dot').eq(2).addClass('active').siblings().removeClass('active');
+    }
 };
 
 // creates a global "addWheelListener" method
@@ -204,17 +216,17 @@ $(window).keydown(function(e) {
 });
 
 // Swipe Support
-$('#wrap').swipe({
-    swipe: function(event, direction, distance, duration, fingerCount) {
+// $('#wrap').swipe({
+//     swipe: function(event, direction, distance, duration, fingerCount) {
 
-        if (direction == "up") {
-            scrollDirection = "down";
-        } else if (direction == "down") {
-            scrollDirection = "up";
-        };
+//         if (direction == "up") {
+//             scrollDirection = "down";
+//         } else if (direction == "down") {
+//             scrollDirection = "up";
+//         };
 
-        scrollLogic();
+//         scrollLogic();
 
-    },
-    threshold: 100
-});
+//     },
+//     threshold: 100
+// });
