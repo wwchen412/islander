@@ -54,7 +54,7 @@
 
 body,
 html {
-  font-size: 24px;
+  font-size: 16px;
   font-family: Arista Pro Alternate, '微軟正黑體';
   letter-spacing: 1px;
   color: #fff;
@@ -71,7 +71,7 @@ html {
     height: auto; }
 
 p {
-  font-size: .9rem;
+  font-size: 1rem;
   line-height: 200%;
   color: #fff;
   font-weight: 100; }
