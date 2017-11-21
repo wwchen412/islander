@@ -25,6 +25,9 @@ html {
   position: relative;
   height: 100vh;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    #wrap {
+      overflow: auto; } }
 
 p {
   font-size: 1rem;
