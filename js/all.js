@@ -55,31 +55,45 @@ function scrollLogic() {
     //---------------- DOWN TRANSITIONS ----------------------------
     // SLIDE 1 --> SLIDE 2
     if (counter == 1 && scrollDirection == "down") {
-        scrollAnimate(-25);
+        scrollAnimate(-(100 / slides.length));
     }
 
     // SLIDE 2 --> SLIDE 3
     else if (counter == 2 && scrollDirection == "down") {
-        scrollAnimate(-25 * 2);
+        scrollAnimate(-(100 / slides.length) * 2);
 
     }
 
     // SLIDE 3 --> SLIDE 4
     else if (counter == 3 && scrollDirection == "down") {
-        scrollAnimate(-25 * 3);
+        scrollAnimate(-(100 / slides.length) * 3);
+    }
+    // SLIDE 4 --> SLIDE 5
+    else if (counter == 4 && scrollDirection == "down") {
+        scrollAnimate(-(100 / slides.length) * 4);
+    }
+    // SLIDE5  --> SLIDE 6
+    else if (counter == 5 && scrollDirection == "down") {
+        scrollAnimate(-(100 / slides.length) * 5);
     }
 
-
     //---------------- UP TRANSITIONS ----------------------------
-
+    // SLIDE 6 --> SLIDE 5
+    else if (counter == 6 && scrollDirection == "up") {
+        scrollAnimate(-(100 / slides.length) * 4);
+    }
+    // SLIDE 4 --> SLIDE 3
+    else if (counter == 5 && scrollDirection == "up") {
+        scrollAnimate(-(100 / slides.length) * 3);
+    }
     // SLIDE 4 --> SLIDE 3
     else if (counter == 4 && scrollDirection == "up") {
-        scrollAnimate(-25 * 2);
+        scrollAnimate(-(100 / slides.length) * 2);
     }
 
     // SLIDE 3 --> SLIDE 2
     else if (counter == 3 && scrollDirection == "up") {
-        scrollAnimate(-25 * 1);
+        scrollAnimate(-(100 / slides.length) * 1);
     }
 
     // SLIDE 2 --> SLIDE 1

@@ -18,7 +18,7 @@
             body,
             html {
                 font-size: 24px;
-                font-family: Arista Pro Alternate;
+                font-family: Arista Pro Alternate, '微軟正黑體';
                 letter-spacing: 1px;
                 color: #fff;
                 text-shadow: 0px 0px 1px rgba(#000, .3);
@@ -142,33 +142,43 @@
             }
             
             .full-page {
-                // height: 400vh;
                 position: absolute;
                 top: 0;
                 left: 0;
-                height: 400vh;
+                height: 600vh;
                 width: 100%;
                 overflow: hidden;
                 transition: transform 1s ease;
             }
             
             .section {
-                height: 25%;
                 width: 100%;
                 background-size: cover;
-                // background-attachment: fixed;
+                background-position: 50% 50%;
                 transform: translateZ(0);
+                height: 100%;
                 @extend %innerCenter;
                 &>* {
                     text-align: center;
                 }
+                &>div {
+                    text-align: center;
+                    h2 {
+                        font-weight: bold;
+                    }
+                    .more {
+                        img {
+                            width: 150px;
+                        }
+                    }
+                }
+            }
+            
+            .section-scroll {
+                height: calc(100% / 6);
             }
             
             .section1 {
-                // background: url('../img/section1.png') 50% 50%;
-                // background-size: cover;
-                justify-content: center;
-                align-items: center;
                 position: relative;
                 z-index: -1;
                 .logo {
@@ -209,15 +219,8 @@
             }
             
             .section2 {
-                background-image: 50% 50% url('../img/section1.png');
                 z-index: 2;
                 @extend %innerCenter;
-                .story {
-                    text-align: center;
-                    h2 {
-                        font-weight: bold;
-                    }
-                }
                 .more {
                     img {
                         width: 150px;
@@ -226,26 +229,11 @@
             }
             
             .section3 {
-                background-image: url('../img/section2.png');
-                background-size: cover;
                 z-index: 3;
                 @extend %innerCenter;
-                .brand {
-                    text-align: center;
-                    h2 {
-                        font-weight: bold;
-                    }
-                }
-                .more {
-                    img {
-                        width: 150px;
-                    }
-                }
             }
             
             .section4 {
-                background-image: url('../img/section3.png');
-                background-size: cover;
                 z-index: 4;
                 @extend %innerCenter;
                 .contact-form {
@@ -333,10 +321,13 @@
                         border-radius: 50%;
                     }
                     &:after {
+                        content: ' ';
                         display: block;
                         position: absolute;
                         right: 30px;
                         top: -10px;
+                        opacity: 0;
+                        transition: .5s;
                     }
                     &.active {
                         border: #fff solid 1px;
@@ -346,7 +337,8 @@
                     top: 40%;
                     &.active {
                         &:after {
-                            content: 'Story';
+                            content: 'Islander';
+                            opacity: 1;
                         }
                     }
                 }
@@ -354,7 +346,8 @@
                     top: calc(40% + 60px);
                     &.active {
                         &:after {
-                            content: 'Brand';
+                            content: 'Story';
+                            opacity: 1;
                         }
                     }
                 }
@@ -362,7 +355,26 @@
                     top: calc(40% + 120px);
                     &.active {
                         &:after {
+                            content: 'Coffee Academy';
+                            opacity: 1;
+                        }
+                    }
+                }
+                .dot4 {
+                    top: calc(40% + 180px);
+                    &.active {
+                        &:after {
+                            content: 'Shop';
+                            opacity: 1;
+                        }
+                    }
+                }
+                .dot5 {
+                    top: calc(40% + 240px);
+                    &.active {
+                        &:after {
                             content: 'Contact';
+                            opacity: 1;
                         }
                     }
                 }

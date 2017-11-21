@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +17,7 @@
 body,
 html {
   font-size: 24px;
-  font-family: Arista Pro Alternate;
+  font-family: Arista Pro Alternate, '微軟正黑體';
   letter-spacing: 1px;
   color: #fff;
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3); }
@@ -134,7 +135,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  height: 400vh;
+  height: 600vh;
   width: 100%;
   overflow: hidden;
   -webkit-transition: -webkit-transform 1s ease;
@@ -144,23 +145,25 @@ header {
   transition: transform 1s ease, -webkit-transform 1s ease; }
 
 .section {
-  height: 25%;
   width: 100%;
   background-size: cover;
+  background-position: 50% 50%;
   -webkit-transform: translateZ(0);
-  transform: translateZ(0); }
+  transform: translateZ(0);
+  height: 100%; }
   .section > * {
     text-align: center; }
+  .section > div {
+    text-align: center; }
+    .section > div h2 {
+      font-weight: bold; }
+    .section > div .more img {
+      width: 150px; }
+
+.section-scroll {
+  height: calc(100% / 6); }
 
 .section1 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
   position: relative;
   z-index: -1; }
   .section1 .logo {
@@ -198,29 +201,14 @@ header {
       transform: translateY(-4px); }
 
 .section2 {
-  background-image: 50% 50% url("../img/section1.png");
   z-index: 2; }
-  .section2 .story {
-    text-align: center; }
-    .section2 .story h2 {
-      font-weight: bold; }
   .section2 .more img {
     width: 150px; }
 
 .section3 {
-  background-image: url("../img/section2.png");
-  background-size: cover;
   z-index: 3; }
-  .section3 .brand {
-    text-align: center; }
-    .section3 .brand h2 {
-      font-weight: bold; }
-  .section3 .more img {
-    width: 150px; }
 
 .section4 {
-  background-image: url("../img/section3.png");
-  background-size: cover;
   z-index: 4; }
   .section4 .contact-form {
     padding: 20px 0;
@@ -299,24 +287,42 @@ header {
       top: 4px;
       border-radius: 50%; }
     #scrollbar .dot:after {
+      content: ' ';
       display: block;
       position: absolute;
       right: 30px;
-      top: -10px; }
+      top: -10px;
+      opacity: 0;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
     #scrollbar .dot.active {
       border: #fff solid 1px; }
   #scrollbar .dot1 {
     top: 40%; }
     #scrollbar .dot1.active:after {
-      content: 'Story'; }
+      content: 'Islander';
+      opacity: 1; }
   #scrollbar .dot2 {
     top: calc(40% + 60px); }
     #scrollbar .dot2.active:after {
-      content: 'Brand'; }
+      content: 'Story';
+      opacity: 1; }
   #scrollbar .dot3 {
     top: calc(40% + 120px); }
     #scrollbar .dot3.active:after {
-      content: 'Contact'; }
+      content: 'Coffee Academy';
+      opacity: 1; }
+  #scrollbar .dot4 {
+    top: calc(40% + 180px); }
+    #scrollbar .dot4.active:after {
+      content: 'Shop';
+      opacity: 1; }
+  #scrollbar .dot5 {
+    top: calc(40% + 240px); }
+    #scrollbar .dot5.active:after {
+      content: 'Contact';
+      opacity: 1; }
 
 footer {
   position: fixed;
