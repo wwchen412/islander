@@ -4,11 +4,22 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .6);
     z-index: 99999;
     display: none;
+    opacity: 0;
+    transition: .3s;
     &.active {
-        display: block;
+        opacity: 1;
+        transition: .3s;
+        .iframe-wrapper {
+            // width: 100%;
+            // height: 100%;
+            // overflow: scroll;
+            iframe {
+                opacity: 1;
+            }
+        }
     }
     &>* {
         display: flex;
@@ -27,6 +38,8 @@
             display: block;
             width: 100%;
             height: 100%;
+            opacity: 0;
+            transition: .5s .5s;
             // transform: translate(-50%, -50%);
         }
     }

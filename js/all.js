@@ -18,6 +18,7 @@ function scrollAnimate(distance) {
 
 // SCROLL ANIMATIONS AND LOGIC
 function scrollLogic() {
+
     //---------------- DOWN TRANSITIONS ----------------------------
     // SLIDE 1 --> SLIDE 2
     if (counter == 1 && scrollDirection == "down") {
@@ -206,8 +207,19 @@ $(window).keydown(function(e) {
     scrollLogic();
 
 });
+// nav click
 
+$('nav li').each(function() {
+    $(this).click(function() {
 
+        var navNum = $(this).index();
+        scrollAnimate(-(100 / slides.length) * navNum);
+        $('#scrollbar').fadeIn().find('.dot').eq(navNum - 1).addClass('active').siblings().removeClass('active');
+        $('nav li').eq(navNum).addClass('active').siblings().removeClass('active');
+        counter = navNum;
+        console.log(counter);
+    })
+})
 
 
 // light box
@@ -223,16 +235,18 @@ $('.vdo-link').each(function() {
         var evt_link = $(this).attr('data-src');
         console.log(evt_link);
         $('#lightbox').find('.iframe-wrapper').append('<iframe src="' + evt_link + '" frameborder="0" allowfullscreen></iframe>');
-        $('#lightbox').addClass('active');
-
+        $('#lightbox').fadeIn(300).addClass('active');
+        $('#wrap').addClass('active');
+        // $('body,html').css('height', '100%');
     })
 })
 
 // 關閉視窗
 $('#lightbox').click(function() {
     if ($(this).hasClass('active')) {
-        $(this).removeClass('active');
+        $(this).fadeOut(300).removeClass('active');
         $(this).find('.iframe-wrapper').html('');
+        $('#wrap').removeClass('active');
     }
 
 })
