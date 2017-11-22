@@ -77,6 +77,10 @@
                 margin-bottom: 1.5rem;
             }
             
+            .pb-3 {
+                padding-bottom: 1rem;
+            }
+            
             .pd-head {
                 padding-top: 150px;
             }
@@ -163,6 +167,24 @@
                     width: 100%;
                     z-index: 1;
                 }
+                nav {
+                    li {
+                        position: relative;
+                        &.active {
+                            &:before {
+                                content: '';
+                                display: inline-block;
+                                position: absolute;
+                                top: 5px;
+                                left: -20px;
+                                width: 1rem;
+                                height: 1rem;
+                                background: url('../img/coffeeIcon1.svg');
+                                background-repeat: no-repeat;
+                            }
+                        }
+                    }
+                }
                 ul {
                     justify-content: space-between;
                     align-items: center;
@@ -214,6 +236,7 @@
                     }
                     .more {
                         img {
+                            margin-top: 20vh;
                             width: 150px;
                         }
                     }
@@ -479,6 +502,8 @@
             
             // 內頁
             .vdo-link {
+                display: block;
+                padding: 20px 0;
                 &>* {
                     display: inline-block;
                     vertical-align: middle;

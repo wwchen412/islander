@@ -101,6 +101,9 @@ a {
 .mb-5 {
   margin-bottom: 1.5rem; }
 
+.pb-3 {
+  padding-bottom: 1rem; }
+
 .pd-head {
   padding-top: 150px; }
 
@@ -181,6 +184,18 @@ header {
     left: 0;
     width: 100%;
     z-index: 1; }
+  header nav li {
+    position: relative; }
+    header nav li.active:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 5px;
+      left: -20px;
+      width: 1rem;
+      height: 1rem;
+      background: url("../img/coffeeIcon1.svg");
+      background-repeat: no-repeat; }
   header ul {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -232,6 +247,7 @@ header {
     .section > div h2 {
       font-weight: bold; }
     .section > div .more img {
+      margin-top: 20vh;
       width: 150px; }
 
 .section-scroll {
@@ -440,6 +456,9 @@ footer {
     footer li img {
       width: 30px; }
 
-.vdo-link > * {
-  display: inline-block;
-  vertical-align: middle; }
+.vdo-link {
+  display: block;
+  padding: 20px 0; }
+  .vdo-link > * {
+    display: inline-block;
+    vertical-align: middle; }

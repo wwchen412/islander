@@ -80,21 +80,27 @@ function scrollLogic() {
     // scrollbar
     if (counter == 1) {
         $('#scrollbar').fadeOut().find('.dot').removeClass('active');
+        $('nav li').removeClass('active');
     }
     if (counter == 2) {
         $('#scrollbar').fadeIn().find('.dot').eq(0).addClass('active').siblings().removeClass('active');
+        $('nav li').eq(1).addClass('active').siblings().removeClass('active');
     }
     if (counter == 3) {
         $('#scrollbar').fadeIn().find('.dot').eq(1).addClass('active').siblings().removeClass('active');
+        $('nav li').eq(2).addClass('active').siblings().removeClass('active');
     }
     if (counter == 4) {
         $('#scrollbar').fadeIn().find('.dot').eq(2).addClass('active').siblings().removeClass('active');
+        $('nav li').eq(3).addClass('active').siblings().removeClass('active');
     }
     if (counter == 5) {
         $('#scrollbar').fadeIn().find('.dot').eq(3).addClass('active').siblings().removeClass('active');
+        $('nav li').eq(4).addClass('active').siblings().removeClass('active');
     }
     if (counter == 6) {
         $('#scrollbar').fadeIn().find('.dot').eq(4).addClass('active').siblings().removeClass('active');
+        $('nav li').eq(5).addClass('active').siblings().removeClass('active');
     }
 };
 
@@ -207,20 +213,26 @@ $(window).keydown(function(e) {
 // light box
 
 var vdo_link = document.querySelectorAll('.vdo-link');
-var lightboxActive = document.querySelector('#lightbox.active');
+// var lightboxActive = document.querySelector('#lightbox.active');
 
-for (i = 0; i < vdo_link.length; i++) {
-    vdo_link[i].addEventListener('click', lightbox, false)
-}
 
-function lightbox() {
-    $('#lightbox').addClass('active');
-    event.preventDefault();
-}
+$('.vdo-link').each(function() {
+    $(this).click(function(e) {
+        event.preventDefault();
+        event.stopPropagation();
+        var evt_link = $(this).attr('data-src');
+        console.log(evt_link);
+        $('#lightbox').find('.iframe-wrapper').append('<iframe src="' + evt_link + '" frameborder="0" allowfullscreen></iframe>');
+        $('#lightbox').addClass('active');
 
+    })
+})
+
+// 關閉視窗
 $('#lightbox').click(function() {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
+        $(this).find('.iframe-wrapper').html('');
     }
 
 })
