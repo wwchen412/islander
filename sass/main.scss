@@ -237,7 +237,7 @@
                         max-width: 300px;
                     }
                 }
-                video {
+                .iframe-wrapper {
                     position: fixed;
                     // position: absolute;
                     right: 0;
@@ -248,6 +248,32 @@
                     height: auto;
                     z-index: -100;
                     display: block;
+                    .video-foreground {
+                        position: absolute;
+                        top: 0;
+                        left: -100%;
+                        width: 300%;
+                        height: 100%;
+                        &:before {
+                            content: '';
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0.3);
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 99;
+                        }
+                    }
+                    iframe {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        pointer-events: none;
+                    }
                 }
                 .scorll-down {
                     position: absolute;

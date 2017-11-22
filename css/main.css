@@ -249,7 +249,7 @@ header {
     .section1 .logo img {
       width: 100%;
       max-width: 300px; }
-  .section1 video {
+  .section1 .iframe-wrapper {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -259,6 +259,29 @@ header {
     height: auto;
     z-index: -100;
     display: block; }
+    .section1 .iframe-wrapper .video-foreground {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 300%;
+      height: 100%; }
+      .section1 .iframe-wrapper .video-foreground:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99; }
+    .section1 .iframe-wrapper iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none; }
   .section1 .scorll-down {
     position: absolute;
     bottom: 45px;
