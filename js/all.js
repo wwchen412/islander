@@ -250,3 +250,8 @@ $('#lightbox').click(function() {
     }
 
 })
+
+// menu toggle
+$('.toggle-buttom').click(function() {
+    $('.toggle-menu').slideToggle();
+})

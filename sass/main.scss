@@ -157,6 +157,18 @@
                 }
             }
             
+            .hidden-sm {
+                @media screen and (min-width: 769px) {
+                    display: none !important;
+                }
+            }
+            
+            .hidden-xs {
+                @media screen and (min-width: 300px)and (max-width: 768px) {
+                    display: none !important;
+                }
+            }
+            
             header {
                 background: #fff;
                 // background-size: cover;
@@ -166,6 +178,9 @@
                 left: 0;
                 width: 100%;
                 z-index: 100;
+                @media screen and (min-width: 300px)and (max-width: 768px) {
+                    padding: 10px 20px;
+                }
                 .img-navbg {
                     position: absolute;
                     top: 50px;
@@ -174,6 +189,9 @@
                     z-index: 1;
                 }
                 nav {
+                    .toggle-buttom {
+                        text-align: right;
+                    }
                     li {
                         position: relative;
                         &.active {
@@ -196,11 +214,23 @@
                     align-items: center;
                     position: relative;
                     z-index: 2;
+                    &.toggle-menu {
+                        @media screen and (min-width: 300px) and (max-width: 768px) {
+                            flex-direction: column;
+                            display: none;
+                            li {
+                                text-align: center;
+                            }
+                        }
+                    }
                     li {
                         margin: 0 30px;
                         color: #000;
                         &:first-child {
                             margin-right: auto;
+                            @media screen and (min-width: 300px) and (max-width: 768px) {
+                                margin: 0 auto;
+                            }
                         }
                         font-size: 20px;
                         a {
@@ -256,6 +286,9 @@
             .section1 {
                 position: relative;
                 z-index: -1;
+                @media screen and (min-width: 300px)and (max-width: 768px) {
+                    background: url('../img/section1.png');
+                }
                 .logo {
                     position: absolute;
                     top: 50%;
