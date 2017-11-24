@@ -123,6 +123,9 @@ a {
 
 .pd-head {
   padding-top: 150px; }
+  @media screen and (max-width: 768px) {
+    .pd-head {
+      padding-top: 80px; } }
 
 .container {
   max-width: 1170px;
@@ -175,9 +178,15 @@ a {
       margin: 0 30px; }
   .islander-row .islander-6 {
     display: inline-block;
-    width: calc(100% / 2 - 15px); }
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 15px; }
     .islander-row .islander-6:nth-child(2n) {
       margin-left: 15px; }
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      .islander-row .islander-6 {
+        width: 100%; }
+        .islander-row .islander-6:nth-child(2n) {
+          margin-left: 0; } }
   .islander-row .islander-5 {
     display: inline-block;
     width: calc(100% / 5 - 31px);
@@ -187,6 +196,11 @@ a {
       max-height: 80px;
       display: block;
       margin-bottom: 2rem; }
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      .islander-row .islander-5 {
+        width: 100%; }
+        .islander-row .islander-5 img {
+          max-height: 100%; } }
 
 @media screen and (min-width: 769px) {
   .hidden-sm {
