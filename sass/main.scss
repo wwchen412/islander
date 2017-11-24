@@ -190,7 +190,8 @@
                 }
                 nav {
                     .toggle-buttom {
-                        text-align: right;
+                        // text-align: right;
+                        margin-left: calc(100% - 82px);
                     }
                     li {
                         position: relative;
@@ -242,6 +243,13 @@
                             }
                         }
                     }
+                }
+            }
+            
+            .phone-menu {
+                &>div {
+                    display: inline-block;
+                    vertical-align: middle;
                 }
             }
             
