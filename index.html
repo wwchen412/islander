@@ -59,7 +59,7 @@
                 </div>
                 <div class="iframe-wrapper">
                     <div id="player" class="video-foreground">
-                        <iframe id="ytplayer" class="youtube-video" src="https://www.youtube.com/embed/gJQJ_l6qiHY?rel=0&amp;controls=0&amp;showinfo=0&loop=1&playlist=gJQJ_l6qiHY=1" gesture="media" frameborder="0" allowfullscreen></iframe>
+                        <!-- <iframe id="ytplayer" class="youtube-video" src="https://www.youtube.com/embed/gJQJ_l6qiHY?rel=0&amp;controls=0&amp;showinfo=0&loop=1&playlist=gJQJ_l6qiHY=1" gesture="media" frameborder="0" allowfullscreen></iframe> -->
                     </div>
 
                 </div>
@@ -197,18 +197,19 @@
                 videoId: "gJQJ_l6qiHY",
                 playerVars: {
                     controls: 0,
+                    loop: 1,
                     rel: 0,
                     info: 0,
-                    showinfo: 0,
+                    playlist: "gJQJ_l6qiHY",
                     mute: 0,
-                    loop: 1
+                    showinfo: 0
                 },
                 events: {
                     'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange
                 }
             });
-            console.log('mute');
+
 
         }
 
@@ -221,7 +222,7 @@
         }
 
         function onPlayerStateChange(event) {
-            // event.target.mute();
+            event.target.mute();
         }
     </script>
 </body>

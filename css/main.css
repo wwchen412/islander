@@ -347,12 +347,15 @@ header {
       left: 0;
       width: 150%;
       height: 200%;
-      -webkit-transform: translate(-25%, -50%);
-      -ms-transform: translate(-25%, -50%);
-      transform: translate(-25%, -50%); }
+      -webkit-transform: translate(-16.5%, -50%);
+      -ms-transform: translate(-16.5%, -50%);
+      transform: translate(-16.5%, -50%); }
       @media screen and (min-width: 300px) and (max-width: 768px) {
         .section1 .iframe-wrapper .video-foreground {
-          width: 300%; } }
+          width: 310%;
+          -webkit-transform: translate(-33.5%, -50%);
+          -ms-transform: translate(-33.5%, -50%);
+          transform: translate(-33.5%, -50%); } }
       .section1 .iframe-wrapper .video-foreground:before {
         content: '';
         width: 100%;

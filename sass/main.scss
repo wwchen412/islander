@@ -341,9 +341,10 @@
                         left: 0;
                         width: 150%;
                         height: 200%;
-                        transform: translate(-25%, -50%);
+                        transform: translate(-16.5%, -50%);
                         @media screen and (min-width: 300px)and (max-width: 768px) {
-                            width: 300%;
+                            width: 310%;
+                            transform: translate(-33.5%, -50%);
                         }
                         // padding-bottom: 56.9%;
                         &:before {
