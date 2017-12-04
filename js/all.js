@@ -40,15 +40,15 @@ function scrollLogic() {
         scrollAnimate(-(100 / slides.length) * 4);
     }
     // SLIDE5  --> SLIDE 6
-    else if (counter == 5 && scrollDirection == "down") {
-        scrollAnimate(-(100 / slides.length) * 5);
-    }
+    // else if (counter == 5 && scrollDirection == "down") {
+    //     scrollAnimate(-(100 / slides.length) * 5);
+    // }
 
     //---------------- UP TRANSITIONS ----------------------------
     // SLIDE 6 --> SLIDE 5
-    else if (counter == 6 && scrollDirection == "up") {
-        scrollAnimate(-(100 / slides.length) * 4);
-    }
+    // else if (counter == 6 && scrollDirection == "up") {
+    //     scrollAnimate(-(100 / slides.length) * 4);
+    // }
     // SLIDE 4 --> SLIDE 3
     else if (counter == 5 && scrollDirection == "up") {
         scrollAnimate(-(100 / slides.length) * 3);
