@@ -4,8 +4,9 @@ var scrollDirection;
 var slides = $('.full-page .section');
 var slidesLength = slides.length;
 var inTransition = false;
+console.log(slides);
 
-
+console.log(slidesLength);
 
 function scrollAnimate(distance) {
     inTransition = true;

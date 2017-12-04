@@ -286,7 +286,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  height: 600vh;
+  height: 500vh;
   width: 100%;
   overflow: hidden;
   -webkit-transition: -webkit-transform 1s ease;
@@ -314,7 +314,7 @@ header {
       width: 150px; }
 
 .section-scroll {
-  height: calc(100% / 6); }
+  height: calc(100% / 5); }
 
 .section1 {
   position: relative;
@@ -343,10 +343,16 @@ header {
     display: block; }
     .section1 .iframe-wrapper .video-foreground {
       position: absolute;
-      top: 0;
-      left: -25%;
+      top: 50%;
+      left: 0;
       width: 150%;
-      height: 100%; }
+      height: 200%;
+      -webkit-transform: translate(-25%, -50%);
+      -ms-transform: translate(-25%, -50%);
+      transform: translate(-25%, -50%); }
+      @media screen and (min-width: 300px) and (max-width: 768px) {
+        .section1 .iframe-wrapper .video-foreground {
+          width: 300%; } }
       .section1 .iframe-wrapper .video-foreground:before {
         content: '';
         width: 100%;
@@ -496,18 +502,13 @@ header {
     #scrollbar .dot2.active:after {
       content: 'Story';
       opacity: 1; }
-  #scrollbar .dot3 {
-    top: calc(30% + 120px); }
-    #scrollbar .dot3.active:after {
-      content: 'Coffee Academy';
-      opacity: 1; }
   #scrollbar .dot4 {
-    top: calc(30% + 180px); }
+    top: calc(30% + 120px); }
     #scrollbar .dot4.active:after {
       content: 'Shop';
       opacity: 1; }
   #scrollbar .dot5 {
-    top: calc(30% + 240px); }
+    top: calc(30% + 180px); }
     #scrollbar .dot5.active:after {
       content: 'Contact';
       opacity: 1; }

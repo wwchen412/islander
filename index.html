@@ -23,7 +23,7 @@
                     </li>
                     <li><a href="index.html#islander">islander</a></li>
                     <li><a href="index.html#story">STORY</a></li>
-                    <li><a href="index.html#brand">Coffee Academy</a></li>
+                    <!-- <li><a href="index.html#brand">Coffee Academy</a></li> -->
                     <li><a href="index.html#shop" title="Coming Soon">SHOP</a></li>
                     <li><a href="index.html#contact">CONTACT</a></li>
 
@@ -57,9 +57,9 @@
                 <div class="logo">
                     <img src="img/logo.svg" alt="">
                 </div>
-                <div class="iframe-wrapper hidden-xs">
-                    <div class="video-foreground">
-                        <iframe id="ytplayer" src="https://www.youtube.com/embed/gJQJ_l6qiHY?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1&mute=1&loop=1" gesture="media" frameborder="0" allowfullscreen></iframe>
+                <div class="iframe-wrapper">
+                    <div id="player" class="video-foreground">
+                        <iframe id="ytplayer" class="youtube-video" src="https://www.youtube.com/embed/gJQJ_l6qiHY?rel=0&amp;controls=0&amp;showinfo=0&loop=1&playlist=gJQJ_l6qiHY=1" gesture="media" frameborder="0" allowfullscreen></iframe>
                     </div>
 
                 </div>
@@ -99,7 +99,7 @@
             </div>
 
             <!-- 第五區塊 coffee-->
-            <div class="section4 section d-flex section-scroll" style="background-image:url('img/section5.png')">
+            <!-- <div class="section4 section d-flex section-scroll" style="background-image:url('img/section5.png')">
                 <div class="brand">
                     <h2 class="mb-3">想沖一杯好咖啡
 
@@ -114,7 +114,7 @@
                         <img src="img/more.svg" alt="">
                     </a>
                 </div>
-            </div>
+            </div> -->
             <!-- 第六區塊 buy -->
             <div class="section4 section d-flex section-scroll" style="background-image:url('img/section6.png')">
                 <div class="buy">
@@ -160,7 +160,7 @@
         <div id="scrollbar" class="hidden-xs">
             <div class="dot dot1 active"></div>
             <div class="dot dot2"></div>
-            <div class="dot dot3"></div>
+            <!-- <div class="dot dot3"></div> -->
             <div class="dot dot4"></div>
             <div class="dot dot5"></div>
 
@@ -183,8 +183,47 @@
     <!-- jQuery JS 3.1.0 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/all.js"></script>
+    <script>
+        var tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var player;
 
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player("player", {
+                height: "651",
+                width: "868",
+                videoId: "gJQJ_l6qiHY",
+                playerVars: {
+                    controls: 0,
+                    rel: 0,
+                    info: 0,
+                    showinfo: 0,
+                    mute: 0,
+                    loop: 1
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+            console.log('mute');
 
+        }
+
+        function onPlayerReady(event) {
+
+            event.target.playVideo();
+            event.target.setPlaybackQuality(hd1080);
+
+            console.log('loaded');
+        }
+
+        function onPlayerStateChange(event) {
+            // event.target.mute();
+        }
+    </script>
 </body>
 
 </html>
