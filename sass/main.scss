@@ -310,7 +310,7 @@
             
             .section1 {
                 position: relative;
-                z-index: -1;
+                z-index: 0;
                 @media screen and (min-width: 300px)and (max-width: 768px) {
                     background: url('../img/section1.png');
                 }
@@ -343,7 +343,7 @@
                         height: 200%;
                         transform: translate(-16.5%, -50%);
                         @media screen and (min-width: 300px)and (max-width: 768px) {
-                            width: 310%;
+                            width: 330%;
                             transform: translate(-33.5%, -50%);
                         }
                         // padding-bottom: 56.9%;
@@ -359,7 +359,8 @@
                             z-index: 99;
                         }
                     }
-                    iframe {
+                    iframe,
+                    video {
                         position: absolute;
                         width: 100%;
                         height: 100%;

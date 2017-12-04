@@ -51,6 +51,8 @@
         </nav>
     </header>
     <div id="wrap">
+
+
         <div class="full-page">
             <!-- 第一區塊 影片 -->
             <div id="section1" class="section section1 d-flex section-scroll">
@@ -60,6 +62,7 @@
                 <div class="iframe-wrapper">
                     <div id="player" class="video-foreground">
                         <!-- <iframe id="ytplayer" class="youtube-video" src="https://www.youtube.com/embed/gJQJ_l6qiHY?rel=0&amp;controls=0&amp;showinfo=0&loop=1&playlist=gJQJ_l6qiHY=1" gesture="media" frameborder="0" allowfullscreen></iframe> -->
+                        <video src="img/bgvdo.mp4" loop autoplay defaultMuted muted></video>
                     </div>
 
                 </div>
@@ -67,8 +70,10 @@
 
 
                 <div class="scorll-down">
-                    <img src="img/arrow.svg" alt="" style="width:30px">
-                    <h3>SCROLL</h3>
+                    <a href="index.html" class="vdo-link mb-5" data-src="https://www.youtube.com/embed/gJQJ_l6qiHY?rel=0&amp;controls=0&amp;showinfo=0&loop=1&playlist=gJQJ_l6qiHY=1&autoplay=1">
+                        <img src="img/play.svg" alt="" style="width:30px">
+                        <h3>PLAY VIDEO</h3>
+                    </a>
                 </div>
             </div>
             <!-- 第三區塊 islander-->
@@ -179,11 +184,20 @@
             </ul>
         </footer>
     </div>
+    <div id="lightbox">
+        <div class="container">
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/gJQJ_l6qiHY?rel=0&amp;controls=0&amp;showinfo=0&loop=1&playlist=gJQJ_l6qiHY=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
 
     <!-- jQuery JS 3.1.0 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/all.js"></script>
-    <script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/all.js">
+    </script>
+    <!-- <script>
         var tag = document.createElement("script");
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName("script")[0];
@@ -224,7 +238,7 @@
         function onPlayerStateChange(event) {
             event.target.mute();
         }
-    </script>
+    </script> -->
 </body>
 
 </html>

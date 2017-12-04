@@ -231,6 +231,7 @@ var vdo_link = document.querySelectorAll('.vdo-link');
 
 $('.vdo-link').each(function() {
     $(this).click(function(e) {
+
         event.preventDefault();
         event.stopPropagation();
         var evt_link = $(this).attr('data-src');
