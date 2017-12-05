@@ -432,6 +432,14 @@ header {
       font-size: 1rem;
       padding: 5px 20px;
       color: #3f3f3f; }
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      .section4 form .form-group {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0); }
+        .section4 form .form-group label {
+          width: calc(100% - 160px);
+          margin: 0 auto 10px; } }
   .section4 form button {
     margin-top: 30px;
     -webkit-appearance: none;

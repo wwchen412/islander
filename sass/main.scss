@@ -437,6 +437,13 @@
                             padding: 5px 20px;
                             color: rgb(63, 63, 63);
                         }
+                        @media screen and (min-width:300px)and(max-width:768px) {
+                            transform: translateX(0);
+                            label {
+                                width: calc(100% - 160px);
+                                margin: 0 auto 10px;
+                            }
+                        }
                     }
                     button {
                         margin-top: 30px;
