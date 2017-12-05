@@ -139,6 +139,12 @@
                     &:nth-child(2n) {
                         margin: 0 30px;
                     }
+                    @media screen and (min-width:300px)and (max-width:768px) {
+                        width: 100%;
+                        &:nth-child(2n) {
+                            margin: 0;
+                        }
+                    }
                 }
                 .islander-6 {
                     display: inline-block;
