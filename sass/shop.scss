@@ -1,1 +1,77 @@
 @import '_header.scss';
+@import '_grid.scss';
+@import '_color.scss';
+@import '_member.scss';
+body {
+    // background-color: #f00;
+    color: #000;
+}
+
+p {
+    color: #000;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#wrap {
+    margin-top: 175px;
+}
+
+.bread {
+    ul {
+        padding-bottom: 10px;
+        border-bottom: 2px solid $maincolor;
+    }
+    li {
+        display: inline-block;
+        margin: 0 25px;
+        position: relative;
+        a {
+            color: #989898;
+            &:active,
+            &:hover,
+            &:visited {
+                color: #989898;
+            }
+            &.active,
+            &:hover {
+                color: $maincolor;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    background: 50% 50% url('../img/coffeeIcon1.svg') no-repeat;
+                    vertical-align: text-bottom;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    ul {
+        padding: 15px 0 30px;
+    }
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 5px;
+        p {
+            color: $maincolor;
+        }
+        svg {
+            width: 30px;
+            fill: $maincolor;
+        }
+    }
+    .copyright {
+        padding: 15px 0;
+        background-color: $darkcolor;
+        text-align: center;
+        color: #fff;
+    }
+}

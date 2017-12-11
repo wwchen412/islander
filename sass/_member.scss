@@ -1,0 +1,95 @@
+@import '_color.scss';
+.history-filter {
+    h2 {
+        color: $maincolor;
+    }
+    padding: 30px 0;
+    &>* {
+        display: inline-block;
+    }
+}
+
+.history-form {
+    margin-bottom: 100px;
+    .form-group {
+        border: 2px solid $maincolor;
+        border-left: 1px solid $maincolor;
+        border-right: 1px solid $maincolor;
+        margin-bottom: 15px;
+    }
+    .title {
+        background-color: $maincolor;
+        flex-wrap: wrap;
+        border-bottom: 1px solid $maincolor;
+        p {
+            color: #fff;
+            display: inline-block;
+        }
+        .date {
+            flex: 1;
+        }
+        .number {
+            flex: 3;
+        }
+        .status {
+            flex: 1;
+        }
+        @media screen and (max-width:768px) {
+            &>div {
+                flex: 0 0 100% !important;
+                text-align: left !important;
+                p {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    .content {
+        border-right: 0px;
+        border-left: 0px;
+        .content-block {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            border: 1px solid $maincolor;
+            border-bottom: 0px;
+            &.f3 {
+                flex: 3;
+            }
+            &.f2 {
+                flex: 2;
+            }
+            li {
+                p {
+                    padding: 0 15px;
+                }
+            }
+        }
+        .blockgroup {
+            p {
+                display: flex;
+                height: 50%;
+                align-items: center;
+                border-bottom: 2px solid $maincolor;
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+            span {
+                display: inline-block;
+                min-width: 100px;
+            }
+        }
+        @media screen and (max-width:768px) {
+            flex-direction: column;
+            &:first-child {
+                text-align: center;
+            }
+        }
+    }
+    &>div p {
+        padding: 15px;
+    }
+}
