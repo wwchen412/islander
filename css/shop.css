@@ -15,7 +15,8 @@ header {
     top: 60px;
     left: 0;
     width: 100%;
-    z-index: 1; }
+    z-index: 1;
+    pointer-events: none; }
   header nav .toggle-buttom {
     margin-left: calc(100% - 82px); }
   header nav li {
@@ -391,6 +392,127 @@ a {
         content: 'A';
         font-family: noto sans; }
 
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: none; }
+  .login-form .fb-login {
+    text-align: center;
+    display: block;
+    background-color: #3b5998;
+    color: #fff;
+    max-width: 280px;
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 30px;
+    margin: 0 auto;
+    font-family: noto sans;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    position: relative; }
+    .login-form .fb-login:hover, .login-form .fb-login:active {
+      background-color: #344e86; }
+    .login-form .fb-login:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 40px;
+      left: 5px;
+      top: 5px;
+      background: url("../img/fb_login.svg"); }
+  .login-form p {
+    color: #855E00; }
+  .login-form .login-hr {
+    margin: 15px 0;
+    padding: 15px 0;
+    color: #855E00;
+    text-align: center;
+    position: relative; }
+    .login-form .login-hr p {
+      color: #855E00;
+      display: inline-block;
+      background-color: #fff;
+      position: relative;
+      padding: 0 10px;
+      z-index: 1; }
+    .login-form .login-hr:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 2px;
+      background-color: #855E00; }
+  .login-form .tabs {
+    font-size: 0;
+    letter-spacing: 0; }
+    .login-form .tabs > div {
+      font-size: 1rem;
+      text-align: center;
+      display: inline-block;
+      padding: 20px 15px;
+      width: calc(50%);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #855E00;
+      color: #855E00;
+      cursor: pointer; }
+      .login-form .tabs > div.active {
+        background-color: #855E00;
+        color: #fff; }
+  .login-form form {
+    padding: 40px 0; }
+    .login-form form .input-group {
+      direction: rtl; }
+      .login-form form .input-group label {
+        width: 100%;
+        display: inline-block;
+        padding: 10px 0; }
+    .login-form form svg {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      vertical-align: middle; }
+    .login-form form input {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      border: 0;
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+      font-size: 1rem;
+      display: inline-block;
+      width: calc(100% - 45px);
+      text-align: left;
+      direction: ltr; }
+      .login-form form input:focus {
+        outline-offset: 0; }
+      .login-form form input:focus {
+        border-color: #855E00;
+        outline: 0; }
+        .login-form form input:focus::-webkit-input-placeholder {
+          color: #855E00; }
+      .login-form form input.error {
+        border-color: #A83542; }
+        .login-form form input.error + svg .cls-1 {
+          fill: #A83542; }
+    .login-form form a {
+      margin: 35px 0;
+      display: inline-block;
+      text-shadow: none;
+      text-align: center;
+      width: 100%; }
+    .login-form form button {
+      padding: 15px;
+      width: 100%;
+      font-size: 0.9rem; }
+
 body {
   color: #000; }
 
@@ -401,7 +523,8 @@ p {
   text-align: center; }
 
 #wrap {
-  margin-top: 175px; }
+  margin-top: 175px;
+  min-height: calc(100vh - 175px - 127px); }
 
 .bread ul {
   padding-bottom: 10px;
