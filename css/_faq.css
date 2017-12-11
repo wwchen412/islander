@@ -1,0 +1,30 @@
+.faq-group {
+  border-bottom: 1px solid #855E00; }
+  .faq-group > div {
+    padding: 10px 0; }
+    .faq-group > div:before {
+      content: '';
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: #855E00;
+      vertical-align: middle;
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 50px; }
+    .faq-group > div p {
+      padding-left: 15px;
+      display: inline-block;
+      width: calc(100% - 65px);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      vertical-align: middle; }
+    .faq-group > div.faq-q {
+      cursor: pointer; }
+      .faq-group > div.faq-q:before {
+        content: 'Q'; }
+    .faq-group > div.faq-a {
+      display: none; }
+      .faq-group > div.faq-a:before {
+        content: 'A'; }

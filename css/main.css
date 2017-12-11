@@ -152,14 +152,15 @@ p {
   font-weight: 400; }
 
 h2 {
+  color: #855E00;
   font-family: Arista Pro; }
 
 h3 {
-  color: #fff;
+  color: #855E00;
   font-size: 1.2rem; }
 
 a {
-  color: #fff;
+  color: #855E00;
   text-decoration: none; }
   a:visited {
     color: #ddd; }
@@ -176,8 +177,14 @@ a {
 .mb-5 {
   margin-bottom: 1.5rem; }
 
+.py {
+  padding: 15px 0; }
+
 .pb-3 {
   padding-bottom: 1rem; }
+
+.border-bottom {
+  border-bottom: 1px solid #855E00; }
 
 .pd-head {
   padding-top: 150px; }

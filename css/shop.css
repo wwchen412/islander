@@ -101,14 +101,15 @@ p {
   font-weight: 400; }
 
 h2 {
+  color: #855E00;
   font-family: Arista Pro; }
 
 h3 {
-  color: #fff;
+  color: #855E00;
   font-size: 1.2rem; }
 
 a {
-  color: #fff;
+  color: #855E00;
   text-decoration: none; }
   a:visited {
     color: #ddd; }
@@ -125,8 +126,14 @@ a {
 .mb-5 {
   margin-bottom: 1.5rem; }
 
+.py {
+  padding: 15px 0; }
+
 .pb-3 {
   padding-bottom: 1rem; }
+
+.border-bottom {
+  border-bottom: 1px solid #855E00; }
 
 .pd-head {
   padding-top: 150px; }
@@ -345,6 +352,44 @@ a {
           text-align: center; } }
   .history-form > div p {
     padding: 15px; }
+
+.faq {
+  margin-bottom: 40px; }
+
+.faq-group {
+  border-bottom: 1px solid #855E00; }
+  .faq-group > div {
+    padding: 10px 0; }
+    .faq-group > div:before {
+      content: '';
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: #855E00;
+      vertical-align: middle;
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 4px; }
+    .faq-group > div p {
+      padding-left: 15px;
+      display: inline-block;
+      width: calc(100% - 65px);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      vertical-align: middle; }
+    .faq-group > div.faq-q {
+      cursor: pointer; }
+      .faq-group > div.faq-q:before {
+        content: 'Q';
+        background-color: #A83542;
+        font-family: noto sans; }
+    .faq-group > div.faq-a {
+      display: none; }
+      .faq-group > div.faq-a:before {
+        content: 'A';
+        font-family: noto sans; }
 
 body {
   color: #000; }

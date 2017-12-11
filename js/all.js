@@ -255,5 +255,11 @@ $('#lightbox').click(function() {
 
 // menu toggle
 $('.toggle-buttom').click(function() {
-    $('.toggle-menu').slideToggle();
-})
+        $('.toggle-menu').slideToggle();
+    })
+    // faq
+$('.faq-q').each(function() {
+    $(this).click(function() {
+        $(this).siblings('.faq-a').slideToggle();
+    })
+});

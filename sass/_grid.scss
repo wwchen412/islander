@@ -33,16 +33,17 @@ p {
 }
 
 h2 {
+    color: $maincolor;
     font-family: Arista Pro;
 }
 
 h3 {
-    color: #fff;
+    color: $maincolor;
     font-size: 1.2rem;
 }
 
 a {
-    color: #fff;
+    color: $maincolor;
     text-decoration: none;
     &:visited {
         color: #ddd;
@@ -65,8 +66,16 @@ a {
     margin-bottom: 1.5rem;
 }
 
+.py {
+    padding: 15px 0;
+}
+
 .pb-3 {
     padding-bottom: 1rem;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $maincolor;
 }
 
 .pd-head {
