@@ -22,7 +22,6 @@ html {
     font-family: Arista Pro Alternate, '微軟正黑體';
     letter-spacing: 1px;
     color: #fff;
-    text-shadow: 0px 0px 1px rgba(#000, .3);
 }
 
 p {
@@ -33,17 +32,14 @@ p {
 }
 
 h2 {
-    color: $maincolor;
     font-family: Arista Pro;
 }
 
 h3 {
-    color: $maincolor;
     font-size: 1.2rem;
 }
 
 a {
-    color: $maincolor;
     text-decoration: none;
     &:visited {
         color: #ddd;
@@ -201,5 +197,14 @@ a {
     &:hover,
     &:active {
         background-color: darken($red, 5%);
+    }
+}
+
+.btn-gray {
+    background-color: $gray;
+    color: #fff;
+    &:hover,
+    &:active {
+        background-color: darken($gray, 5%);
     }
 }

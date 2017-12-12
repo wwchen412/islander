@@ -62,93 +62,95 @@
             <div class="container">
                 <ul>
                     <li>
-                        <a href="member.html">會員資訊</a>
+                        <a href="" class="active">會員資訊</a>
                     </li>
                     <li>
-                        <a href="history.html" class="active">訂單管理</a>
+                        <a href="history.html">訂單管理</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="history">
+        <div class="member">
             <div class="container">
-                <div class="history-filter d-flex justify-between">
-                    <h2>消費紀錄</h2>
-                    <button class="btn btn-red">顯示所有</button>
-                </div>
-                <div class="history-form">
-                    <div class="form-group">
-                        <div class="title d-flex justify-between">
-                            <div class="date d-flex">
-                                <p>日期：<span>2017/06/18</span></p>
+                <div class="islander-row" style="padding:0 30px;">
+                    <div class="islander-6">
+                        <h3 class="py border-bottom mt-3">基本資料</h3>
+                        <div class="basic-form">
+                            <div class="input-groups">
+                                <div class="input-group">
+                                    <label for="">
+                                    <input type="text" placeholder="請輸入姓名"> 
+                                    <img src="img/member.svg" alt="" class="svg icon">
+                                 
+                                </label>
+                                </div>
+                                <div class="input-group">
+                                    <label for="">
+                                   <input type="date">
+                                   <img src="img/birth.svg" alt="" class="svg icon">
+                                </label>
+                                </div>
                             </div>
-                            <div class="number">
-                                <p>訂單編號：<span>12039388</span></p>
+                            <div class="input-group">
+                                <label for="">
+                                     <input type="tel" placeholder="請輸入電話">
+                                     <img src="img/phone.svg" alt="" class="svg icon" >
+                                </label>
                             </div>
-                            <div class="status text-center">
-                                <p>訂單狀態：<span>已完成</span></p>
+                            <div class="input-group">
+                                <label for="">
+                                    <input type="email" value="xxxx@islander.com" readonly disabled>
+                                    <img src="img/email.svg" alt="" class="svg icon" >
+                                </label>
                             </div>
-
-                        </div>
-                        <div class="content d-flex">
-                            <div class="content-block text-xs-center">
-                                <p>品名</p>
-                            </div>
-                            <div class="content-block f3">
-                                <p>桌上棒球x1</p>
-                            </div>
-                            <div class="content-block f2 blockgroup">
-                                <p><span>金額</span>1000</p>
-
-                                <p><span>運費</span>85</p>
-                            </div>
-                            <div class="content-block f2 text-center text-xs-left">
-                                <p>總計 <span>815</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="title d-flex justify-between">
-                            <div class="date d-flex">
-                                <p>日期：<span>2017/06/18</span></p>
-                            </div>
-                            <div class="number">
-                                <p>訂單編號：<span>12039388</span></p>
-                            </div>
-                            <div class="status text-center">
-                                <p>訂單狀態：<span>已完成</span></p>
-                            </div>
-
-                        </div>
-                        <div class="content d-flex">
-                            <div class="content-block text-xs-center">
-                                <p>品名</p>
-                            </div>
-                            <div class="content-block f3">
-                                <ul>
-                                    <li>
-                                        <p>100%卡霧 得獎精品莊園咖啡豆</p>
-                                        <p> 1/2磅台幣1,200 元</p>
-                                        <p> 數量：2</p>
-                                    </li>
-                                    <li>
-                                        <p>100%卡霧 得獎精品莊園咖啡豆</p>
-                                        <p> 1/2磅台幣1,200 元</p>
-                                        <p> 數量：2</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content-block f2 blockgroup">
-                                <p><span>金額</span>1000</p>
-
-                                <p><span>運費</span>85</p>
-                            </div>
-                            <div class="content-block f2 text-center text-xs-left">
-                                <p>總計 <span>815</span></p>
+                            <div class="input-group">
+                                <div class="select-group">
+                                    <select name="" id="">
+                                                <option value="國家">國家</option>
+                                            </select>
+                                    <select name="" id="">
+                                                <option value="國家">城市</option>
+                                            </select>
+                                    <select name="" id="">
+                                                <option value="國家">地區</option>
+                                            </select>
+                                </div>
+                                <img src="img/location.svg" alt="" class="svg icon">
+                                <label for="">
+                                        <input type="text" placeholder="請輸入地址">
+                                      
+                                    </label>
                             </div>
                         </div>
                     </div>
+                    <div class="islander-6">
+                        <h3 class="py border-bottom mt-3">密碼修改</h3>
+                        <div class="input-group">
+                            <label for="">
+                                    <input type="password"  placeholder="目前密碼請僅在更改時輸入">
+                                    <img src="img/unlock.svg" alt="" class="svg icon" >
+                                </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="">
+                                <input type="password"  placeholder="新密碼">
+                                <img src="img/password.svg" alt="" class="svg icon" >
+                           </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="">
+                                    <input type="password"  placeholder="密碼確認">
+                                    <img src="img/check.svg" alt="" class="svg icon" >
+                               </label>
+                        </div>
+                        <div class="btn-groups">
+                            <button class="btn btn-gray">取消修改</button>
+                            <button class="btn btn-red">取消修改</button>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
         </div>
         <footer class="footer">

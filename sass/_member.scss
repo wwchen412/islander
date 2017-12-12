@@ -93,3 +93,89 @@
         padding: 15px;
     }
 }
+
+// 會員資訊
+.member {
+    .input-groups {
+        font-size: 0;
+        letter-spacing: 0;
+        &>div {
+            display: inline-block;
+            width: calc(100% / 2);
+        }
+    }
+    .input-group {
+        padding: 10px 0;
+        direction: rtl;
+        input {
+            width: calc(100% - 40px);
+            border: 0;
+            font-size: 1rem;
+            padding: 10px;
+            border-bottom: 1px solid #c7c7c7;
+            &::-webkit-input-placeholder {
+                color: #c7c7c7;
+            }
+            &:focus {
+                border-color: $maincolor;
+                outline: 0;
+                &::-webkit-input-placeholder {
+                    color: $maincolor;
+                }
+            }
+            direction: ltr;
+        }
+        svg {
+            width: 30px;
+            // margin: 0 5px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+            // .cls-1 {
+            //     fill: #f00
+            // }
+            // .cls-2 {
+            //     fill: none;
+            //     stroke: #f00;
+            //     stroke-linecap: round;
+            //     stroke-miterlimit: 10;
+            //     stroke-width: 0.83px;
+            // }
+        }
+        .select-group {
+            direction: ltr;
+            width: calc(100% - 40px);
+            display: inline-block;
+            select {
+                appearance: none;
+                display: inline-block;
+                width: calc(100% / 3 - (10px / 2));
+                background-color: #fff;
+                border-radius: 0;
+                padding: 10px;
+                margin-right: 5px;
+                cursor: pointer;
+                font-size: 1rem;
+                &:focus {
+                    border-color: $maincolor;
+                    outline: 0;
+                }
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .btn-groups {
+        letter-spacing: 0;
+        margin-top: 40px;
+        .btn {
+            font-size: 1rem;
+            display: inline-block;
+            width: calc(100% / 2 - 5px);
+            &:last-child {
+                margin-left: 10px;
+            }
+        }
+    }
+}
