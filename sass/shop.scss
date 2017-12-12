@@ -4,6 +4,7 @@
 @import '_member.scss';
 @import '_faq.scss';
 @import '_login.scss';
+@import '_shoplist.scss';
 body {
     // background-color: #f00;
     color: #000;
@@ -71,6 +72,7 @@ p {
             color: $maincolor;
         }
         svg {
+            display: inline-block;
             width: 30px;
             fill: $maincolor;
         }

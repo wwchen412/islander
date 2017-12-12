@@ -164,7 +164,8 @@ a {
   margin: 0 auto; }
 
 .islander-row {
-  font-size: 0; }
+  font-size: 0;
+  letter-spacing: 0; }
   .islander-row > * {
     vertical-align: top; }
   .islander-row .islander-4 {
@@ -188,6 +189,25 @@ a {
         width: 100%; }
         .islander-row .islander-6:nth-child(2n) {
           margin-left: 0; } }
+  .islander-row .islander-3 {
+    display: inline-block;
+    width: calc(100% / 4 - (15px * 3)/ 4);
+    margin-bottom: 15px;
+    margin-right: 15px; }
+    .islander-row .islander-3:nth-child(4n) {
+      margin-right: 0; }
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      .islander-row .islander-3 {
+        width: 100%;
+        margin-right: 0; } }
+  .islander-row .islander-9 {
+    display: inline-block;
+    width: calc((100% / 4 * 3) - 15px);
+    margin-bottom: 15px; }
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      .islander-row .islander-9 {
+        width: 100%;
+        margin-left: 0; } }
   .islander-row .islander-5 {
     display: inline-block;
     width: calc(100% / 5 - 31px);
@@ -555,6 +575,123 @@ a {
       width: 100%;
       font-size: 0.9rem; }
 
+.shop-banner {
+  margin-top: -110px;
+  max-height: 450px;
+  overflow: hidden; }
+
+.shop-list .item-list > li > h3 {
+  border-top: 1px solid #855E00;
+  border-bottom: 1px solid #855E00;
+  padding: .8rem 0; }
+
+.shop-list .item-list > li ul {
+  margin-left: 30px; }
+
+.shop-list .item-list > li li {
+  padding: 10px 0;
+  position: relative; }
+  .shop-list .item-list > li li.active:before, .shop-list .item-list > li li:hover:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    background: 50% 50% url("../img/coffeeIcon1.svg") no-repeat; }
+
+.shop-list a {
+  font-size: 1rem;
+  color: #855E00; }
+  .shop-list a p {
+    color: #855E00; }
+
+.items .btn-cart {
+  border-radius: 50%; }
+
+.items button {
+  width: 50px;
+  height: 50px;
+  padding: 12.5px; }
+  .items button img {
+    width: 25px;
+    height: 25px; }
+
+.shop-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 100; }
+  .shop-lightbox .lightbox-content {
+    height: 100%; }
+  .shop-lightbox .lightBlock {
+    max-width: 960px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid #855E00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    overflow: hidden; }
+    .shop-lightbox .lightBlock > div {
+      padding: 20px; }
+    .shop-lightbox .lightBlock .title {
+      background-color: #855E00;
+      padding: 20px;
+      font-family: noto sans; }
+      .shop-lightbox .lightBlock .title h3 {
+        font-size: 1rem;
+        color: #fff; }
+    .shop-lightbox .lightBlock .content {
+      background-color: #fff; }
+      .shop-lightbox .lightBlock .content p {
+        color: #855E00;
+        font-family: noto sans; }
+    .shop-lightbox .lightBlock .price {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .shop-lightbox .lightBlock .price input {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        border: 0;
+        border: 1px solid #855E00;
+        font-size: 1rem;
+        text-align: center;
+        padding: 5px; }
+        .shop-lightbox .lightBlock .price input:focus {
+          outline-offset: 0; }
+      .shop-lightbox .lightBlock .price a {
+        font-size: 1rem;
+        color: #fff;
+        margin-left: 10px;
+        padding: 5px 15px; }
+    .shop-lightbox .lightBlock .close {
+      padding: 10px;
+      position: absolute;
+      right: 10px;
+      top: 7.5px;
+      color: #fff;
+      cursor: pointer; }
+
 body {
   color: #000; }
 
@@ -604,6 +741,7 @@ p {
   .footer li p {
     color: #855E00; }
   .footer li svg {
+    display: inline-block;
     width: 30px;
     fill: #855E00; }
 

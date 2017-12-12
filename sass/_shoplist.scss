@@ -1,0 +1,133 @@
+.shop-banner {
+    margin-top: -110px;
+    max-height: 450px;
+    overflow: hidden;
+}
+
+.shop-list {
+    .item-list {
+        &>li {
+            &>h3 {
+                border-top: 1px solid $maincolor;
+                border-bottom: 1px solid $maincolor;
+                padding: .8rem 0;
+            }
+            ul {
+                margin-left: 30px;
+            }
+            li {
+                padding: 10px 0;
+                position: relative;
+                &.active,
+                &:hover {
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: -20px;
+                        top: 15px;
+                        width: 15px;
+                        height: 15px;
+                        background: 50% 50% url('../img/coffeeIcon1.svg') no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    a {
+        font-size: 1rem;
+        color: $maincolor;
+        p {
+            color: $maincolor;
+        }
+    }
+}
+
+.items {
+    .btn-cart {
+        border-radius: 50%;
+    }
+    button {
+        width: 50px;
+        height: 50px;
+        padding: 12.5px;
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+// 光箱
+.shop-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#fff, .6);
+    z-index: 100;
+    .lightbox-content {
+        height: 100%;
+        // overflow-x: scroll;
+    }
+    .lightBlock {
+        max-width: 960px;
+        width: 100%;
+        margin: auto;
+        border: 1px solid $maincolor;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        overflow: hidden;
+        &>div {
+            padding: 20px;
+        }
+        .title {
+            background-color: $maincolor;
+            padding: 20px;
+            font-family: noto sans;
+            h3 {
+                font-size: 1rem;
+                color: #fff;
+            }
+        }
+        .content {
+            background-color: #fff;
+            p {
+                color: $maincolor;
+                font-family: noto sans;
+            }
+        }
+        .price {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 0;
+            justify-content: space-between;
+            align-items: center;
+            input {
+                @include custom_select;
+                border: 1px solid $maincolor;
+                font-size: 1rem;
+                text-align: center;
+                padding: 5px;
+            }
+            a {
+                font-size: 1rem;
+                color: #fff;
+                margin-left: 10px;
+                padding: 5px 15px;
+            }
+        }
+        .close {
+            padding: 10px;
+            position: absolute;
+            right: 10px;
+            top: 7.5px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
