@@ -225,17 +225,17 @@ a {
     vertical-align: top; }
   .islander-row .islander-4 {
     display: inline-block;
-    width: calc(100% / 3 - 60px); }
-    .islander-row .islander-4:nth-child(2n) {
+    width: calc(100% / 3 - 60px / 3); }
+    .islander-row .islander-4:nth-child(3n+2) {
       margin: 0 30px; }
     @media screen and (min-width: 300px) and (max-width: 768px) {
       .islander-row .islander-4 {
         width: 100%; }
-        .islander-row .islander-4:nth-child(2n) {
+        .islander-row .islander-4:nth-child(3n+2) {
           margin: 0; } }
   .islander-row .islander-6 {
     display: inline-block;
-    width: calc(100% / 2 - 15px);
+    width: calc(100% / 2 - 15px / 2);
     margin-bottom: 15px; }
     .islander-row .islander-6:nth-child(2n) {
       margin-left: 15px; }

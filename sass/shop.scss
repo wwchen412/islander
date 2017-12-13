@@ -5,6 +5,7 @@
 @import '_faq.scss';
 @import '_login.scss';
 @import '_shoplist.scss';
+@import '_shipping.scss';
 body {
     // background-color: #f00;
     color: #000;
@@ -20,6 +21,10 @@ p {
 
 .text-center {
     text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 #wrap {
@@ -71,10 +76,14 @@ p {
         p {
             color: $maincolor;
         }
+        img,
         svg {
             display: inline-block;
             width: 30px;
             fill: $maincolor;
+            &.cls-1 {
+                fill: $maincolor;
+            }
         }
     }
     .copyright {
