@@ -3,13 +3,22 @@
     font-family: noto sans;
     .shipping-form {
         border: 1px solid $maincolor;
+        .islander-row {
+            @include range-width(769px, 0) {
+                display: flex;
+            }
+        }
         .islander-row>div {
             padding: 10px 30px;
             margin-bottom: 0;
+            margin: 0;
         }
     }
     .form-title {
         background-color: $maincolor;
+        @include range-width(300px, 768px) {
+            display: none;
+        }
         p {
             color: #fff;
             text-align: center;
@@ -20,20 +29,45 @@
         &:last-child {
             border: 0;
         }
-        .content {
-            display: inline-block;
-            vertical-align: top;
+        .content-group {
+            &>* {
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        .num {
+            text-align: right;
+            margin-left: auto;
+            font-size: .9rem;
+            align-self: flex-end;
+            // @include range-width(300px, 768px) {
+            //     margin-left: 0;
+            //     margin-top: 10px;
+            // }
+            input {
+                border: 1px solid $maincolor;
+                padding: 5px 0;
+                text-align: center;
+                max-width: 50px;
+                margin-left: 10px;
+            }
         }
         p {
             font-size: 0.9rem;
         }
         img {
             max-width: 70px;
+            max-height: 70px;
             display: inline-block;
         }
         .islander-9 {
-            @include range-width(768px, 0) {
+            @include range-width(769px, 0) {
                 border-right: 1px solid $maincolor;
+            }
+        }
+        .islander-3 {
+            @include range-width(769px, 0) {
+                align-self: center;
             }
         }
     }
@@ -146,7 +180,7 @@
             font-size: 0.9rem;
             svg {
                 width: 20px;
-                vertical-align: baseline;
+                vertical-align: middle;
                 margin-right: 5px;
             }
             svg,

@@ -717,11 +717,20 @@ a {
   font-family: noto sans; }
   .shipping .shipping-form {
     border: 1px solid #855E00; }
+    @media screen and (min-width: 769px) {
+      .shipping .shipping-form .islander-row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
     .shipping .shipping-form .islander-row > div {
       padding: 10px 30px;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      margin: 0; }
   .shipping .form-title {
     background-color: #855E00; }
+    @media screen and (max-width: 768px) and (min-width: 300px) {
+      .shipping .form-title {
+        display: none; } }
     .shipping .form-title p {
       color: #fff;
       text-align: center; }
@@ -729,17 +738,34 @@ a {
     border-bottom: 1px solid #855E00; }
     .shipping .form-list:last-child {
       border: 0; }
-    .shipping .form-list .content {
+    .shipping .form-list .content-group > * {
       display: inline-block;
       vertical-align: top; }
+    .shipping .form-list .num {
+      text-align: right;
+      margin-left: auto;
+      font-size: .9rem;
+      -ms-flex-item-align: end;
+      align-self: flex-end; }
+      .shipping .form-list .num input {
+        border: 1px solid #855E00;
+        padding: 5px 0;
+        text-align: center;
+        max-width: 50px;
+        margin-left: 10px; }
     .shipping .form-list p {
       font-size: 0.9rem; }
     .shipping .form-list img {
       max-width: 70px;
+      max-height: 70px;
       display: inline-block; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 769px) {
       .shipping .form-list .islander-9 {
         border-right: 1px solid #855E00; } }
+    @media screen and (min-width: 769px) {
+      .shipping .form-list .islander-3 {
+        -ms-flex-item-align: center;
+        align-self: center; } }
   .shipping .send-form .islander-row > div {
     margin-bottom: 0; }
   .shipping .send-form .islander-4 {
@@ -842,7 +868,7 @@ a {
     font-size: 0.9rem; }
     .shipping .pay button svg {
       width: 20px;
-      vertical-align: baseline;
+      vertical-align: middle;
       margin-right: 5px; }
     .shipping .pay button svg,
     .shipping .pay button .cls-1 {
