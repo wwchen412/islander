@@ -641,6 +641,10 @@ a {
     transform: translate(-50%, -50%);
     border-radius: 5px;
     overflow: hidden; }
+    @media screen and (max-width: 768px) and (min-width: 300px) {
+      .shop-lightbox .lightBlock {
+        max-width: 80%;
+        max-height: 80%; } }
     .shop-lightbox .lightBlock > div {
       padding: 20px; }
     .shop-lightbox .lightBlock .title {
@@ -655,6 +659,14 @@ a {
       .shop-lightbox .lightBlock .content p {
         color: #855E00;
         font-family: noto sans; }
+      @media screen and (max-width: 768px) and (min-width: 300px) {
+        .shop-lightbox .lightBlock .content p {
+          max-height: 200px;
+          overflow: auto; }
+        .shop-lightbox .lightBlock .content img {
+          width: auto;
+          max-height: 150px;
+          margin: auto; } }
     .shop-lightbox .lightBlock .price {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -667,7 +679,16 @@ a {
       justify-content: space-between;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+      border-top: 1px solid #855E00; }
+      @media screen and (max-width: 768px) and (min-width: 300px) {
+        .shop-lightbox .lightBlock .price {
+          padding: 10px 20px;
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          background-color: #fff; } }
       .shop-lightbox .lightBlock .price input {
         appearance: none;
         -moz-appearance: none;
@@ -685,10 +706,10 @@ a {
         margin-left: 10px;
         padding: 5px 15px; }
     .shop-lightbox .lightBlock .close {
-      padding: 10px;
+      padding: 20px;
       position: absolute;
-      right: 10px;
-      top: 7.5px;
+      right: 0px;
+      top: 0px;
       color: #fff;
       cursor: pointer; }
 

@@ -82,6 +82,11 @@
         transform: translate(-50%, -50%);
         border-radius: 5px;
         overflow: hidden;
+        @include range-width(300px,
+        768px) {
+            max-width: 80%;
+            max-height: 80%;
+        }
         &>div {
             padding: 20px;
         }
@@ -100,6 +105,18 @@
                 color: $maincolor;
                 font-family: noto sans;
             }
+            @include range-width(300px,
+            768px) {
+                p {
+                    max-height: 200px;
+                    overflow: auto;
+                }
+                img {
+                    width: auto;
+                    max-height: 150px;
+                    margin: auto;
+                }
+            }
         }
         .price {
             display: flex;
@@ -107,6 +124,16 @@
             padding: 10px 0;
             justify-content: space-between;
             align-items: center;
+            border-top: 1px solid $maincolor;
+            @include range-width(300px,
+            768px) {
+                padding: 10px 20px;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                background-color: #fff;
+            }
             input {
                 @include custom_select;
                 border: 1px solid $maincolor;
@@ -122,10 +149,10 @@
             }
         }
         .close {
-            padding: 10px;
+            padding: 20px;
             position: absolute;
-            right: 10px;
-            top: 7.5px;
+            right: 0px;
+            top: 0px;
             color: #fff;
             cursor: pointer;
         }
