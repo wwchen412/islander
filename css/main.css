@@ -291,6 +291,16 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
+.justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.align-item-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 .btn {
   -webkit-appearance: none;
   -moz-appearance: none;
