@@ -78,6 +78,8 @@ header {
       height: 1rem;
       background: url("../img/coffeeIcon1.svg");
       background-repeat: no-repeat; }
+    header nav li img {
+      width: 30px; }
   header ul {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;

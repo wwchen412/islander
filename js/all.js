@@ -145,3 +145,12 @@ $(function() {
         })
     })
 })
+
+$(function() {
+
+    if ($('header').hasClass('header-index') === false) {
+        $('header').load('shop-index.html header');
+    } else {
+
+    }
+})
