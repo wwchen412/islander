@@ -10,9 +10,9 @@
               background-color: #fff;
               box-sizing: border-box;
               margin-right: 15px;
+              margin-bottom: 15px;
               @include range-width(300px, 768px) {
                   width: calc(100% / 2 - (15px / 2));
-                  margin-bottom: 15px;
                   &:nth-child(2n) {
                       margin-right: 0;
                   }
@@ -52,5 +52,17 @@
                   }
               }
           }
+      }
+  }
+  
+  .news-bg {
+      background: url('../img/newsbg.png') no-repeat;
+      background-size: cover;
+      padding: 40px 0;
+      min-height: 100vh;
+      h2 {
+          margin: 30px;
+          text-align: center;
+          color: #fff;
       }
   }
