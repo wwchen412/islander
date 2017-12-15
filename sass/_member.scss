@@ -96,6 +96,7 @@
 
 // 會員資訊
 .member {
+    min-height: calc(100vh - 110px - 127px - 99px);
     .input-groups {
         font-size: 0;
         letter-spacing: 0;
