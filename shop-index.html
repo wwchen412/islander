@@ -208,8 +208,10 @@
                                 </table>
                             </div>
                             <div class="item">
-                                <h2 class="text-center mb-3 border-bottom pb-3">
-                                    <img src="img/sgs.svg" alt="" class="icon svg white-svg">點選觀看SGS認證書</h2>
+                                <h2 class="text-center pb-3 sgsbtn">
+                                    <img src="img/sgs.svg" alt="" class="icon svg white-svg">點選觀看SGS認證書
+                                </h2>
+                                <div class="hr-line mb3"></div>
                                 <ul class="sgs-list islander-row">
                                     <li class="islander-3"><img src="img/sgs-list.png" alt="" class="img-fluid"></li>
                                     <li class="islander-3"><img src="img/sgs-list_1.png" alt="" class="img-fluid"></li>
@@ -238,6 +240,7 @@
     </script>
     <script>
         window.addEventListener("scroll", fadeIn);
+
         var appear = document.querySelectorAll('.appear');
         var screenHalf = screen.height / 2;
 
@@ -252,6 +255,12 @@
                 }
             }
         }
+        $(function() {
+            $('.sgsbtn').click(function() {
+                $(this).addClass('active');
+                $(this).siblings('.sgs-list').delay(1000).slideDown();
+            })
+        })
     </script>
 
 

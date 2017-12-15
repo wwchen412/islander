@@ -315,3 +315,33 @@ section {
         }
     }
 }
+
+.sgsbtn {
+    cursor: pointer;
+    position: relative;
+    margin: 40px 0;
+    &:hover {
+        filter: drop-shadow( 0 0 10px rgba(#fff, .5));
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        background-color: #fff;
+        margin: 0 auto;
+        width: 0;
+        transition: 1s;
+    }
+    &.active {
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+.sgs-list {
+    display: none;
+}

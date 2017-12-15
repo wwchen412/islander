@@ -1161,3 +1161,31 @@ section {
       -webkit-transform: translateY(-7rem);
       -ms-transform: translateY(-7rem);
       transform: translateY(-7rem); } }
+
+.sgsbtn {
+  cursor: pointer;
+  position: relative;
+  margin: 40px 0; }
+  .sgsbtn:hover {
+    -webkit-filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); }
+  .sgsbtn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 1px;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 0;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
+  .sgsbtn.active:after {
+    width: 100%; }
+
+.sgs-list {
+  display: none; }
