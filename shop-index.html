@@ -73,7 +73,7 @@
                 <div class="black-wrap">
                     <div class="container">
                         <div class="section-content">
-                            <div class="item transform-offset-5">
+                            <div class="item appear transform-offset-5 fadeIn">
                                 <div class="item-img">
                                     <img src="img/item.png" alt="" class="img-fluid">
                                 </div>
@@ -85,7 +85,7 @@
                                 </div>
 
                             </div>
-                            <div class="item transform-offset-7">
+                            <div class="item appear transform-offset-7">
 
                                 <div class="item-content">
                                     <h2 class="mb-3">可那 得獎精品莊園咖啡豆</h2>
@@ -104,7 +104,7 @@
             <section class="section3">
                 <div class="black-wrap">
                     <div class="container">
-                        <div class="text-center d-flex justify-center align-item-center section-content">
+                        <div class="text-center d-flex justify-center align-item-center section-content appear">
                             <h2 class="mb-3">最經典的選擇</h2>
                             <p>入口前，傳來一陣麝香葡萄香氣，深呼吸，彷彿置身熱帶花園，茉莉、香草、野菊…。觸碰舌尖，清爽明亮的萊姆口感，入喉後轉換成莓果甘味。溫度略降，洋溢堅果及巧克力香氣，即使放涼，仍顯細緻甘醇，不酸澀。</p>
                         </div>
@@ -115,7 +115,7 @@
                 <div class="black-wrap">
                     <div class="container">
                         <div class="section-content">
-                            <div class="item">
+                            <div class="item appear">
                                 <div class="item-img">
                                     <img src="img/item_3.png" alt="" class="img-fluid">
                                 </div>
@@ -127,7 +127,7 @@
                                 </div>
 
                             </div>
-                            <div class="item">
+                            <div class="item appear">
 
                                 <div class="item-content">
                                     <h2 class="mb-3">可那 得獎精品莊園咖啡豆</h2>
@@ -139,7 +139,7 @@
                                     <img src="img/item_4.png" alt="" class="img-fluid">
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item appear">
                                 <div class="item-img">
                                     <img src="img/item_5.png" alt="" class="img-fluid">
                                 </div>
@@ -151,7 +151,7 @@
                                 </div>
 
                             </div>
-                            <div class="item">
+                            <div class="item appear">
 
                                 <div class="item-content">
                                     <h2 class="mb-3">可那 得獎精品莊園咖啡豆</h2>
@@ -163,7 +163,7 @@
                                     <img src="img/item_6.png" alt="" class="img-fluid">
                                 </div>
                             </div>
-                            <div class="item" style="padding:20px 0;">
+                            <div class="item appear" style="padding:20px 0;">
                                 <h2 class="text-center mb-3 border-bottom pb-3">
                                     <img src="img/ingred.svg" alt="" class="icon svg white-svg">成分・原材料</h2>
                                 <table class="table">
@@ -217,7 +217,7 @@
                                     <li class="islander-3"><img src="img/sgs-list_3.png" alt="" class="img-fluid"></li>
                                 </ul>
                                 <a href="" class="btn more-item">
-                                    <img src="img/coffeeIcon1.svg" alt="" style="width:15px;vertical-align:middle;">更多組合</a>
+                                    <img src="img/coffeeIcon1.svg" alt="" style="width:15px;vertical-align:middle;margin-right:10px;">更多組合</a>
                             </div>
                         </div>
                     </div>
@@ -236,6 +236,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
     <script src="js/all.js ">
     </script>
+    <script>
+        window.addEventListener("scroll", fadeIn);
+        var appear = document.querySelectorAll('.appear');
+        var screenHalf = screen.height / 2;
+
+        function fadeIn() {
+            var windowH = window.pageYOffset;
+            for (i = 0; i < appear.length; i++) {
+                var appearT = appear[i].offsetTop;
+                var fadeActive = appearT - screenHalf;
+
+                if (windowH >= fadeActive) {
+                    appear[i].classList.add('fadeIn');
+                }
+            }
+        }
+    </script>
+
+
 </body>
 
 </html>

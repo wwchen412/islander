@@ -145,6 +145,7 @@ section {
         font-size: 0;
         letter-spacing: 0;
         margin: 0 auto;
+        transition: .3s;
         @include range-width(300px,
         768px) {
             display: flex;
@@ -253,6 +254,43 @@ section {
                 th {
                     padding: 15px 20px;
                 }
+            }
+        }
+    }
+    .appear {
+        opacity: 0;
+        transition: .5s;
+        &.fadeIn {
+            opacity: 1;
+            &>div {
+                &:nth-child(1) {
+                    opacity: 0;
+                    animation: fadeLeft 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                    animation: fadeRight 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+                }
+            }
+        }
+        @keyframes fadeLeft {
+            0% {
+                transform: translateX(-150px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeRight {
+            0% {
+                transform: translateX(150px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
             }
         }
     }
