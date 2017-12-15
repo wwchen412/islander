@@ -593,7 +593,8 @@ a {
 .shop-list .item-list > li > h3 {
   border-top: 1px solid #855E00;
   border-bottom: 1px solid #855E00;
-  padding: .8rem 0; }
+  padding: .8rem 0;
+  cursor: pointer; }
 
 .shop-list .item-list > li ul {
   margin-left: 30px; }
@@ -613,12 +614,15 @@ a {
 
 .shop-list a {
   font-size: 1rem;
-  color: #855E00; }
+  color: #855E00;
+  display: block; }
   .shop-list a p {
     color: #855E00; }
 
 .items .btn-cart {
   border-radius: 50%; }
+  .items .btn-cart .svg .cls-1 {
+    fill: #fff; }
 
 .items button {
   width: 50px;
@@ -629,6 +633,7 @@ a {
     height: 25px; }
 
 .shop-lightbox {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;

@@ -11,6 +11,7 @@
                 border-top: 1px solid $maincolor;
                 border-bottom: 1px solid $maincolor;
                 padding: .8rem 0;
+                cursor: pointer;
             }
             ul {
                 margin-left: 30px;
@@ -37,6 +38,7 @@
     a {
         font-size: 1rem;
         color: $maincolor;
+        display: block;
         p {
             color: $maincolor;
         }
@@ -46,6 +48,11 @@
 .items {
     .btn-cart {
         border-radius: 50%;
+        .svg {
+            .cls-1 {
+                fill: #fff;
+            }
+        }
     }
     button {
         width: 50px;
@@ -60,6 +67,7 @@
 
 // 光箱
 .shop-lightbox {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;

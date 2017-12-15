@@ -322,6 +322,55 @@ a {
   .btn-gray:hover, .btn-gray:active {
     background-color: #666666; }
 
+.news-block {
+  margin-top: 100px; }
+  .news-block ul {
+    font-size: 0;
+    letter-spacing: 0; }
+    .news-block ul li {
+      display: inline-block;
+      width: calc(100% / 4 - (15px * 3 / 4));
+      background-color: #fff;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-right: 15px; }
+      @media screen and (max-width: 768px) and (min-width: 300px) {
+        .news-block ul li {
+          width: calc(100% / 2 - (15px / 2));
+          margin-bottom: 15px; }
+          .news-block ul li:nth-child(2n) {
+            margin-right: 0; } }
+      .news-block ul li:nth-child(4n) {
+        margin-right: 0; }
+      .news-block ul li .img-wrap {
+        width: 100%;
+        height: 0;
+        padding-bottom: 65%;
+        overflow: hidden; }
+      .news-block ul li article {
+        text-shadow: none;
+        padding: 20px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif; }
+        .news-block ul li article h4 {
+          font-size: 1rem;
+          color: #000; }
+        .news-block ul li article p {
+          color: #000;
+          line-height: 130%;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          display: -moz-box;
+          -moz-line-clamp: 3;
+          -moz-box-orient: vertical;
+          display: box;
+          line-clamp: 3;
+          box-orient: vertical;
+          overflow: hidden; }
+
 body,
 html {
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3); }
@@ -344,7 +393,7 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  height: 500vh;
+  height: 700vh;
   width: 100%;
   overflow: hidden;
   -webkit-transition: -webkit-transform 1s ease;
@@ -364,15 +413,19 @@ html {
   .section > * {
     text-align: center; }
   .section > div {
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
     .section > div h2 {
       font-weight: bold; }
     .section > div .more img {
-      margin-top: 20vh;
+      margin-top: 100px;
       width: 150px; }
 
 .section-scroll {
-  height: calc(100% / 5); }
+  height: calc(100% / 7); }
+  @media screen and (max-width: 768px) and (min-width: 300px) {
+    .section-scroll {
+      height: auto; } }
 
 .section1 {
   position: relative;
@@ -565,21 +618,36 @@ html {
   #scrollbar .dot1 {
     top: 30%; }
     #scrollbar .dot1.active:after {
-      content: 'Islander';
+      content: 'Latest news';
       opacity: 1; }
   #scrollbar .dot2 {
     top: calc(30% + 60px); }
     #scrollbar .dot2.active:after {
+      content: 'Islander';
+      opacity: 1; }
+  #scrollbar .dot3 {
+    top: calc(30% + 120px); }
+    #scrollbar .dot3.active:after {
       content: 'Story';
       opacity: 1; }
   #scrollbar .dot4 {
-    top: calc(30% + 120px); }
+    top: calc(30% + 180px); }
     #scrollbar .dot4.active:after {
-      content: 'Shop';
+      content: 'Coffee Academy';
       opacity: 1; }
   #scrollbar .dot5 {
-    top: calc(30% + 180px); }
+    top: calc(30% + 240px); }
     #scrollbar .dot5.active:after {
+      content: 'Shop';
+      opacity: 1; }
+  #scrollbar .dot6 {
+    top: calc(30% + 300px); }
+    #scrollbar .dot6.active:after {
+      content: 'Contact';
+      opacity: 1; }
+  #scrollbar .dot7 {
+    top: calc(30% + 360px); }
+    #scrollbar .dot7.active:after {
       content: 'Contact';
       opacity: 1; }
 

@@ -41,15 +41,21 @@ function scrollLogic() {
         scrollAnimate(-(100 / slides.length) * 4);
     }
     // SLIDE5  --> SLIDE 6
-    // else if (counter == 5 && scrollDirection == "down") {
-    //     scrollAnimate(-(100 / slides.length) * 5);
-    // }
-
+    else if (counter == 5 && scrollDirection == "down") {
+        scrollAnimate(-(100 / slides.length) * 5);
+    } else if (counter == 6 && scrollDirection == "down") {
+        scrollAnimate(-(100 / slides.length) * 6);
+    }
     //---------------- UP TRANSITIONS ----------------------------
+
     // SLIDE 6 --> SLIDE 5
-    // else if (counter == 6 && scrollDirection == "up") {
-    //     scrollAnimate(-(100 / slides.length) * 4);
-    // }
+    else if (counter == 7 && scrollDirection == "up") {
+        scrollAnimate(-(100 / slides.length) * 5);
+    }
+    // SLIDE 5 --> SLIDE 4
+    else if (counter == 6 && scrollDirection == "up") {
+        scrollAnimate(-(100 / slides.length) * 4);
+    }
     // SLIDE 4 --> SLIDE 3
     else if (counter == 5 && scrollDirection == "up") {
         scrollAnimate(-(100 / slides.length) * 3);
@@ -103,6 +109,10 @@ function scrollLogic() {
     if (counter == 6) {
         $('#scrollbar').fadeIn().find('.dot').eq(4).addClass('active').siblings().removeClass('active');
         $('nav li').eq(5).addClass('active').siblings().removeClass('active');
+    }
+    if (counter == 7) {
+        $('#scrollbar').fadeIn().find('.dot').eq(5).addClass('active').siblings().removeClass('active');
+        $('nav li').eq(6).addClass('active').siblings().removeClass('active');
     }
 };
 
@@ -298,3 +308,75 @@ jQuery('img.svg').each(function() {
     }, 'xml');
 
 });
+
+// fadein動畫
+window.addEventListener("scroll", fadeIn);
+
+var appear = document.querySelectorAll('.appear');
+var screenHalf = screen.height / 2;
+
+function fadeIn() {
+    var windowH = window.pageYOffset;
+    for (i = 0; i < appear.length; i++) {
+        var appearT = appear[i].offsetTop;
+        var fadeActive = appearT - screenHalf;
+
+        if (windowH >= fadeActive) {
+            appear[i].classList.add('fadeIn');
+        }
+    }
+}
+$(function() {
+    $('.sgsbtn').click(function() {
+        $(this).addClass('active');
+        $(this).siblings('.sgs-list').delay(1000).slideDown();
+    })
+})
+
+// 商品展開光箱購物車
+var shopMore = document.querySelectorAll('.shop-more');
+var sLightbox = document.querySelector('.shop-lightbox');
+
+function shopLightbox() {
+    event.preventDefault();
+    event.stopPropagation();
+    // 取得商品資料
+    var boxContents = {
+        title: this.dataset.title,
+        img: this.dataset.src,
+        content: this.dataset.content,
+        price: parseInt(this.dataset.price)
+    };
+
+    $('.box-img').attr('src', boxContents.img);
+    $('.box-title h3').text(boxContents.title);
+    $('.box-content').text(boxContents.content);
+    // 光箱出現
+    sLightbox.style.display = 'block';
+    // 關閉事件
+    var close_content = document.querySelector('.lightbox-content');
+    var close = document.querySelector('.shop-lightbox .close');
+    close_content.addEventListener('click', closeBox, false);
+    close.addEventListener('click', closeBox, false);
+}
+// 關閉事件
+function closeBox() {
+    event.stopPropagation();
+    $('.lightBlock').click(function() {
+        event.stopPropagation();
+    })
+    sLightbox.style.display = 'none';
+}
+
+// 點擊展開
+for (i = 0; i < shopMore.length; i++) {
+    shopMore[i].addEventListener('click', shopLightbox, false);
+}
+// 商品側邊展開
+$(function() {
+    $('.shop-list .item-list h3').each(function() {
+        $(this).click(function() {
+            $(this).siblings('ul').slideToggle();
+        })
+    })
+})

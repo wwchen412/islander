@@ -239,28 +239,6 @@
     <script src="js/all.js ">
     </script>
     <script>
-        window.addEventListener("scroll", fadeIn);
-
-        var appear = document.querySelectorAll('.appear');
-        var screenHalf = screen.height / 2;
-
-        function fadeIn() {
-            var windowH = window.pageYOffset;
-            for (i = 0; i < appear.length; i++) {
-                var appearT = appear[i].offsetTop;
-                var fadeActive = appearT - screenHalf;
-
-                if (windowH >= fadeActive) {
-                    appear[i].classList.add('fadeIn');
-                }
-            }
-        }
-        $(function() {
-            $('.sgsbtn').click(function() {
-                $(this).addClass('active');
-                $(this).siblings('.sgs-list').delay(1000).slideDown();
-            })
-        })
     </script>
 
 

@@ -1,6 +1,8 @@
             @import '_lightbox.scss';
             @import '_header.scss';
             @import '_grid.scss';
+            @import '_mixin.scss';
+            @import '_news.scss';
             body,
             html {
                 text-shadow: 0px 0px 1px rgba(#000, .3);
@@ -27,7 +29,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                height: 500vh;
+                height: 700vh;
                 width: 100%;
                 overflow: hidden;
                 transition: transform 1s ease;
@@ -46,12 +48,13 @@
                 }
                 &>div {
                     text-align: center;
+                    width: 100%;
                     h2 {
                         font-weight: bold;
                     }
                     .more {
                         img {
-                            margin-top: 20vh;
+                            margin-top: 100px;
                             width: 150px;
                         }
                     }
@@ -59,7 +62,10 @@
             }
             
             .section-scroll {
-                height: calc(100% / 5);
+                height: calc(100% / 7);
+                @include range-width(300px, 768px) {
+                    height: auto;
+                }
             }
             
             .section1 {
@@ -267,7 +273,7 @@
                     top: 30%;
                     &.active {
                         &:after {
-                            content: 'Islander';
+                            content: 'Latest news';
                             opacity: 1;
                         }
                     }
@@ -276,22 +282,31 @@
                     top: calc(30% + 60px);
                     &.active {
                         &:after {
+                            content: 'Islander';
+                            opacity: 1;
+                        }
+                    }
+                }
+                .dot3 {
+                    top: calc(30% + 120px);
+                    &.active {
+                        &:after {
                             content: 'Story';
                             opacity: 1;
                         }
                     }
                 }
-                // .dot3 {
-                //     top: calc(30% + 120px);
-                //     &.active {
-                //         &:after {
-                //             content: 'Coffee Academy';
-                //             opacity: 1;
-                //         }
-                //     }
-                // }
                 .dot4 {
-                    top: calc(30% + 120px);
+                    top: calc(30% + 180px);
+                    &.active {
+                        &:after {
+                            content: 'Coffee Academy';
+                            opacity: 1;
+                        }
+                    }
+                }
+                .dot5 {
+                    top: calc(30% + 240px);
                     &.active {
                         &:after {
                             content: 'Shop';
@@ -299,8 +314,8 @@
                         }
                     }
                 }
-                .dot5 {
-                    top: calc(30% + 180px);
+                .dot6 {
+                    top: calc(30% + 300px);
                     &.active {
                         &:after {
                             content: 'Contact';
@@ -308,15 +323,15 @@
                         }
                     }
                 }
-                // .dot6 {
-                //     top: calc(20% + 300px);
-                //     &.active {
-                //         &:after {
-                //             content: 'Contact';
-                //             opacity: 1;
-                //         }
-                //     }
-                // }
+                .dot7 {
+                    top: calc(30% + 360px);
+                    &.active {
+                        &:after {
+                            content: 'Contact';
+                            opacity: 1;
+                        }
+                    }
+                }
             }
             
             footer {
