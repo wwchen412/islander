@@ -167,13 +167,19 @@ $(function() {
 
         if (nationText !== '台灣') {
             $('.county').attr('disabled', true);
+            $('.county').attr('required', false);
             $('.country').attr('disabled', true);
+            $('.country').attr('required', false);
             $('.district').attr('disabled', true);
+            $('.district').attr('required', false);
 
         } else {
             $('.county').attr('disabled', false);
             $('.country').attr('disabled', false);
             $('.district').attr('disabled', false);
+            $('.county').attr('required', true);
+            $('..country').attr('required', true);
+            $('.district').attr('required', true);
         }
     })
 

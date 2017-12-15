@@ -918,6 +918,10 @@ a {
     .shipping .pay button .cls-1 {
       fill: #fff; }
 
+form input.error,
+form select.error {
+  border: 1px solid #A83542 !important; }
+
 .news-block {
   margin-top: 100px; }
   .news-block ul {

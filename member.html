@@ -70,90 +70,92 @@
                 </ul>
             </div>
         </div>
-        <div class="member-block">
-            <div class="container">
-                <div class="islander-row" style="padding:0 30px;">
-                    <div class="islander-6">
-                        <h3 class="py border-bottom mt-3">基本資料</h3>
-                        <div class="basic-form">
-                            <div class="input-groups">
-                                <div class="input-group">
-                                    <label for="">
-                                    <input type="text" placeholder="請輸入姓名"> 
+        <form action="" id="member-form">
+            <div class="member-block">
+                <div class="container">
+                    <div class="islander-row" style="padding:0 30px;">
+                        <div class="islander-6">
+                            <h3 class="py border-bottom mt-3">基本資料</h3>
+                            <div class="basic-form">
+                                <div class="input-groups">
+                                    <div class="input-group">
+                                        <label for="">
+                                    <input type="text" placeholder="請輸入姓名" required> 
                                     <img src="img/member.svg" alt="" class="svg icon">
                                  
                                 </label>
-                                </div>
-                                <div class="input-group">
-                                    <label for="">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">
                                    <input type="date">
                                    <img src="img/birth.svg" alt="" class="svg icon">
                                 </label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="input-group">
-                                <label for="">
-                                     <input type="tel" placeholder="請輸入電話">
+                                <div class="input-group">
+                                    <label for="">
+                                     <input type="tel" placeholder="請輸入電話" required>
                                      <img src="img/phone.svg" alt="" class="svg icon" >
                                 </label>
-                            </div>
-                            <div class="input-group">
-                                <label for="">
+                                </div>
+                                <div class="input-group">
+                                    <label for="">
                                     <input type="email" value="xxxx@islander.com" readonly disabled>
                                     <img src="img/email.svg" alt="" class="svg icon" >
                                 </label>
-                            </div>
-                            <div class="input-group">
-                                <div class="select-group">
-                                    <select name="" id="" class="nation">
+                                </div>
+                                <div class="input-group">
+                                    <div class="select-group">
+                                        <select name="" id="" class="nation" required>
                                                 <option value="台灣">台灣</option>
                                                 <option value="國外">國外</option>
                                             </select>
-                                    <select name="" id="" class="country">
+                                        <select name="" id="" class="country" required>
                                                 <option value="城市">城市</option>
                                             </select>
-                                    <select name="" id="" class="district">
+                                        <select name="" id="" class="district" required>
                                                 <option value="地區">地區</option>
                                             </select>
-                                </div>
-                                <img src="img/location.svg" alt="" class="svg icon">
-                                <label for="">
+                                    </div>
+                                    <img src="img/location.svg" alt="" class="svg icon">
+                                    <label for="">
                                         <input type="text" placeholder="請輸入地址">
                                       
                                     </label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="islander-6">
-                        <h3 class="py border-bottom mt-3">密碼修改</h3>
-                        <div class="input-group">
-                            <label for="">
+                        <div class="islander-6">
+                            <h3 class="py border-bottom mt-3">密碼修改</h3>
+                            <div class="input-group">
+                                <label for="">
                                     <input type="password"  placeholder="目前密碼請僅在更改時輸入">
                                     <img src="img/unlock.svg" alt="" class="svg icon" >
                                 </label>
-                        </div>
-                        <div class="input-group">
-                            <label for="">
+                            </div>
+                            <div class="input-group">
+                                <label for="">
                                 <input type="password"  placeholder="新密碼">
                                 <img src="img/password.svg" alt="" class="svg icon" >
                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label for="">
+                            </div>
+                            <div class="input-group">
+                                <label for="">
                                     <input type="password"  placeholder="密碼確認">
                                     <img src="img/check.svg" alt="" class="svg icon" >
                                </label>
+                            </div>
+                            <div class="btn-groups">
+                                <button class="btn btn-gray">取消修改</button>
+                                <button class="btn btn-red">確定修改</button>
+                            </div>
                         </div>
-                        <div class="btn-groups">
-                            <button class="btn btn-gray">取消修改</button>
-                            <button class="btn btn-red">取消修改</button>
-                        </div>
+
                     </div>
 
                 </div>
-
             </div>
-        </div>
+        </form>
         <footer class="footer">
             <div class="container text-center">
 
@@ -255,6 +257,9 @@
     </div>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/tw-city-selector.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/validate-plus.js"></script>
     <script src="js/all.js">
     </script>
     <script>
@@ -262,6 +267,21 @@
             el: ".member-block", // 同 DOM querySelector()
             elCounty: ".country",
             elDistrict: ".district"
+        });
+
+
+        $("#member-form").validate({
+            submitHandler: function(form) {
+                form.submit();
+            },
+            errorPlacement: function(error, element) {
+                element.closest('.input-group').append(error);
+            },
+            rules: {
+                user_pwd_again: {
+                    equalTo: '#user-pwd-input'
+                }
+            }
         });
     </script>
 </body>

@@ -154,8 +154,7 @@
                         </div>
                     </div>
                 </div>
-                <form action="
-                ">
+                <form action=" " id="shipping-form">
                     <div class="islander-row">
                         <div class="islander-6">
                             <h3 class="border-bottom pb-3 mb-3">收件資訊</h3>
@@ -200,7 +199,7 @@
                                     </div>
                                 </div>
                                 <div class="input-group">
-                                    <input type="email" name="" id="" placeholder="請輸入地址">
+                                    <input type="text" name="" id="" placeholder="請輸入地址" required>
                                 </div>
                                 <div class="input-group">
                                     <textarea name="" id="" rows="5 " placeholder="請輸入備註 "></textarea>
@@ -231,7 +230,7 @@
                             <div class="pay">
                                 <div class="input-group">
                                     <label for="pay1">
-                                    <input type="radio" name="pay" id="pay1">
+                                    <input type="radio" name="pay" id="pay1" checked required>
                                    <div class="pay-block">
                                        <img src="img/pay.svg" alt="" class="icon svg">
                                       貨到付款
@@ -241,7 +240,7 @@
                                 </div>
                                 <div class="input-group">
                                     <label for="pay2">
-                                        <input type="radio" name="pay" id="pay2">
+                                        <input type="radio" name="pay" id="pay2" required>
                                        <div class="pay-block">
                                            <img src="img/pay_1.svg" alt="" class="icon svg">
                                          線上刷卡
@@ -251,7 +250,7 @@
                                 </div>
                                 <div class="input-group">
                                     <label for="pay3">
-                                            <input type="radio" name="pay" id="pay3">
+                                            <input type="radio" name="pay" id="pay3" required>
                                            <div class="pay-block">
                                                <img src="img/pay_2.svg" alt="" class="icon svg">
                                               定期定額
@@ -308,6 +307,8 @@
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
     <script src="js/tw-city-selector.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/validate-plus.js"></script>
     <script src="js/all.js ">
     </script>
     <script>
@@ -315,6 +316,20 @@
             el: ".send-form", // 同 DOM querySelector()
             elCounty: ".country",
             elDistrict: ".district"
+        });
+
+        $("#shipping-form").validate({
+            submitHandler: function(form) {
+                form.submit();
+            },
+            errorPlacement: function(error, element) {
+                element.closest('.input-group').append(error);
+            },
+            rules: {
+                user_pwd_again: {
+                    equalTo: '#user-pwd-input'
+                }
+            }
         });
     </script>
 
