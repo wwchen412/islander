@@ -127,6 +127,7 @@
     .member {
         .input-group {
             padding: 0;
+            direction: rtl;
             input {
                 width: calc(100% - 40px);
                 border: 0;
@@ -135,6 +136,11 @@
                 border-bottom: 1px solid #c7c7c7;
                 direction: ltr;
                 border-radius: 0;
+            }
+            svg {
+                width: 30px;
+                display: inline-block;
+                vertical-align: middle;
             }
         }
     }

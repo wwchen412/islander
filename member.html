@@ -70,7 +70,7 @@
                 </ul>
             </div>
         </div>
-        <div class="member">
+        <div class="member-block">
             <div class="container">
                 <div class="islander-row" style="padding:0 30px;">
                     <div class="islander-6">
@@ -105,14 +105,15 @@
                             </div>
                             <div class="input-group">
                                 <div class="select-group">
-                                    <select name="" id="">
-                                                <option value="國家">國家</option>
+                                    <select name="" id="" class="nation">
+                                                <option value="台灣">台灣</option>
+                                                <option value="國外">國外</option>
                                             </select>
-                                    <select name="" id="">
-                                                <option value="國家">城市</option>
+                                    <select name="" id="" class="country">
+                                                <option value="城市">城市</option>
                                             </select>
-                                    <select name="" id="">
-                                                <option value="國家">地區</option>
+                                    <select name="" id="" class="district">
+                                                <option value="地區">地區</option>
                                             </select>
                                 </div>
                                 <img src="img/location.svg" alt="" class="svg icon">
@@ -255,6 +256,13 @@
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/all.js">
+    </script>
+    <script>
+        new TwCitySelector({
+            el: ".member-block", // 同 DOM querySelector()
+            elCounty: ".country",
+            elDistrict: ".district"
+        });
     </script>
 </body>
 

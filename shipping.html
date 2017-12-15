@@ -173,26 +173,27 @@
                                     </div>
                                 </div>
                                 <div class="input-group">
-                                    <input type="email" name="" id="" placeholder="請輸入電子郵件">
+                                    <input type="email" name="" id="" placeholder="請輸入電子郵件" required>
                                 </div>
                                 <div class="islander-row">
                                     <div class="islander-4">
                                         <div class="input-group">
-                                            <select name="" id="">
-                                                <option value="">國家</option>
+                                            <select name="" id="" class="nation" required>
+                                                <option value="">台灣</option>
+                                                <option value="">國外</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="islander-4">
                                         <div class="input-group">
-                                            <select name="" id="">
+                                            <select name="" id="" class="country select-none" required>
                                                         <option value="">縣市</option>
                                                     </select>
                                         </div>
                                     </div>
                                     <div class="islander-4">
                                         <div class="input-group">
-                                            <select name="" id="">
+                                            <select name="" id="" class="district select-none" required>
                                                         <option value="">鄉鎮市區</option>
                                                     </select>
                                         </div>
@@ -212,7 +213,6 @@
                                 </div>
                                 <div class="member">
                                     <div class="input-group">
-
                                         <input type="password" placeholder="請輸入密碼">
                                         <img src="img/password.svg" alt="" class="svg icon">
                                     </div>
@@ -307,8 +307,17 @@
     </div>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
+    <script src="js/tw-city-selector.min.js"></script>
     <script src="js/all.js ">
     </script>
+    <script>
+        new TwCitySelector({
+            el: ".send-form", // 同 DOM querySelector()
+            elCounty: ".country",
+            elDistrict: ".district"
+        });
+    </script>
+
 </body>
 
 </html>

@@ -367,41 +367,41 @@ a {
   .history-form > div p {
     padding: 15px; }
 
-.member {
+.member-block {
   min-height: calc(100vh - 110px - 127px - 99px); }
-  .member .input-groups {
+  .member-block .input-groups {
     font-size: 0;
     letter-spacing: 0; }
-    .member .input-groups > div {
+    .member-block .input-groups > div {
       display: inline-block;
       width: calc(100% / 2); }
-  .member .input-group {
+  .member-block .input-group {
     padding: 10px 0;
     direction: rtl; }
-    .member .input-group input {
+    .member-block .input-group input {
       width: calc(100% - 40px);
       border: 0;
       font-size: 1rem;
       padding: 10px;
       border-bottom: 1px solid #c7c7c7;
       direction: ltr; }
-      .member .input-group input::-webkit-input-placeholder {
+      .member-block .input-group input::-webkit-input-placeholder {
         color: #c7c7c7; }
-      .member .input-group input:focus {
+      .member-block .input-group input:focus {
         border-color: #855E00;
         outline: 0; }
-        .member .input-group input:focus::-webkit-input-placeholder {
+        .member-block .input-group input:focus::-webkit-input-placeholder {
           color: #855E00; }
-    .member .input-group svg {
+    .member-block .input-group svg {
       width: 30px;
       display: inline-block;
       vertical-align: middle;
       margin-right: 5px; }
-    .member .input-group .select-group {
+    .member-block .input-group .select-group {
       direction: ltr;
       width: calc(100% - 40px);
       display: inline-block; }
-      .member .input-group .select-group select {
+      .member-block .input-group .select-group select {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
@@ -413,19 +413,19 @@ a {
         margin-right: 5px;
         cursor: pointer;
         font-size: 1rem; }
-        .member .input-group .select-group select:focus {
+        .member-block .input-group .select-group select:focus {
           border-color: #855E00;
           outline: 0; }
-        .member .input-group .select-group select:last-child {
+        .member-block .input-group .select-group select:last-child {
           margin: 0; }
-  .member .btn-groups {
+  .member-block .btn-groups {
     letter-spacing: 0;
     margin-top: 40px; }
-    .member .btn-groups .btn {
+    .member-block .btn-groups .btn {
       font-size: 1rem;
       display: inline-block;
       width: calc(100% / 2 - 5px); }
-      .member .btn-groups .btn:last-child {
+      .member-block .btn-groups .btn:last-child {
         margin-left: 10px; }
 
 .faq {
@@ -861,7 +861,8 @@ a {
         display: inline-block;
         vertical-align: middle; }
   .shipping .member .input-group {
-    padding: 0; }
+    padding: 0;
+    direction: rtl; }
     .shipping .member .input-group input {
       width: calc(100% - 40px);
       border: 0;
@@ -870,6 +871,10 @@ a {
       border-bottom: 1px solid #c7c7c7;
       direction: ltr;
       border-radius: 0; }
+    .shipping .member .input-group svg {
+      width: 30px;
+      display: inline-block;
+      vertical-align: middle; }
   .shipping .pay input[type="radio"] {
     visibility: hidden;
     display: none; }

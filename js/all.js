@@ -146,6 +146,8 @@ $(function() {
     })
 })
 
+// load header
+
 $(function() {
 
     if ($('header').hasClass('header-index') === false) {
@@ -153,4 +155,26 @@ $(function() {
     } else {
 
     }
+})
+
+// 篩國家
+// 台灣內才能選鄉鎮市
+$(function() {
+
+    $('.nation').on('change', function() {
+
+        var nationText = $('.nation :selected ').text();
+
+        if (nationText !== '台灣') {
+            $('.county').attr('disabled', true);
+            $('.country').attr('disabled', true);
+            $('.district').attr('disabled', true);
+
+        } else {
+            $('.county').attr('disabled', false);
+            $('.country').attr('disabled', false);
+            $('.district').attr('disabled', false);
+        }
+    })
+
 })
