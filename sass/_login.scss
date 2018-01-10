@@ -36,7 +36,7 @@
         }
     }
     p {
-        color: $maincolor;
+        // color: $maincolor;
     }
     .login-hr {
         margin: 15px 0;
@@ -73,11 +73,22 @@
             width: calc(50%);
             box-sizing: border-box;
             border: 1px solid $maincolor;
-            color: $maincolor;
+            a{
+                color: $red;
+                &:visited {
+                    color: $red;
+                }
+            }
             cursor: pointer;
             &.active {
                 background-color: $maincolor;
+                a{
                 color: #fff;
+                &:visited{
+                    color: #fff;
+                }
+                }
+                
             }
         }
     }
@@ -97,6 +108,7 @@
             height: 30px;
             margin-right: 10px;
             vertical-align: middle;
+            fill:$yellow;
         }
         input {
             @include custom_select;
@@ -107,6 +119,9 @@
             width: calc(100% - 45px);
             text-align: left;
             direction: ltr;
+            &::-webkit-input-placeholder {
+                color: $lightgray;
+            }
             &:focus {
                 border-color: $maincolor;
                 outline: 0;

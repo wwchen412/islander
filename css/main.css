@@ -176,7 +176,7 @@ a {
   padding-bottom: 1rem; }
 
 .border-bottom {
-  border-bottom: 1px solid #855E00; }
+  border-bottom: 1px solid #004b87; }
 
 .pd-head {
   padding-top: 150px; }
@@ -313,10 +313,10 @@ a {
   border-radius: 0; }
 
 .btn-red {
-  background-color: #A83542;
+  background-color: #82beff;
   color: #fff; }
   .btn-red:hover, .btn-red:active {
-    background-color: #952f3a; }
+    background-color: #69b1ff; }
 
 .btn-gray {
   background-color: #737373;

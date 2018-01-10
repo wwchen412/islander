@@ -113,9 +113,9 @@
             border: 0;
             font-size: 1rem;
             padding: 10px;
-            border-bottom: 1px solid #c7c7c7;
+            border-bottom: 1px solid $lightgray;
             &::-webkit-input-placeholder {
-                color: #c7c7c7;
+                color: $lightgray;
             }
             &:focus {
                 border-color: $maincolor;
