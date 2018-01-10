@@ -69,7 +69,7 @@ header {
   header nav li {
     position: relative; }
     header nav li.active:before {
-      content: '';
+      content: "";
       display: inline-block;
       position: absolute;
       top: 5px;
@@ -113,6 +113,12 @@ header {
         text-decoration: none; }
         header ul li a:visited {
           color: #000; }
+      header ul li svg {
+        width: 30px; }
+        header ul li svg .st0 {
+          fill: #004b87; }
+        header ul li svg .st1 {
+          stroke: #004b87; }
 
 .phone-menu > div {
   display: inline-block;

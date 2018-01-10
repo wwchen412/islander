@@ -1,87 +1,98 @@
+@import '_color.scss';
 header {
-    background: #fff;
-    // background-size: cover;
-    padding: 20px 20px 0;
-    position: fixed;
-    top: 0;
+  background: #fff;
+  // background-size: cover;
+  padding: 20px 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  @media screen and (min-width: 300px) and (max-width: 768px) {
+    padding: 10px 20px;
+  }
+  .img-navbg {
+    position: absolute;
+    top: 60px;
     left: 0;
     width: 100%;
-    z-index: 100;
-    @media screen and (min-width: 300px)and (max-width: 768px) {
-        padding: 10px 20px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  nav {
+    .toggle-buttom {
+      // text-align: right;
+      margin-left: calc(100% - 82px);
     }
-    .img-navbg {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        z-index: 1;
-        pointer-events: none;
-    }
-    nav {
-        .toggle-buttom {
-            // text-align: right;
-            margin-left: calc(100% - 82px);
+    li {
+      position: relative;
+      &.active {
+        &:before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 5px;
+          left: -20px;
+          width: 1rem;
+          height: 1rem;
+          background: url("../img/coffeeIcon1.svg");
+          background-repeat: no-repeat;
         }
+      }
+      img {
+        width: 30px;
+      }
+     
+    }
+  }
+  ul {
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    &.toggle-menu {
+      @media screen and (min-width: 300px) and (max-width: 768px) {
+        flex-direction: column;
+        display: none;
         li {
-            position: relative;
-            &.active {
-                &:before {
-                    content: '';
-                    display: inline-block;
-                    position: absolute;
-                    top: 5px;
-                    left: -20px;
-                    width: 1rem;
-                    height: 1rem;
-                    background: url('../img/coffeeIcon1.svg');
-                    background-repeat: no-repeat;
-                }
-            }
-            img {
-                width: 30px;
-            }
+          padding: 10px 0;
+          text-align: center;
         }
+      }
     }
-    ul {
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        z-index: 2;
-        &.toggle-menu {
-            @media screen and (min-width: 300px) and (max-width: 768px) {
-                flex-direction: column;
-                display: none;
-                li {
-                    padding: 10px 0;
-                    text-align: center;
-                }
-            }
+    li {
+      margin: 0 30px;
+      color: #000;
+      &:first-child {
+        margin-right: auto;
+        @media screen and (min-width: 300px) and (max-width: 768px) {
+          margin: 0 auto;
         }
-        li {
-            margin: 0 30px;
-            color: #000;
-            &:first-child {
-                margin-right: auto;
-                @media screen and (min-width: 300px) and (max-width: 768px) {
-                    margin: 0 auto;
-                }
-            }
-            font-size: 20px;
-            a {
-                color: #000;
-                text-decoration: none;
-                &:visited {
-                    color: #000;
-                }
-            }
+      }
+      font-size: 20px;
+      a {
+        color: #000;
+        text-decoration: none;
+        &:visited {
+          color: #000;
         }
+      }
+       svg {
+           width: 30px;
+           .st0 {
+               fill: $maincolor;
+           }
+           .st1 {
+               stroke: $maincolor;
+           }
+       }
     }
+  }
 }
 
 .phone-menu {
-    &>div {
-        display: inline-block;
-        vertical-align: middle;
-    }
+  & > div {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
