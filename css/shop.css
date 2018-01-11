@@ -213,6 +213,10 @@ a {
     width: calc(100% / 6 - (15px * 5 ) / 6);
     margin-bottom: 15px;
     margin-right: 15px; }
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      .islander-row .islander-2 {
+        width: 100%;
+        margin-right: 0; } }
   .islander-row .islander-9 {
     display: inline-block;
     width: calc((100% / 4 * 3) - 15px);
@@ -874,30 +878,39 @@ a {
         display: none; } }
     .shipping .form-title p {
       text-align: center; }
-  .shipping .form-list:last-child {
-    border: 0; }
-  .shipping .form-list .content-group > * {
-    display: inline-block;
-    vertical-align: top;
-    -ms-flex-item-align: center;
-    align-self: center; }
-  .shipping .form-list .content-group .content {
-    max-width: calc(100% - 100px); }
-  .shipping .form-list .num {
-    text-align: center;
-    font-size: 0.9rem; }
-    .shipping .form-list .num input {
-      border: 1px solid #737373;
-      padding: 5px 0;
-      text-align: center;
-      max-width: 50px;
-      margin-left: 10px; }
-  .shipping .form-list p {
-    font-size: 0.9rem; }
-  .shipping .form-list img {
-    max-width: 100px;
-    max-height: 100px;
-    display: inline-block; }
+  .shipping .form-list {
+    border-bottom: 1px solid #ccc; }
+    .shipping .form-list:last-child {
+      border: 0; }
+    .shipping .form-list .content-group > * {
+      display: inline-block;
+      vertical-align: top;
+      -ms-flex-item-align: center;
+      align-self: center; }
+    .shipping .form-list .content-group .content {
+      width: calc(100% - 100px); }
+    .shipping .form-list .num {
+      font-size: 0.9rem; }
+      .shipping .form-list .num input {
+        border: 1px solid #737373;
+        padding: 5px 0;
+        text-align: center;
+        max-width: 50px;
+        margin-left: 10px; }
+        @media screen and (max-width: 768px) and (min-width: 300px) {
+          .shipping .form-list .num input {
+            margin-left: 0; }
+            .shipping .form-list .num input:before {
+              content: attr(data-content); } }
+    .shipping .form-list p {
+      font-size: 0.9rem; }
+      @media screen and (max-width: 768px) and (min-width: 300px) {
+        .shipping .form-list p:before {
+          content: attr(data-content); } }
+    .shipping .form-list img {
+      max-width: 100px;
+      max-height: 100px;
+      display: inline-block; }
   .shipping .total {
     width: calc((100% / 6 - (15px * 5) / 6)*2);
     margin-left: calc(100% - ((100% / 6 - (15px * 5) / 6)*2)); }
@@ -985,6 +998,9 @@ a {
           margin-bottom: 0; } }
       .shipping .send-form .input-group .islander-4 select {
         width: 100%; }
+        @media screen and (max-width: 768px) and (min-width: 300px) {
+          .shipping .send-form .input-group .islander-4 select {
+            margin-bottom: 15px; } }
   .shipping .member .input-group {
     padding: 0;
     direction: rtl; }
@@ -1137,6 +1153,10 @@ p {
 
 .text-center {
   text-align: center; }
+
+@media screen and (min-width: 769px) {
+  .text-centerPc {
+    text-align: center; } }
 
 .text-right {
   text-align: right; }

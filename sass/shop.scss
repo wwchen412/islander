@@ -23,6 +23,11 @@ p {
 .text-center {
     text-align: center;
 }
+.text-centerPc{
+    @include range-width(769px,0){
+        text-align: center;
+    }
+}
 
 .text-right {
     text-align: right;

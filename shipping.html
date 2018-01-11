@@ -120,25 +120,26 @@
                             <div class="islander-6">
                                 <div class="d-flex content-group">
                                     <div class="content">
-                                        <p>100%卡霧 得獎精品莊園咖啡豆</p>
-                                        <p>1/2磅台幣</p>
+                                        <p data-content="品名：">100% Ka’u Extra fancy 淺烘焙 咖啡豆 1/2 磅</p>
+                                       
                                     </div>
                                     <img src="img/bag1.png" alt="">
                                 </div>
                             </div>
-                            <div class="islander-2 text-center">
+                            <div class="islander-2 text-centerPc">
                                 <div class="">
-                                    <p>2400</p>
+                                    <p data-content="單價：">2400</p>
                                 </div>
                             </div>
-                            <div class="islander-2 text-center">
-                                <div class="num">
-                                    <input type="number" min="1" max="100" value="1">
+                            <div class="islander-2 text-centerPc">
+                                <div class="num text-centerPc">
+                                <p data-content="數量：" style="display:inline"></p>
+                                    <input type="number" min="1" max="100" value="1" data-content="數量">
                                 </div>
                             </div>
-                            <div class="islander-2 text-center">
+                            <div class="islander-2 text-centerPc">
                                 <div class="">
-                                    <p>2400</p>
+                                    <p data-content="總額：">2400</p>
                                 </div>
                             </div>
                         </div>
@@ -148,25 +149,26 @@
                             <div class="islander-6">
                                 <div class="d-flex content-group">
                                     <div class="content">
-                                        <p>100%卡霧 得獎精品莊園咖啡豆</p>
-                                        <p>1/2磅台幣</p>
+                                        <p data-content="品名：">100% Ka’u Extra fancy 淺烘焙 咖啡豆 1/2 磅</p>
+                    
                                     </div>
                                     <img src="img/bag1.png" alt="">
                                 </div>
                             </div>
-                            <div class="islander-2 text-center">
+                            <div class="islander-2 text-centerPc">
                                 <div class="">
-                                    <p>2400</p>
+                                    <p data-content="單價：">2400</p>
                                 </div>
                             </div>
-                            <div class="islander-2 text-center">
-                                <div class="num">
-                                    <input type="number" min="1" max="100" value="1">
+                            <div class="islander-2 text-centerPc">
+                                <div class="num text-centerPc">
+                                    <p data-content="數量：" style="display:inline"></p>
+                                    <input type="number" min="1" max="100" value="1" data-content="數量">
                                 </div>
                             </div>
-                            <div class="islander-2 text-center">
+                            <div class="islander-2 text-centerPc">
                                 <div class="">
-                                    <p>2400</p>
+                                    <p data-content="總額：">2400</p>
                                 </div>
                             </div>
                         </div>
@@ -221,7 +223,7 @@
                                         </select>
                                     </div>
                                     <div class="islander-4">
-                                        <select name="" id="" class="district select-none" required>
+                                        <select name="" id="" class="district select-none" required style="margin-bottom:0">
                                             <option value="">鄉鎮市區</option>
                                         </select>
                                     </div>
@@ -258,7 +260,12 @@
                         </div>
                         <h3 class="border-bottom pb-3 mb-3">收件資訊</h3>
                         <div class="send-form">
-
+                            <div class="input-group ">
+                                <label for="autoForm">
+                                    <input type="checkbox" id="autoForm">
+                                    <p>同購買人資料</p>
+                                </label>
+                            </div>
 
                             <div class="input-group">
                                 <p>姓名*</p>
@@ -287,7 +294,7 @@
                                         </select>
                                     </div>
                                     <div class="islander-4">
-                                        <select name="" id="" class="district select-none" required>
+                                        <select name="" id="" class="district select-none" required style="margin-bottom:0">
                                             <option value="">鄉鎮市區</option>
                                         </select>
                                     </div>
@@ -300,11 +307,7 @@
                                 <input type="text" name="" id="" placeholder="請輸入地址" required>
                             </div>
 
-                            <div class="input-group">
-                                <p>備註</p>
-                                <textarea name="" id="" rows="5 " placeholder="請輸入備註 "></textarea>
-                            </div>
-
+                           
                         </div>
                         <h3 class="border-bottom pb-3 mb-3 ">請選擇付款方式</h3>
                         <div class="pay">
@@ -344,8 +347,6 @@
                     </div>
 
                 </form>
-
-
             </div>
         </div>
         <footer class="footer ">

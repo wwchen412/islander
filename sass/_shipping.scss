@@ -7,7 +7,7 @@
         display: flex;
       }
     }
-    .islander-row>div {
+    .islander-row > div {
       padding: 10px 30px;
       margin-bottom: 0;
       margin: 0;
@@ -24,48 +24,51 @@
     }
   }
   .form-list {
-    // border-bottom: 1px solid $maincolor;
+    border-bottom: 1px solid $lightgray;
     &:last-child {
       border: 0;
     }
     .content-group {
-      &>* {
+      & > * {
         display: inline-block;
         vertical-align: top;
         align-self: center;
       }
       .content {
-        max-width: calc(100% - 100px); // overflow: hidden;
+        width: calc(100% - 100px); 
       }
     }
     .num {
-      text-align: center;
-      font-size: 0.9rem; // @include range-width(300px, 768px) {
-      //     margin-left: 0;
-      //     margin-top: 10px;
-      // }
+      
+      font-size: 0.9rem;
+      
       input {
         border: 1px solid $gray;
         padding: 5px 0;
         text-align: center;
         max-width: 50px;
         margin-left: 10px;
+        @include range-width(300px, 768px) {
+          margin-left: 0;
+          &:before {
+            content: attr(data-content);
+          }
+        }
       }
     }
     p {
       font-size: 0.9rem;
+      @include range-width(300px,768px) {
+        &:before {
+          content: attr(data-content);
+        }
+      }
     }
     img {
       max-width: 100px;
       max-height: 100px;
       display: inline-block;
-    } // .islander-9 {
-    // }
-    // .islander-3 {
-    //   @include range-width(769px, 0) {
-    //     align-self: center;
-    //   }
-    // }
+    } 
   }
   .total {
     width: calc((100% / 6 - (15px * 5) / 6)*2);
@@ -88,13 +91,12 @@
       display: inline-block;
     }
     .islander-4 {
-      @include range-width(769px,0){
+      @include range-width(769px,0) {
         width: calc(100% / 3 - 30px / 3);
         &:nth-child(3n + 2) {
           margin: 0 15px;
         }
       }
-      
     }
     .input-group {
       margin-bottom: 15px;
@@ -140,7 +142,7 @@
           background: 50% 50% url("../img/checked.svg") no-repeat;
           background-size: 70%;
         }
-        &+p {
+        & + p {
           margin-left: 10px;
           display: inline-block;
           vertical-align: middle;
@@ -151,13 +153,15 @@
         width: calc(100% - 100px);
       }
       .islander-4 {
-        @include range-width(769px,0){
+        @include range-width(769px,0) {
           width: calc((100% - 30px) / 3);
-          margin-bottom: 0
+          margin-bottom: 0;
         }
-        ;
         select {
           width: 100%;
+          @include range-width(300px,768px) {
+            margin-bottom: 15px;
+          }
         }
       }
     }
@@ -186,9 +190,9 @@
     input[type="radio"] {
       visibility: hidden;
       display: none;
-      &+.pay-block {
+      & + .pay-block {
         background-color: #f2f2f2;
-         border: 2px solid transparent;
+        border: 2px solid transparent;
         color: $maincolor;
         svg,
         .cls-1 {
@@ -196,7 +200,7 @@
         }
       }
       &:checked {
-        &+.pay-block {
+        & + .pay-block {
           background-color: #fff;
           border: 2px solid $maincolor;
           svg,
@@ -215,13 +219,13 @@
       text-align: center;
       position: relative;
       transition: 0.2s;
-      @include range-width(300px,768px){
+      @include range-width(300px,768px) {
         margin-bottom: 10px;
       }
       svg {
         width: 50px;
         position: absolute;
-        left:calc(50% - 120px);
+        left: calc(50% - 120px);
         top: 50%;
         transform: translateY(-50%);
       }
@@ -233,12 +237,12 @@
       &:nth-child(2) {
         margin: 0 5px;
       }
-      @include range-width(300px,768px){
+      @include range-width(300px,768px) {
         width: 100%;
-      
-         &:nth-child(2) {
-           margin: 0 ;
-         }
+
+        &:nth-child(2) {
+          margin: 0;
+        }
       }
     }
     button {
@@ -247,7 +251,7 @@
       padding: 10px 40px;
       width: 33%;
       font-size: 0.9rem;
-      @include range-width(300px,768px){
+      @include range-width(300px,768px) {
         width: 100%;
       }
       svg {
