@@ -135,7 +135,7 @@ a {
   padding-bottom: 1rem; }
 
 .border-bottom {
-  border-bottom: 1px solid #004b87; }
+  border-bottom: 1px solid #737373; }
 
 .pd-head {
   padding-top: 150px; }
@@ -208,6 +208,11 @@ a {
       .islander-row .islander-3 {
         width: 100%;
         margin-right: 0; } }
+  .islander-row .islander-2 {
+    display: inline-block;
+    width: calc(100% / 6 - (15px * 5 ) / 6);
+    margin-bottom: 15px;
+    margin-right: 15px; }
   .islander-row .islander-9 {
     display: inline-block;
     width: calc((100% / 4 * 3) - 15px);
@@ -851,112 +856,135 @@ a {
 
 .shipping {
   font-family: noto sans; }
-  .shipping .shipping-form {
-    border: 1px solid #004b87; }
-    @media screen and (min-width: 769px) {
-      .shipping .shipping-form .islander-row {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; } }
-    .shipping .shipping-form .islander-row > div {
-      padding: 10px 30px;
-      margin-bottom: 0;
-      margin: 0; }
+  @media screen and (min-width: 769px) {
+    .shipping .shipping-form .islander-row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  .shipping .shipping-form .islander-row > div {
+    padding: 10px 30px;
+    margin-bottom: 0;
+    margin: 0;
+    -ms-flex-item-align: center;
+    align-self: center; }
   .shipping .form-title {
-    background-color: #004b87; }
+    border-bottom: 1px solid #ccc; }
     @media screen and (max-width: 768px) and (min-width: 300px) {
       .shipping .form-title {
         display: none; } }
     .shipping .form-title p {
-      color: #fff;
       text-align: center; }
-  .shipping .form-list {
-    border-bottom: 1px solid #004b87; }
-    .shipping .form-list:last-child {
-      border: 0; }
-    .shipping .form-list .content-group > * {
-      display: inline-block;
-      vertical-align: top; }
-    .shipping .form-list .num {
-      text-align: right;
-      margin-left: auto;
-      font-size: .9rem;
-      -ms-flex-item-align: end;
-      align-self: flex-end; }
-      .shipping .form-list .num input {
-        border: 1px solid #004b87;
-        padding: 5px 0;
-        text-align: center;
-        max-width: 50px;
-        margin-left: 10px; }
-    .shipping .form-list p {
-      font-size: 0.9rem; }
-    .shipping .form-list img {
-      max-width: 70px;
-      max-height: 70px;
-      display: inline-block; }
-    @media screen and (min-width: 769px) {
-      .shipping .form-list .islander-9 {
-        border-right: 1px solid #004b87; } }
-    @media screen and (min-width: 769px) {
-      .shipping .form-list .islander-3 {
-        -ms-flex-item-align: center;
-        align-self: center; } }
-  .shipping .send-form .islander-row > div {
-    margin-bottom: 0; }
-  .shipping .send-form .islander-4 {
-    width: calc(100% / 3 - 30px / 3); }
-    .shipping .send-form .islander-4:nth-child(3n+2) {
-      margin: 0 15px; }
-  .shipping .send-form .input-group {
-    margin-bottom: 15px; }
-    .shipping .send-form .input-group input,
-    .shipping .send-form .input-group select,
-    .shipping .send-form .input-group textarea {
-      appearance: none;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      border: 0;
-      width: 100%;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 4px;
+  .shipping .form-list:last-child {
+    border: 0; }
+  .shipping .form-list .content-group > * {
+    display: inline-block;
+    vertical-align: top;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .shipping .form-list .content-group .content {
+    max-width: calc(100% - 100px); }
+  .shipping .form-list .num {
+    text-align: center;
+    font-size: 0.9rem; }
+    .shipping .form-list .num input {
+      border: 1px solid #737373;
+      padding: 5px 0;
+      text-align: center;
+      max-width: 50px;
+      margin-left: 10px; }
+  .shipping .form-list p {
+    font-size: 0.9rem; }
+  .shipping .form-list img {
+    max-width: 100px;
+    max-height: 100px;
+    display: inline-block; }
+  .shipping .total {
+    width: calc((100% / 6 - (15px * 5) / 6)*2);
+    margin-left: calc(100% - ((100% / 6 - (15px * 5) / 6)*2)); }
+    .shipping .total p {
       font-size: 0.9rem;
-      background-color: transparent;
-      color: #737373; }
-      .shipping .send-form .input-group input:focus,
-      .shipping .send-form .input-group select:focus,
-      .shipping .send-form .input-group textarea:focus {
-        outline-offset: 0; }
-      .shipping .send-form .input-group input:focus,
-      .shipping .send-form .input-group select:focus,
-      .shipping .send-form .input-group textarea:focus {
-        outline: 0;
-        border-color: #004b87; }
-        .shipping .send-form .input-group input:focus::-webkit-input-placeholder,
-        .shipping .send-form .input-group select:focus::-webkit-input-placeholder,
-        .shipping .send-form .input-group textarea:focus::-webkit-input-placeholder {
-          color: #004b87; }
-      .shipping .send-form .input-group input::-webkit-input-placeholder,
-      .shipping .send-form .input-group select::-webkit-input-placeholder,
-      .shipping .send-form .input-group textarea::-webkit-input-placeholder {
-        color: #ccc; }
-    .shipping .send-form .input-group input[type="checkbox"] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      width: 20px;
-      height: 20px;
-      border-color: #004b87;
-      vertical-align: middle;
+      display: inline-block;
+      width: calc(100% / 2 - 4px);
+      padding: 10px 30px; }
+    @media screen and (max-width: 768px) and (min-width: 300px) {
+      .shipping .total {
+        width: 100%;
+        margin-left: 0; } }
+  .shipping .send-form {
+    max-width: 545px;
+    margin: 0 auto; }
+    .shipping .send-form .islander-row {
       display: inline-block; }
-      .shipping .send-form .input-group input[type="checkbox"]:checked {
-        background: 50% 50% url("../img/checked.svg") no-repeat;
-        background-size: 70%; }
-      .shipping .send-form .input-group input[type="checkbox"] + p {
-        margin-left: 10px;
+    @media screen and (min-width: 769px) {
+      .shipping .send-form .islander-4 {
+        width: calc(100% / 3 - 30px / 3); }
+        .shipping .send-form .islander-4:nth-child(3n + 2) {
+          margin: 0 15px; } }
+    .shipping .send-form .input-group {
+      margin-bottom: 15px; }
+      .shipping .send-form .input-group label {
+        font-size: 0.9rem;
+        color: #004b87; }
+      .shipping .send-form .input-group p {
         display: inline-block;
-        vertical-align: middle; }
+        width: 100px;
+        vertical-align: top; }
+      .shipping .send-form .input-group input,
+      .shipping .send-form .input-group select,
+      .shipping .send-form .input-group textarea {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        border: 0;
+        width: calc(100% - 100px);
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        background-color: transparent;
+        color: #737373; }
+        .shipping .send-form .input-group input:focus,
+        .shipping .send-form .input-group select:focus,
+        .shipping .send-form .input-group textarea:focus {
+          outline-offset: 0; }
+        .shipping .send-form .input-group input:focus,
+        .shipping .send-form .input-group select:focus,
+        .shipping .send-form .input-group textarea:focus {
+          outline: 0;
+          border-color: #004b87; }
+          .shipping .send-form .input-group input:focus::-webkit-input-placeholder,
+          .shipping .send-form .input-group select:focus::-webkit-input-placeholder,
+          .shipping .send-form .input-group textarea:focus::-webkit-input-placeholder {
+            color: #004b87; }
+        .shipping .send-form .input-group input::-webkit-input-placeholder,
+        .shipping .send-form .input-group select::-webkit-input-placeholder,
+        .shipping .send-form .input-group textarea::-webkit-input-placeholder {
+          color: #ccc; }
+      .shipping .send-form .input-group input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-color: #004b87;
+        vertical-align: middle;
+        display: inline-block; }
+        .shipping .send-form .input-group input[type="checkbox"]:checked {
+          background: 50% 50% url("../img/checked.svg") no-repeat;
+          background-size: 70%; }
+        .shipping .send-form .input-group input[type="checkbox"] + p {
+          margin-left: 10px;
+          display: inline-block;
+          vertical-align: middle;
+          width: auto; }
+      .shipping .send-form .input-group .islander-row {
+        width: calc(100% - 100px); }
+      @media screen and (min-width: 769px) {
+        .shipping .send-form .input-group .islander-4 {
+          width: calc((100% - 30px) / 3);
+          margin-bottom: 0; } }
+      .shipping .send-form .input-group .islander-4 select {
+        width: 100%; }
   .shipping .member .input-group {
     padding: 0;
     direction: rtl; }
@@ -975,38 +1003,61 @@ a {
   .shipping .pay input[type="radio"] {
     visibility: hidden;
     display: none; }
+    .shipping .pay input[type="radio"] + .pay-block {
+      background-color: #f2f2f2;
+      border: 2px solid transparent;
+      color: #004b87; }
+      .shipping .pay input[type="radio"] + .pay-block svg,
+      .shipping .pay input[type="radio"] + .pay-block .cls-1 {
+        fill: #004b87; }
     .shipping .pay input[type="radio"]:checked + .pay-block {
-      background-color: #004b87;
-      color: #fff; }
+      background-color: #fff;
+      border: 2px solid #004b87; }
       .shipping .pay input[type="radio"]:checked + .pay-block svg,
       .shipping .pay input[type="radio"]:checked + .pay-block .cls-1 {
-        fill: #fff; }
+        fill: #004b87; }
   .shipping .pay .pay-block {
     font-size: 1rem;
     display: block;
     width: 100%;
-    border: 1px solid #004b87;
     color: #004b87;
     padding: 30px 20px;
     text-align: center;
     position: relative;
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s; }
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+    @media screen and (max-width: 768px) and (min-width: 300px) {
+      .shipping .pay .pay-block {
+        margin-bottom: 10px; } }
     .shipping .pay .pay-block svg {
       width: 50px;
       position: absolute;
-      left: 10px;
+      left: calc(50% - 120px);
       top: 50%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%); }
   .shipping .pay .input-group {
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    width: calc((100% - 10px) /3);
+    display: inline-block; }
+    .shipping .pay .input-group:nth-child(2) {
+      margin: 0 5px; }
+    @media screen and (max-width: 768px) and (min-width: 300px) {
+      .shipping .pay .input-group {
+        width: 100%; }
+        .shipping .pay .input-group:nth-child(2) {
+          margin: 0; } }
   .shipping .pay button {
-    margin-top: 15px;
-    width: 100%;
+    margin: 15px auto;
+    display: block;
+    padding: 10px 40px;
+    width: 33%;
     font-size: 0.9rem; }
+    @media screen and (max-width: 768px) and (min-width: 300px) {
+      .shipping .pay button {
+        width: 100%; } }
     .shipping .pay button svg {
       width: 20px;
       vertical-align: middle;
