@@ -781,26 +781,73 @@ a {
       cursor: pointer; }
 
 .shopbg-list {
-  margin-top: -110px;
+  margin-top: 0;
   min-height: calc(100vh - 127px - 65px); }
   .shopbg-list p {
     color: #fff; }
-  .shopbg-list .shop-select {
-    padding: 50px 0;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    margin: 0 auto; }
-    .shopbg-list .shop-select li {
+  .shopbg-list .listBlocks .listblock {
+    overflow: auto;
+    clear: both; }
+    .shopbg-list .listBlocks .listblock li {
+      width: calc((100% / 4) - (15px / 2));
+      padding-bottom: calc(100% / 4 - 10px);
+      margin: 0 0 10px 10px;
+      float: left;
+      position: relative; }
+      .shopbg-list .listBlocks .listblock li:nth-child(even) {
+        margin-left: 5px; }
+      .shopbg-list .listBlocks .listblock li.catgory {
+        width: calc((100% / 2) - 5px);
+        padding-bottom: calc(100% / 2 - 10px);
+        margin-left: 0;
+        margin-right: 5px; }
+      @media screen and (max-width: 768px) and (min-width: 300px) {
+        .shopbg-list .listBlocks .listblock li {
+          width: calc(100% / 2);
+          padding-bottom: calc(100% / 2);
+          margin: 0; }
+          .shopbg-list .listBlocks .listblock li:nth-child(even) {
+            margin-left: 0; }
+          .shopbg-list .listBlocks .listblock li.catgory {
+            width: calc(100%);
+            padding-bottom: calc(100% / 2);
+            margin-right: 0; } }
+    .shopbg-list .listBlocks .listblock img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover; }
+    @media screen and (min-width: 769px) {
+      .shopbg-list .listBlocks .listblock:nth-child(2n) li {
+        margin: 0 10px 10px 0; }
+      .shopbg-list .listBlocks .listblock:nth-child(2n) .catgory {
+        float: right;
+        margin-right: 0; } }
+  .shopbg-list .listBlocks .listInfo {
+    padding: 5px 10px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    .shopbg-list .listBlocks .listInfo > * {
       display: inline-block;
-      width: calc(100% / 4);
-      padding: 0 5px;
-      text-align: center;
-      margin-bottom: 15px; }
-      @media screen and (max-width: 576px) and (min-width: 300px) {
-        .shopbg-list .shop-select li {
-          width: calc(100% / 2); } }
+      vertical-align: bottom; }
+    .shopbg-list .listBlocks .listInfo p {
+      color: #000;
+      height: 32px;
+      max-width: calc(100% - 37px); }
+    .shopbg-list .listBlocks .listInfo .btn {
+      width: 32px;
+      height: 32px;
+      float: right;
+      padding: 0; }
+      .shopbg-list .listBlocks .listInfo .btn img {
+        position: static;
+        width: 100%; }
 
 .shipping {
   font-family: noto sans; }

@@ -189,25 +189,93 @@
 
 // shopbg-list
 .shopbg-list {
-  margin-top: -110px;
+  margin-top: 0;
   min-height: calc(100vh - 127px - 65px);
   p {
     color: #fff;
   }
-  .shop-select {
-    padding: 50px 0;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 auto;
-    li {
-      display: inline-block;
-      width: calc(100% / 4);
-      padding: 0 5px;
-      text-align: center;
-      margin-bottom: 15px;
-      @include range-width(300px,
-            576px) {
-        width: calc(100% / 2);
+
+  .listBlocks {
+    .listblock {
+      overflow: auto;
+      clear: both;
+      //  單格
+      li {
+        width: calc((100% / 4) - (15px / 2));
+        padding-bottom: calc(100% / 4 - 10px);
+        margin: 0 0 10px 10px;
+        float: left;
+        position: relative;
+        &:nth-child(even) {
+          margin-left: 5px;
+        }
+        &.catgory {
+          width: calc((100% / 2) - 5px);
+          padding-bottom: calc(100% / 2 - 10px);
+          margin-left: 0;
+          margin-right: 5px;
+        }
+        // 手機版
+        @include range-width(300px,768px) {
+          width: calc(100% / 2);
+          padding-bottom: calc(100% / 2);
+          margin: 0;
+          &:nth-child(even) {
+            margin-left: 0;
+          }
+          &.catgory {
+            width: calc(100%);
+            padding-bottom: calc(100% / 2);
+            margin-right: 0;
+          }
+        }
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &:nth-child(2n) {
+        @include range-width(769px,0) {
+          li {
+            margin: 0 10px 10px 0;
+          }
+
+          .catgory {
+            float: right;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .listInfo {
+      padding: 5px 10px;
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      & > * {
+        display: inline-block;
+        vertical-align: bottom;
+      }
+      p {
+        color: #000;
+        height: 32px;
+        max-width: calc(100% - 37px);
+      }
+      .btn {
+        width: 32px;
+        height: 32px;
+        float: right;
+        padding: 0;
+        img {
+          position: static;
+          width: 100%;
+        }
       }
     }
   }
