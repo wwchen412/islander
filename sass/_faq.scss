@@ -4,7 +4,7 @@
 }
 
 .faq-group {
-    // border-bottom: 1px solid $maincolor;
+    border-bottom: 1px solid $lightgray;
     &>div {
         padding: 10px 0;
         &:before {
@@ -29,6 +29,7 @@
         }
         &.faq-q {
             cursor: pointer;
+           
             &:before {
                 content: 'Q';
                 background-color: $pink;
