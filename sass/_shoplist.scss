@@ -9,8 +9,8 @@
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     left: 50%;
-    top: 60%;
-    transform: translate(-50%, 0%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     h3 {
       color: #fff;
       font-size: 1rem;
@@ -64,7 +64,49 @@
     display: block;
   }
 }
-
+// 單品頁面
+.singleItem {
+   font-family: Arial,
+   Helvetica,
+   sans-serif;
+  .title {
+    margin-bottom: 30px;
+  }
+  .status {
+    margin: 15px 0;
+  }
+  .price {
+   
+    input {
+      display: inline-block;
+      -webkit-appearance: none;
+      border: 0;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      width: 50px;
+      margin-right: 10px;
+    }
+    .btn {
+      width: auto;
+      padding: 5px 20px;
+      height: auto;
+    }
+  }
+ 
+}
+.single-title{
+  padding: 10px;
+  border-bottom: 1px solid $maincolor;
+  margin-bottom: 15px;
+  img{
+    width: 30px;
+    display: inline-block;vertical-align: middle;
+    margin-right: 15px;
+  }
+}
+ .item-editor {
+   padding: 20px 50px;
+ }
 .items {
   .btn-cart {
     border-radius: 50%;
