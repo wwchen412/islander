@@ -1082,9 +1082,15 @@ a {
     .shipping .pay button .cls-1 {
       fill: #fff; }
 
+label.error {
+  color: #eb415a !important; }
+
 form input.error,
 form select.error {
-  border: 1px solid #82beff !important; }
+  border: 1px solid #eb415a !important; }
+  form input.error::-webkit-input-placeholder,
+  form select.error::-webkit-input-placeholder {
+    color: #eb415a !important; }
 
 .news-block {
   margin-top: 100px; }

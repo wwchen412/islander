@@ -121,7 +121,7 @@
                                 <div class="d-flex content-group">
                                     <div class="content">
                                         <p data-content="品名：">100% Ka’u Extra fancy 淺烘焙 咖啡豆 1/2 磅</p>
-                                       
+
                                     </div>
                                     <img src="img/bag1.png" alt="">
                                 </div>
@@ -133,7 +133,7 @@
                             </div>
                             <div class="islander-2 text-centerPc">
                                 <div class="num text-centerPc">
-                                <p data-content="數量：" style="display:inline"></p>
+                                    <p data-content="數量：" style="display:inline"></p>
                                     <input type="number" min="1" max="100" value="1" data-content="數量">
                                 </div>
                             </div>
@@ -150,7 +150,7 @@
                                 <div class="d-flex content-group">
                                     <div class="content">
                                         <p data-content="品名：">100% Ka’u Extra fancy 淺烘焙 咖啡豆 1/2 磅</p>
-                    
+
                                     </div>
                                     <img src="img/bag1.png" alt="">
                                 </div>
@@ -191,39 +191,38 @@
                 <!-- 收件資料 -->
                 <form action=" " id="shipping-form">
                     <div class="islander-row">
-
+                        <!-- 購買資訊 -->
                         <h3 class="border-bottom pb-3 mb-3">購買資訊</h3>
-                        <div class="send-form">
-
+                        <div class="send-form buy-form">
 
                             <div class="input-group">
                                 <p>姓名*</p>
-                                <input type="text" placeholder="姓氏" required>
+                                <input id="buy-name" type="text" placeholder="姓氏" required name="buy-name">  
                             </div>
                             <div class="input-group">
                                 <p>電話*</p>
-                                <input type="tel" placeholder="請輸入手機" required>
+                                <input id="buy-phone" type="tel" placeholder="請輸入手機" required name="buy-phone">
                             </div>
                             <div class="input-group">
                                 <p>信箱</p>
-                                <input type="email" name="" id="" placeholder="請輸入電子郵件" required>
+                                <input id="buy-email" type="email" name="" id="" placeholder="請輸入電子郵件" required name="buy-email">
                             </div>
                             <div class="input-group">
                                 <p>地址*</p>
                                 <div class="islander-row">
                                     <div class="islander-4">
-                                        <select name="" id="" class="nation" required="">
-                                            <option value="">台灣</option>
-                                            <option value="">國外</option>
+                                        <select  id="buy-nation" class="nation" required="" name="buy-nation">
+                                            <option value="台灣">台灣</option>
+                                            <option value="國外">國外</option>
                                         </select>
                                     </div>
                                     <div class="islander-4">
-                                        <select name="" id="" class="country select-none" required>
+                                        <select name="" id="buy-country" class="country select-none" required>
                                             <option value="">縣市</option>
                                         </select>
                                     </div>
                                     <div class="islander-4">
-                                        <select name="" id="" class="district select-none" required style="margin-bottom:0">
+                                        <select name="" id="buy-district" class="district select-none" required style="margin-bottom:0">
                                             <option value="">鄉鎮市區</option>
                                         </select>
                                     </div>
@@ -233,12 +232,12 @@
 
                             <div class="input-group">
                                 <p></p>
-                                <input type="text" name="" id="" placeholder="請輸入地址" required>
+                                <input id="buy-address" type="text" name="buy-address" id="" placeholder="請輸入地址" required>
                             </div>
 
                             <div class="input-group">
                                 <p>備註</p>
-                                <textarea name="" id="" rows="5 " placeholder="請輸入備註 "></textarea>
+                                <textarea name="" id="buy-textarea" rows="5 " placeholder="請輸入備註 "></textarea>
                             </div>
                             <div class="input-group ">
                                 <label for="member">
@@ -248,18 +247,19 @@
                             </div>
                             <div class="member">
                                 <div class="input-group">
-                                    <input type="password" placeholder="請輸入密碼">
+                                    <input id="user-pwd-input" type="password" placeholder="請輸入密碼">
                                     <img src="img/password.svg" alt="" class="svg icon">
                                 </div>
                                 <div class="input-group">
 
-                                    <input type="password" placeholder="密碼確認">
+                                    <input type="password" placeholder="密碼確認" class="user_pwd_again">
                                     <img src="img/check.svg" alt="" class="svg icon">
                                 </div>
                             </div>
                         </div>
+                        <!-- 收件資訊 -->
                         <h3 class="border-bottom pb-3 mb-3">收件資訊</h3>
-                        <div class="send-form">
+                        <div class="send-form get-form">
                             <div class="input-group ">
                                 <label for="autoForm">
                                     <input type="checkbox" id="autoForm">
@@ -269,21 +269,21 @@
 
                             <div class="input-group">
                                 <p>姓名*</p>
-                                <input type="text" placeholder="姓氏" required>
+                                <input id="get-name" name="get-name" type="text" placeholder="姓名" required>
                             </div>
                             <div class="input-group">
                                 <p>電話*</p>
-                                <input type="tel" placeholder="請輸入手機" required>
+                            <input id="get-phone" name="get-phone" type="tel" placeholder="手機" required>
                             </div>
                             <div class="input-group">
                                 <p>信箱</p>
-                                <input type="email" name="" id="" placeholder="請輸入電子郵件" required>
+                                <input type="email" name="get-email" id="" placeholder="請輸入電子郵件" required>
                             </div>
                             <div class="input-group">
                                 <p>地址*</p>
                                 <div class="islander-row">
                                     <div class="islander-4">
-                                        <select name="" id="" class="nation" required="">
+                                        <select name="nation" id="" class="nation" required="">
                                             <option value="">台灣</option>
                                             <option value="">國外</option>
                                         </select>
@@ -307,7 +307,7 @@
                                 <input type="text" name="" id="" placeholder="請輸入地址" required>
                             </div>
 
-                           
+
                         </div>
                         <h3 class="border-bottom pb-3 mb-3 ">請選擇付款方式</h3>
                         <div class="pay">
@@ -392,25 +392,35 @@
     <script src="js/all.js ">
     </script>
     <script>
-        new TwCitySelector({
-            el: ".send-form", // 同 DOM querySelector()
-            elCounty: ".country",
-            elDistrict: ".district"
-        });
-
-        $("#shipping-form").validate({
-            submitHandler: function (form) {
-                form.submit();
-            },
-            errorPlacement: function (error, element) {
-                element.closest('.input-group').append(error);
-            },
-            rules: {
-                user_pwd_again: {
-                    equalTo: '#user-pwd-input'
+        $(function(){
+             $("#shipping-form").validate({
+                submitHandler: function (form) {
+                    form.submit();
+                }, highlight:  function (element,  errorClass)  {
+                         $(element).fadeOut(function ()  { $(element).fadeIn();  });
+                   },
+                errorPlacement: function (error, element) {
+                    // element.addClass('error').attr("placeholder", error.text());
+                    element.addClass('error').closest('.input-group').append(error);
+                },
+                rules: {
+                    user_pwd_again: {
+                        equalTo: '#user-pwd-input'
+                    }
                 }
-            }
-        });
+            });
+            new TwCitySelector({
+                el: ".buy-form", // 同 DOM querySelector()
+                elCounty: ".country",
+                elDistrict: ".district"
+            });
+             new TwCitySelector2({
+                el: ".get-form", // 同 DOM querySelector()
+                elCounty: ".country",
+                elDistrict: ".district"
+            });
+        })
+       
     </script>
 
 </body>
