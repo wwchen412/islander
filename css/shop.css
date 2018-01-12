@@ -649,12 +649,13 @@ a {
 
 .shop-list .item-list > li > h3 {
   border-top: 1px solid #004b87;
-  border-bottom: 1px solid #004b87;
   padding: 0.8rem 0;
   cursor: pointer; }
 
 .shop-list .item-list > li ul {
-  margin-left: 30px; }
+  border-top: 1px solid #004b87;
+  padding-left: 30px;
+  display: none; }
 
 .shop-list .item-list > li li {
   padding: 10px 0;
@@ -680,6 +681,11 @@ a {
     margin-bottom: 30px; }
   .singleItem .status {
     margin: 15px 0; }
+  .singleItem .price img {
+    width: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px; }
   .singleItem .price input {
     display: inline-block;
     -webkit-appearance: none;

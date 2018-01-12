@@ -32,12 +32,14 @@
     & > li {
       & > h3 {
         border-top: 1px solid $maincolor;
-        border-bottom: 1px solid $maincolor;
+        // border-bottom: 1px solid $maincolor;
         padding: 0.8rem 0;
         cursor: pointer;
       }
       ul {
-        margin-left: 30px;
+          border-top: 1px solid $maincolor;
+        padding-left: 30px;
+        display: none;
       }
       li {
         padding: 10px 0;
@@ -76,7 +78,12 @@
     margin: 15px 0;
   }
   .price {
-   
+   img{
+     width: 30px;
+     display: inline-block;
+     vertical-align: middle;
+     margin-right: 5px;
+   }
     input {
       display: inline-block;
       -webkit-appearance: none;

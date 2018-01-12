@@ -99,44 +99,44 @@ $(function() {
 })
 
 // 商品展開光箱購物車
-var shopMore = document.querySelectorAll('.shop-more');
-var sLightbox = document.querySelector('.shop-lightbox');
+// var shopMore = document.querySelectorAll('.shop-more');
+// var sLightbox = document.querySelector('.shop-lightbox');
 
-function shopLightbox() {
-    event.preventDefault();
-    event.stopPropagation();
-    // 取得商品資料
-    var boxContents = {
-        title: this.dataset.title,
-        img: this.dataset.src,
-        content: this.dataset.content,
-        price: parseInt(this.dataset.price)
-    };
+// function shopLightbox() {
+//     event.preventDefault();
+//     event.stopPropagation();
+//     // 取得商品資料
+//     var boxContents = {
+//         title: this.dataset.title,
+//         img: this.dataset.src,
+//         content: this.dataset.content,
+//         price: parseInt(this.dataset.price)
+//     };
 
-    $('.box-img').attr('src', boxContents.img);
-    $('.box-title h3').text(boxContents.title);
-    $('.box-content').text(boxContents.content);
-    // 光箱出現
-    sLightbox.style.display = 'block';
-    // 關閉事件
-    var close_content = document.querySelector('.lightbox-content');
-    var close = document.querySelector('.shop-lightbox .close');
-    close_content.addEventListener('click', closeBox, false);
-    close.addEventListener('click', closeBox, false);
-}
+//     $('.box-img').attr('src', boxContents.img);
+//     $('.box-title h3').text(boxContents.title);
+//     $('.box-content').text(boxContents.content);
+//     // 光箱出現
+//     sLightbox.style.display = 'block';
+//     // 關閉事件
+//     var close_content = document.querySelector('.lightbox-content');
+//     var close = document.querySelector('.shop-lightbox .close');
+//     close_content.addEventListener('click', closeBox, false);
+//     close.addEventListener('click', closeBox, false);
+// }
 // 關閉事件
-function closeBox() {
-    event.stopPropagation();
-    $('.lightBlock').click(function() {
-        event.stopPropagation();
-    })
-    sLightbox.style.display = 'none';
-}
+// function closeBox() {
+//     event.stopPropagation();
+//     $('.lightBlock').click(function() {
+//         event.stopPropagation();
+//     })
+//     sLightbox.style.display = 'none';
+// }
 
 // 點擊展開
-for (i = 0; i < shopMore.length; i++) {
-    shopMore[i].addEventListener('click', shopLightbox, false);
-}
+// for (i = 0; i < shopMore.length; i++) {
+//     shopMore[i].addEventListener('click', shopLightbox, false);
+// }
 // 商品側邊展開
 $(function() {
     $('.shop-list .item-list h3').each(function() {
