@@ -80,10 +80,11 @@ header {
        svg {
            width: 30px;
            .st0 {
-               fill: $maincolor;
+               fill:#20c9ca;
            }
            .st1 {
-               stroke: $maincolor;
+               stroke:#20c9ca;
+               fill: transparent;
            }
        }
     }
