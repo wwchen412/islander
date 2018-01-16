@@ -197,7 +197,7 @@
 
                             <div class="input-group">
                                 <p>姓名*</p>
-                                <input id="buy-name" type="text" placeholder="姓氏" required name="buy-name">  
+                                <input id="buy-name" type="text" placeholder="姓名" required name="name">
                             </div>
                             <div class="input-group">
                                 <p>電話*</p>
@@ -211,20 +211,26 @@
                                 <p>地址*</p>
                                 <div class="islander-row">
                                     <div class="islander-4">
-                                        <select  id="buy-nation" class="nation" required="" name="buy-nation">
-                                            <option value="台灣">台灣</option>
-                                            <option value="國外">國外</option>
-                                        </select>
+                                        <div class="select-wrap">
+                                            <select id="buy-nation" class="nation" required="" name="buy-nation">
+                                                <option value="台灣">台灣</option>
+                                                <option value="國外">國外</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="islander-4">
-                                        <select name="" id="buy-country" class="country select-none" required>
-                                            <option value="">縣市</option>
-                                        </select>
+                                        <div class="select-wrap">
+                                            <select name="" id="buy-country" class="country select-none" required>
+                                                <option value="">縣市</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="islander-4">
-                                        <select name="" id="buy-district" class="district select-none" required style="margin-bottom:0">
-                                            <option value="">鄉鎮市區</option>
-                                        </select>
+                                        <div class="select-wrap">
+                                            <select name="" id="buy-district" class="district select-none" required style="margin-bottom:0">
+                                                <option value="">鄉鎮市區</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -235,6 +241,9 @@
                                 <input id="buy-address" type="text" name="buy-address" id="" placeholder="請輸入地址" required>
                             </div>
 
+
+                        </div>
+                        <div class="send-form">
                             <div class="input-group">
                                 <p>備註</p>
                                 <textarea name="" id="buy-textarea" rows="5 " placeholder="請輸入備註 "></textarea>
@@ -246,7 +255,7 @@
                                 </label>
                             </div>
                             <div class="member">
-                                <div class="input-group">
+                                <!-- <div class="input-group">
                                     <input id="user-pwd-input" type="password" placeholder="請輸入密碼">
                                     <img src="img/password.svg" alt="" class="svg icon">
                                 </div>
@@ -254,26 +263,29 @@
 
                                     <input type="password" placeholder="密碼確認" class="user_pwd_again">
                                     <img src="img/check.svg" alt="" class="svg icon">
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- 收件資訊 -->
                         <h3 class="border-bottom pb-3 mb-3">收件資訊</h3>
-                        <div class="send-form get-form">
+                        <div class="send-form">
                             <div class="input-group ">
                                 <label for="autoForm">
                                     <input type="checkbox" id="autoForm">
                                     <p>同購買人資料</p>
                                 </label>
                             </div>
+                        </div>
+                        <div class="send-form get-form">
+
 
                             <div class="input-group">
                                 <p>姓名*</p>
-                                <input id="get-name" name="get-name" type="text" placeholder="姓名" required>
+                                <input id="get-name" name="get-name" type="text" placeholder="請輸入姓名" required>
                             </div>
                             <div class="input-group">
                                 <p>電話*</p>
-                            <input id="get-phone" name="get-phone" type="tel" placeholder="手機" required>
+                                <input id="get-phone" name="get-phone" type="tel" placeholder="請輸入手機" required>
                             </div>
                             <div class="input-group">
                                 <p>信箱</p>
@@ -283,20 +295,26 @@
                                 <p>地址*</p>
                                 <div class="islander-row">
                                     <div class="islander-4">
-                                        <select name="nation" id="" class="nation" required="">
-                                            <option value="">台灣</option>
-                                            <option value="">國外</option>
-                                        </select>
+                                        <div class="select-wrap">
+                                            <select name="nation" id="" class="nation" required="">
+                                                <option value="台灣">台灣</option>
+                                                <option value="國外">國外</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="islander-4">
-                                        <select name="" id="" class="country select-none" required>
-                                            <option value="">縣市</option>
-                                        </select>
+                                        <div class="select-wrap">
+                                            <select name="" id="" class="country select-none" required>
+                                                <option value="">縣市</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="islander-4">
-                                        <select name="" id="" class="district select-none" required style="margin-bottom:0">
-                                            <option value="">鄉鎮市區</option>
-                                        </select>
+                                        <div class="select-wrap">
+                                            <select name="" id="" class="district select-none" required style="margin-bottom:0">
+                                                <option value="">鄉鎮市區</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -392,13 +410,16 @@
     <script src="js/all.js ">
     </script>
     <script>
-        $(function(){
-             $("#shipping-form").validate({
+        $(function () {
+            $("#shipping-form").validate({
                 submitHandler: function (form) {
                     form.submit();
-                }, highlight:  function (element,  errorClass)  {
-                         $(element).fadeOut(function ()  { $(element).fadeIn();  });
-                   },
+                },
+                highlight:   function (element,  errorClass)  {    
+                    $(element).fadeOut(function ()  {
+                        $(element).fadeIn(); 
+                    });  
+                },
                 errorPlacement: function (error, element) {
                     // element.addClass('error').attr("placeholder", error.text());
                     element.addClass('error').closest('.input-group').append(error);
@@ -414,13 +435,12 @@
                 elCounty: ".country",
                 elDistrict: ".district"
             });
-             new TwCitySelector2({
+            new TwCitySelector({
                 el: ".get-form", // 同 DOM querySelector()
                 elCounty: ".country",
                 elDistrict: ".district"
             });
         })
-       
     </script>
 
 </body>
