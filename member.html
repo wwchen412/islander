@@ -115,22 +115,22 @@
                                 <div class="input-groups">
                                    <img src="img/member.svg" alt="" class="svg icon">
                                    <div class="input-group">
-                                        <input type="text" placeholder="姓氏" required>
+                                        <input type="text" placeholder="姓氏" required name="firstname">
                                     </div>
                                     <div class="input-group">
-                                            <input type="text" placeholder="名" required>
+                                            <input type="text" placeholder="名" required name="lastname">
                                     </div>
                                 </div>
                                 <div class="input-group">
                                     <label for="">
-                                        <input type="date">
+                                        <input type="date" name="date">
                                         <img src="img/birth.svg" alt="" class="svg icon">
                                     </label>
                                 </div>
 
                                 <div class="input-group">
                                     <label for="">
-                                        <input type="tel" placeholder="請輸入電話" required>
+                                        <input type="tel" placeholder="請輸入電話" required name="phone">
                                         <img src="img/phone.svg" alt="" class="svg icon">
                                     </label>
                                 </div>
@@ -152,7 +152,7 @@
                                     </div>
                                     <img src="img/location.svg" alt="" class="svg icon">
                                     <label for="">
-                                        <input type="text" placeholder="請輸入地址">
+                                        <input type="text" placeholder="請輸入地址" name="address" required>
 
                                     </label>
                                 </div>
@@ -327,20 +327,25 @@
             elDistrict: ".district"
         });
 
+         $("#member-form").validate({
+                submitHandler: function (form) {
+                    form.submit();
+                },
+                highlight: function (element, errorClass) {
+                    // $(element).fadeOut(function () {
+                    //     $(element).fadeIn();
+                    // });
+                },
+                errorPlacement: function (error, element) {
 
-        $("#member-form").validate({
-            submitHandler: function (form) {
-                form.submit();
-            },
-            errorPlacement: function (error, element) {
-                element.closest('.input-group').append(error);
-            },
-            rules: {
-                user_pwd_again: {
-                    equalTo: '#user-pwd-input'
-                }   
-            }
-        });
+                    element.addClass('error').closest('.input-group').append(error);
+                },
+                rules: {
+                    user_pwd_again: {
+                        equalTo: '#user-pwd-input'
+                    }
+                }
+            });
     </script>
 </body>
 

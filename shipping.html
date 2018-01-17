@@ -424,12 +424,12 @@
                     form.submit();
                 },
                 highlight:   function (element,  errorClass)  {    
-                    $(element).fadeOut(function ()  {
-                        $(element).fadeIn(); 
-                    });  
+                    // $(element).fadeOut(function ()  {
+                    //     $(element).fadeIn(); 
+                    // });  
                 },
                 errorPlacement: function (error, element) {
-                    // element.addClass('error').attr("placeholder", error.text());
+                   
                     element.addClass('error').closest('.input-group').append(error);
                 },
                 rules: {
