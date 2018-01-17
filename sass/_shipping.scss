@@ -8,7 +8,7 @@
       }
     }
     .islander-row > div {
-      padding: 10px 30px;
+      padding: 10px 10px;
       margin-bottom: 0;
       margin: 0;
       align-self: center;
@@ -34,8 +34,20 @@
         vertical-align: top;
         align-self: center;
       }
+      .close{
+        width: 30px;
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: middle;
+      }
       .content {
         width: calc(100% - 100px); 
+        p{
+          padding:0 15px;
+          display: inline-block;
+          width: calc(100% - 30px);
+          vertical-align: middle;
+        }
       }
     }
     .num {
