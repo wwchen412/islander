@@ -191,12 +191,11 @@ $(function() {
 // ----------------------------------------------------
 
 
-$(".single-title").click(function(){
- 
+$(".shop-advice").click(function() {
   $(this)
     .siblings(".item-editor")
-    .stop(true,true)
-    .slideToggle() ;
+    .stop(true, true)
+    .slideToggle();
 });
 // 商品側邊展開
 $(function() {
