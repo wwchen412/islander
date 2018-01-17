@@ -14,6 +14,7 @@
     h3 {
       color: #fff;
       font-size: 1rem;
+      text-align: center;
     }
   }
   img {
@@ -105,6 +106,7 @@
   padding: 10px;
   border-bottom: 1px solid $maincolor;
   margin-bottom: 15px;
+  cursor: pointer;
   img{
     width: 30px;
     display: inline-block;vertical-align: middle;
@@ -113,6 +115,8 @@
 }
  .item-editor {
    padding: 20px 50px;
+   display: none;
+   
  }
 .items {
   .btn-cart {

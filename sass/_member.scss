@@ -29,9 +29,12 @@
   .content {
     border-right: 0px;
     border-left: 0px;
+    display: none;
+
     @include range-width(300px,768px) {
       border-bottom: 1px solid $lightgray;
     }
+
     .content-block {
       display: flex;
       flex-wrap: wrap;

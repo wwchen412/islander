@@ -1,3 +1,28 @@
+/*
+-------------------------------------
+商品頁共用header
+串完後可刪除 只需留 menu toggle
+shop header load 
+-------------------------------------
+*/
+
+
+// load header
+
+$(function() {
+  if ($("header").hasClass("header-index") === false) {
+    $("header").load("shop-index.html header");
+    console.log('load header');
+    // menu toggle
+  
+    $("body").on("click", ".toggle-buttom", function() {
+      $(".toggle-menu").slideToggle();
+    });
+  } else {
+  }
+});
+
+
 // light box
 
 var vdo_link = document.querySelectorAll(".vdo-link");
@@ -36,8 +61,8 @@ $("#lightbox").click(function() {
     $("#wrap").removeClass("active");
   }
 });
-
-// faq
+/*-----------------------問與答頁面------------------*/
+// faq 題目展開
 $(".faq-q").each(function() {
   $(this).click(function() {
     $(this)
@@ -45,8 +70,11 @@ $(".faq-q").each(function() {
       .slideToggle();
   });
 });
-
+/*---------------------------------------------------*/
 // 控制 svg 顏色
+
+
+/*將img 轉換成svg */
 jQuery("img.svg").each(function() {
   var $img = jQuery(this);
   var imgID = $img.attr("id");
@@ -103,6 +131,8 @@ function fadeIn() {
     }
   }
 }
+
+
 $(function() {
   $(".sgsbtn").click(function() {
     $(this).addClass("active");
@@ -152,6 +182,22 @@ $(function() {
 // for (i = 0; i < shopMore.length; i++) {
 //     shopMore[i].addEventListener('click', shopLightbox, false);
 // }
+
+
+
+// ----------------------------------------------------
+//                      商品頁面
+//                 shop-single.html
+// ----------------------------------------------------
+
+
+$(".single-title").click(function(){
+ 
+  $(this)
+    .siblings(".item-editor")
+    .stop(true,true)
+    .slideToggle() ;
+});
 // 商品側邊展開
 $(function() {
   $(".shop-list .item-list h3").each(function() {
@@ -163,20 +209,7 @@ $(function() {
   });
 });
 
-// load header
 
-$(function() {
-  if ($("header").hasClass("header-index") === false) {
-    $("header").load("shop-index.html header");
-
-    // menu toggle
-  
-    $("body").on("click", ".toggle-buttom", function() {
-      $(".toggle-menu").slideToggle();
-    });
-  } else {
-  }
-});
 
 // 篩國家
 // 台灣內才能選鄉鎮市
@@ -210,6 +243,8 @@ $(function() {
     });
   });
 });
+
+
 // 複製表格
 function copy() {
   console.log("copy");
@@ -275,3 +310,26 @@ for (i = 0; i < removeBtn.length; i++) {
     }
   });
 }
+
+
+/*          History Page       */
+$(function () {
+// 只顯示10筆
+$(".history-form .content")
+  .slice(0, 10)
+  .css('display','flex');
+
+  // 點擊更多
+  $('.history-form .btn-more').click(function(){
+    var hiddenContent = $(".history-form .content:hidden").length;
+    $(".history-form .content:hidden")
+      .slice(0, 10)
+      .css("display", "flex");
+
+      // 全部出現以後消失
+      if (hiddenContent == 0){
+        $(".history-form .btn-more").fadeOut();
+      }
+      //  console.log(hiddenContent);
+  })
+});
