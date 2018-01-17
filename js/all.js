@@ -3,8 +3,8 @@
 var vdo_link = document.querySelectorAll(".vdo-link");
 // var lightboxActive = document.querySelector('#lightbox.active');
 
-$(".vdo-link").each(function () {
-  $(this).click(function (e) {
+$(".vdo-link").each(function() {
+  $(this).click(function(e) {
     event.preventDefault();
     event.stopPropagation();
     var evt_link = $(this).attr("data-src");
@@ -13,8 +13,8 @@ $(".vdo-link").each(function () {
       .find(".iframe-wrapper")
       .append(
         '<iframe src="' +
-        evt_link +
-        '" frameborder="0" allowfullscreen></iframe>'
+          evt_link +
+          '" frameborder="0" allowfullscreen></iframe>'
       );
     $("#lightbox")
       .fadeIn(300)
@@ -25,7 +25,7 @@ $(".vdo-link").each(function () {
 });
 
 // 關閉視窗
-$("#lightbox").click(function () {
+$("#lightbox").click(function() {
   if ($(this).hasClass("active")) {
     $(this)
       .fadeOut(300)
@@ -37,13 +37,9 @@ $("#lightbox").click(function () {
   }
 });
 
-// menu toggle
-$(".toggle-buttom").click(function () {
-  $(".toggle-menu").slideToggle();
-});
 // faq
-$(".faq-q").each(function () {
-  $(this).click(function () {
+$(".faq-q").each(function() {
+  $(this).click(function() {
     $(this)
       .siblings(".faq-a")
       .slideToggle();
@@ -51,7 +47,7 @@ $(".faq-q").each(function () {
 });
 
 // 控制 svg 顏色
-jQuery("img.svg").each(function () {
+jQuery("img.svg").each(function() {
   var $img = jQuery(this);
   var imgID = $img.attr("id");
   var imgClass = $img.attr("class");
@@ -59,7 +55,7 @@ jQuery("img.svg").each(function () {
 
   jQuery.get(
     imgURL,
-    function (data) {
+    function(data) {
       // Get the SVG tag, ignore the rest
       var $svg = jQuery(data).find("svg");
 
@@ -107,8 +103,8 @@ function fadeIn() {
     }
   }
 }
-$(function () {
-  $(".sgsbtn").click(function () {
+$(function() {
+  $(".sgsbtn").click(function() {
     $(this).addClass("active");
     $(this)
       .siblings(".sgs-list")
@@ -157,9 +153,9 @@ $(function () {
 //     shopMore[i].addEventListener('click', shopLightbox, false);
 // }
 // 商品側邊展開
-$(function () {
-  $(".shop-list .item-list h3").each(function () {
-    $(this).click(function () {
+$(function() {
+  $(".shop-list .item-list h3").each(function() {
+    $(this).click(function() {
       $(this)
         .siblings("ul")
         .slideToggle();
@@ -169,20 +165,35 @@ $(function () {
 
 // load header
 
-$(function () {
+$(function() {
   if ($("header").hasClass("header-index") === false) {
     $("header").load("shop-index.html header");
-  } else {}
+
+    // menu toggle
+  
+    $("body").on("click", ".toggle-buttom", function() {
+      $(".toggle-menu").slideToggle();
+    });
+  } else {
+  }
 });
 
 // 篩國家
 // 台灣內才能選鄉鎮市
-$(function () {
-  $(".nation").each(function () {
-    $(this).on("change", function () {
-      var nationText = $(this).find("option:selected").text();
-      var country = $(this).parents('.islander-4').siblings().find('.county');
-      var district = $(this).parents('.islander-4').siblings().find('.district');
+$(function() {
+  $(".nation").each(function() {
+    $(this).on("change", function() {
+      var nationText = $(this)
+        .find("option:selected")
+        .text();
+      var country = $(this)
+        .parents(".islander-4")
+        .siblings()
+        .find(".county");
+      var district = $(this)
+        .parents(".islander-4")
+        .siblings()
+        .find(".district");
 
       if (nationText !== "台灣") {
         country.attr("disabled", true);
@@ -201,17 +212,16 @@ $(function () {
 });
 // 複製表格
 function copy() {
-  console.log('copy');
-  var newform2 = $('.buy-form').clone();
-  newform2.filter('form').prop('class', 'get-form');
+  console.log("copy");
+  var newform2 = $(".buy-form").clone();
+  newform2.filter("form").prop("class", "get-form");
   console.log(newform2);
-  $('.get-form').replaceWith(newform2);
+  $(".get-form").replaceWith(newform2);
 }
 
+$("#autoForm").on("change", copy);
 
-$('#autoForm').on('change', copy);
-
-$('input#member').on('change', function () {
+$("input#member").on("change", function() {
   var appendText = `
                     <div class="input-group">
                     <input id="user-pwd-input" type="password" placeholder="請輸入密碼" required>
@@ -243,23 +253,25 @@ $('input#member').on('change', function () {
                           </g>
                         </svg>
                     </div>
-                            `
-  $('.send-form .member').append(appendText);
-})
+                            `;
+  $(".send-form .member").append(appendText);
+});
 
- // 刪除商品
- var removeBtn = document.querySelectorAll(".form-list .close");
- // console.log(removeBtn);
- for (i = 0; i < removeBtn.length; i++) {
-   removeBtn[i].addEventListener("click", function() {
-     var formList = document.querySelectorAll(".form-list");
-     // console.log(formList.length)
-     if (formList.length <= 1) {
-       $(".formLists").html('<h3 style="padding:30px 0;text-align:center;color:#aaa">目前購物車內沒有商品</h3 style="padding:30px 0;text-align:center;color:#aaa">');
-     } else {
-       $(this)
-         .closest(".form-list")
-         .remove();
-     }
-   });
- }
+// 刪除商品
+var removeBtn = document.querySelectorAll(".form-list .close");
+// console.log(removeBtn);
+for (i = 0; i < removeBtn.length; i++) {
+  removeBtn[i].addEventListener("click", function() {
+    var formList = document.querySelectorAll(".form-list");
+    // console.log(formList.length)
+    if (formList.length <= 1) {
+      $(".formLists").html(
+        '<h3 style="padding:30px 0;text-align:center;color:#aaa">目前購物車內沒有商品</h3 style="padding:30px 0;text-align:center;color:#aaa">'
+      );
+    } else {
+      $(this)
+        .closest(".form-list")
+        .remove();
+    }
+  });
+}
