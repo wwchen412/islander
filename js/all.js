@@ -256,7 +256,8 @@ function copy() {
 $("#autoForm").on("change", copy);
 
 $("input#member").on("change", function() {
-  var appendText = `
+  if($(this).prop('checked') == true){
+var appendText = `
                     <div class="input-group">
                     <input id="user-pwd-input" type="password" placeholder="請輸入密碼" required>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="圖層_1" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve" class="svg icon replaced-svg">
@@ -288,7 +289,11 @@ $("input#member").on("change", function() {
                         </svg>
                     </div>
                             `;
-  $(".send-form .member").append(appendText);
+$(".send-form .member").append(appendText);
+  }else{
+    $(".send-form .member").html('');
+  }
+  
 });
 
 // 刪除商品
