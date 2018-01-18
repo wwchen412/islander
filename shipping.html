@@ -42,7 +42,7 @@
                     <li>
                         <a href="index.html#contact">CONTACT</a>
                     </li>
-    
+
                 </ul>
             </div>
             <!-- phone menu -->
@@ -85,10 +85,10 @@
                             <img src="img/fb-b.svg" alt="" style="width:30px">
                         </a>
                     </li>
-    
+
                 </ul>
             </div>
-    
+
         </nav>
     </header>
     <div id="wrap">
@@ -138,7 +138,7 @@
                                 <div class="islander-2 text-centerPc singleNum">
                                     <div class="num text-centerPc">
                                         <p data-content="數量：" style="display:inline"></p>
-                                        <input type="number" min="1" max="100" value="1" data-content="數量" >
+                                        <input type="number" min="1" max="100" value="1" data-content="數量">
                                     </div>
                                 </div>
                                 <div class="islander-2 text-centerPc singleTotal">
@@ -191,9 +191,11 @@
                             <p>運費</p>
                             <p> 85</p>
                         </div>
-                        <div><p>合計</p>
-                        <p> 4885</p></div>
-                       
+                        <div>
+                            <p>合計</p>
+                            <p> 4885</p>
+                        </div>
+
                     </div>
 
                 </div>
@@ -204,10 +206,18 @@
                         <h3 class="border-bottom pb-3 mb-3">購買資訊</h3>
                         <div class="send-form buy-form">
 
+                        <div class="input-groups">
+                            <p>姓名*</p>
                             <div class="input-group">
-                                <p>姓名*</p>
-                                <input id="buy-name" type="text" placeholder="姓名" required name="name">
+                        
+                                <input id="buy-name" name="buy-name" type="text" placeholder="請輸入姓氏" required>
                             </div>
+                            <div class="input-group">
+                        
+                                <input id="buy-lastname" name="buy-lastname" type="text" placeholder="請輸入名字" required>
+                            </div>
+                        </div>
+
                             <div class="input-group">
                                 <p>電話*</p>
                                 <input id="buy-phone" type="tel" placeholder="請輸入手機" required name="buy-phone">
@@ -287,11 +297,18 @@
                         </div>
                         <div class="send-form get-form">
 
-
-                            <div class="input-group">
+                            <div class="input-groups">
                                 <p>姓名*</p>
-                                <input id="get-name" name="get-name" type="text" placeholder="請輸入姓名" required>
+                                <div class="input-group">
+                                    
+                                    <input id="get-name" name="get-name" type="text" placeholder="請輸入姓氏" required>
+                                </div>
+                                <div class="input-group">
+                                    
+                                    <input id="get-lastname" name="get-lastname" type="text" placeholder="請輸入名字" required>
+                                </div>
                             </div>
+
                             <div class="input-group">
                                 <p>電話*</p>
                                 <input id="get-phone" name="get-phone" type="tel" placeholder="請輸入手機" required>
@@ -313,14 +330,14 @@
                                     </div>
                                     <div class="islander-4">
                                         <div class="select-wrap">
-                                            <select name="" id="" class="country select-none" required>
+                                            <select name="send-country" id="send-country" class="country select-none" required>
                                                 <option value="">縣市</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="islander-4">
                                         <div class="select-wrap">
-                                            <select name="" id="" class="district select-none" required style="margin-bottom:0">
+                                            <select name="send-district" id="send-district" class="district select-none" required style="margin-bottom:0">
                                                 <option value="">鄉鎮市區</option>
                                             </select>
                                         </div>
@@ -378,7 +395,7 @@
         </div>
         <footer class="footer">
             <div class="container text-center">
-        
+
                 <ul>
                     <li>
                         <p>Communities & features</p>
@@ -387,7 +404,7 @@
                         <a href="">
                             <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 28 28" style="enable-background:new 0 0 28 28;" xml:space="preserve">
-        
+
                                 <g id="圖層_2">
                                     <g id="圖層_1-2">
                                         <path d="M14,28h-0.1C6.2,27.9-0.1,21.6,0,13.9c0-3.7,1.5-7.2,4.1-9.8C6.7,1.5,10.3,0,14,0l0,0c7.7,0,14,6.3,14,14S21.7,28,14,28z
@@ -433,7 +450,7 @@
                         <a href="">
                             <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 27 27" style="enable-background:new 0 0 27 27;" xml:space="preserve">
-        
+
                                 <g id="圖層_2">
                                     <g id="圖層_1-2">
                                         <path d="M16.7,20.9h-6.4c-2.3,0-4.2-1.9-4.2-4.2v-6.4C6.1,8,8,6.1,10.3,6.1h6.4c2.3,0,4.2,1.9,4.2,4.2v6.4
@@ -492,7 +509,7 @@
                         </a>
                     </li>
                 </ul>
-        
+
             </div>
             <div class="copyright">
                 Copyright © 2017 ISANDER
@@ -518,7 +535,7 @@
                     // });  
                 },
                 errorPlacement: function (error, element) {
-                   
+
                     element.addClass('error').closest('.input-group').append(error);
                 },
                 rules: {
@@ -538,10 +555,6 @@
                 elDistrict: ".district"
             });
         })
-       
-       
-
-      
     </script>
 
 </body>

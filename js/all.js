@@ -9,17 +9,16 @@ shop header load
 
 // load header
 
-$(function() {
+$(function () {
   if ($("header").hasClass("header-index") === false) {
     $("header").load("shop-index.html header");
     console.log('load header');
     // menu toggle
-  
-    $("body").on("click", ".toggle-buttom", function() {
+
+    $("body").on("click", ".toggle-buttom", function () {
       $(".toggle-menu").slideToggle();
     });
-  } else {
-  }
+  } else {}
 });
 
 
@@ -28,8 +27,8 @@ $(function() {
 var vdo_link = document.querySelectorAll(".vdo-link");
 // var lightboxActive = document.querySelector('#lightbox.active');
 
-$(".vdo-link").each(function() {
-  $(this).click(function(e) {
+$(".vdo-link").each(function () {
+  $(this).click(function (e) {
     event.preventDefault();
     event.stopPropagation();
     var evt_link = $(this).attr("data-src");
@@ -38,8 +37,8 @@ $(".vdo-link").each(function() {
       .find(".iframe-wrapper")
       .append(
         '<iframe src="' +
-          evt_link +
-          '" frameborder="0" allowfullscreen></iframe>'
+        evt_link +
+        '" frameborder="0" allowfullscreen></iframe>'
       );
     $("#lightbox")
       .fadeIn(300)
@@ -50,7 +49,7 @@ $(".vdo-link").each(function() {
 });
 
 // 關閉視窗
-$("#lightbox").click(function() {
+$("#lightbox").click(function () {
   if ($(this).hasClass("active")) {
     $(this)
       .fadeOut(300)
@@ -63,8 +62,8 @@ $("#lightbox").click(function() {
 });
 /*-----------------------問與答頁面------------------*/
 // faq 題目展開
-$(".faq-q").each(function() {
-  $(this).click(function() {
+$(".faq-q").each(function () {
+  $(this).click(function () {
     $(this)
       .siblings(".faq-a")
       .slideToggle();
@@ -75,7 +74,7 @@ $(".faq-q").each(function() {
 
 
 /*將img 轉換成svg */
-jQuery("img.svg").each(function() {
+jQuery("img.svg").each(function () {
   var $img = jQuery(this);
   var imgID = $img.attr("id");
   var imgClass = $img.attr("class");
@@ -83,7 +82,7 @@ jQuery("img.svg").each(function() {
 
   jQuery.get(
     imgURL,
-    function(data) {
+    function (data) {
       // Get the SVG tag, ignore the rest
       var $svg = jQuery(data).find("svg");
 
@@ -133,8 +132,8 @@ function fadeIn() {
 }
 
 
-$(function() {
-  $(".sgsbtn").click(function() {
+$(function () {
+  $(".sgsbtn").click(function () {
     $(this).addClass("active");
     $(this)
       .siblings(".sgs-list")
@@ -191,16 +190,16 @@ $(function() {
 // ----------------------------------------------------
 
 
-$(".shop-advice").click(function() {
+$(".shop-advice").click(function () {
   $(this)
     .siblings(".item-editor")
     .stop(true, true)
     .slideToggle();
 });
 // 商品側邊展開
-$(function() {
-  $(".shop-list .item-list h3").each(function() {
-    $(this).click(function() {
+$(function () {
+  $(".shop-list .item-list h3").each(function () {
+    $(this).click(function () {
       $(this)
         .siblings("ul")
         .slideToggle();
@@ -212,9 +211,9 @@ $(function() {
 
 // 篩國家
 // 台灣內才能選鄉鎮市
-$(function() {
-  $(".nation").each(function() {
-    $(this).on("change", function() {
+$(function () {
+  $(".nation").each(function () {
+    $(this).on("change", function () {
       var nationText = $(this)
         .find("option:selected")
         .text();
@@ -255,9 +254,9 @@ function copy() {
 
 $("#autoForm").on("change", copy);
 
-$("input#member").on("change", function() {
-  if($(this).prop('checked') == true){
-var appendText = `
+$("input#member").on("change", function () {
+  if ($(this).prop('checked') == true) {
+    var appendText = `
                     <div class="input-group">
                     <input id="user-pwd-input" type="password" placeholder="請輸入密碼" required>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="圖層_1" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve" class="svg icon replaced-svg">
@@ -289,18 +288,18 @@ var appendText = `
                         </svg>
                     </div>
                             `;
-$(".send-form .member").append(appendText);
-  }else{
+    $(".send-form .member").append(appendText);
+  } else {
     $(".send-form .member").html('');
   }
-  
+
 });
 
 // 刪除商品
 var removeBtn = document.querySelectorAll(".form-list .close");
 // console.log(removeBtn);
 for (i = 0; i < removeBtn.length; i++) {
-  removeBtn[i].addEventListener("click", function() {
+  removeBtn[i].addEventListener("click", function () {
     var formList = document.querySelectorAll(".form-list");
     // console.log(formList.length)
     if (formList.length <= 1) {
@@ -318,22 +317,22 @@ for (i = 0; i < removeBtn.length; i++) {
 
 /*          History Page       */
 $(function () {
-// 只顯示10筆
-$(".history-form .content")
-  .slice(0, 10)
-  .css('display','flex');
+  // 只顯示10筆
+  $(".history-form .content")
+    .slice(0, 10)
+    .css('display', 'flex');
 
   // 點擊更多
-  $('.history-form .btn-more').click(function(){
+  $('.history-form .btn-more').click(function () {
     var hiddenContent = $(".history-form .content:hidden").length;
     $(".history-form .content:hidden")
       .slice(0, 10)
       .css("display", "flex");
 
-      // 全部出現以後消失
-      if (hiddenContent == 0){
-        $(".history-form .btn-more").fadeOut();
-      }
-      //  console.log(hiddenContent);
+    // 全部出現以後消失
+    if (hiddenContent == 0) {
+      $(".history-form .btn-more").fadeOut();
+    }
+    //  console.log(hiddenContent);
   })
 });

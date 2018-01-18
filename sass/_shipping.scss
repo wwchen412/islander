@@ -1,6 +1,7 @@
 @import "_color.scss";
 .shipping {
-  font-family: noto sans;
+font-family: noto sans;
+}
   .shipping-form {
     .islander-row {
       @include range-width(769px, 0) {
@@ -111,6 +112,16 @@
         &:nth-child(3n + 2) {
           margin: 0 15px;
         }
+      }
+    }
+    .input-groups>div.input-group{
+     width: calc((100% - 115px) / 2);
+    }
+    .input-groups{
+      p {
+        display: inline-block;
+        width: 100px;
+        vertical-align: top;
       }
     }
     .input-group {
@@ -281,7 +292,7 @@
       }
     }
   }
-}
+
 
 .select-wrap {
   position: relative;

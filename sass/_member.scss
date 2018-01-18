@@ -94,7 +94,26 @@
     padding: 15px;
   }
 }
-
+.input-groups {
+  font-size: 0;
+  letter-spacing: 0;
+    &>div.input-group {
+    display: inline-block;
+    width: calc((100% - 90px) / 2);
+    input {
+      width: calc(100%);
+    }
+    &:nth-child(3) {
+      margin-left: 15px;
+    }
+  }
+  svg {
+    width: 30px; // margin: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 45px;
+  }
+}
 // 會員資訊
 .member-block {
   min-height: calc(100vh - 110px - 127px - 99px);
@@ -104,28 +123,7 @@
     margin: 0 auto;
     padding: 20px 0;
   }
-  .input-groups {
-    font-size: 0;
-    letter-spacing: 0;
-
-    & > div {
-      display: inline-block;
-      width: calc((100% - 90px) / 2);
-
-      input {
-        width: calc(100%);
-      }
-      &:nth-child(3) {
-        margin-left: 15px;
-      }
-    }
-    svg {
-      width: 30px; // margin: 0 5px;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 45px;
-    }
-  }
+  
   .input-group {
     padding: 10px 0;
     direction: rtl;
