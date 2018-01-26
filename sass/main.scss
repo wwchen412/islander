@@ -42,7 +42,7 @@
                 background-position: 50% 50%;
                 transform: translateZ(0);
                 height: 100%;
-                min-height: 100vh;
+                // min-height: 100vh;
                 @extend %innerCenter;
                 &>* {
                     text-align: center;
@@ -258,7 +258,7 @@
                         top: 4px;
                         border-radius: 50%;
                     }
-                    &:after {
+                   span {
                         content: ' ';
                         display: block;
                         position: absolute;
@@ -274,6 +274,9 @@
                          
                         transform: scale(1);
                         }
+                        span{
+                            opacity: 1;
+                        }
                     }
                 }
                 .dot0{
@@ -282,66 +285,36 @@
                 }
                 .dot1 {
                     top: 30%;
-                    &.active {
-                        &:after {
-                            content: 'Latest news';
-                            opacity: 1;
-                        }
-                    }
+                   
                 }
                 .dot2 {
                     top: calc(30% + 60px);
-                    &.active {
-                        &:after {
-                            content: 'Islander';
-                            opacity: 1;
-                        }
-                    }
+                    
                 }
                 .dot3 {
                     top: calc(30% + 120px);
-                    &.active {
-                        &:after {
-                            content: 'Story';
-                            opacity: 1;
-                        }
-                    }
+                    
                 }
                 .dot4 {
                     top: calc(30% + 180px);
                     &.active {
-                        &:after {
-                            content: 'Coffee Academy';
+                       span {
+                            // content: 'Coffee Academy';
                             opacity: 1;
                         }
                     }
                 }
                 .dot5 {
                     top: calc(30% + 240px);
-                    &.active {
-                        &:after {
-                            content: 'Shop';
-                            opacity: 1;
-                        }
-                    }
+                    
                 }
                 .dot6 {
                     top: calc(30% + 300px);
-                    &.active {
-                        &:after {
-                            content: 'Contact';
-                            opacity: 1;
-                        }
-                    }
+                    
                 }
                 .dot7 {
                     top: calc(30% + 360px);
-                    &.active {
-                        &:after {
-                            content: 'Contact';
-                            opacity: 1;
-                        }
-                    }
+                    
                 }
             }
             
