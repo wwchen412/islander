@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Islander Hawaiian Coffee </title>
-    <link rel="stylesheet" href="css/main.css?1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.fullpage.min.css">
 </head>
 
 <body>
@@ -19,92 +20,208 @@
             <div class="hidden-xs">
                 <ul class="d-flex ">
                     <li>
-                        <a href="index.html"><img src="img/logo-main.svg" alt="" style="width:50px"></a>
+                        <a href="index.html">
+                            <img src="img/logo-main.svg" alt="" style="width:50px">
+                        </a>
                     </li>
                     <!--<li><a href="islander.html">islander</a></li> -->
                     <!-- <li><a href="story.html">STORY</a></li> -->
                     <!-- <li><a href="brand.html">Coffee Academy</a></li> -->
-                    <li><a href=" " title="Coming Soon">SHOP</a></li>
-                    <li><a href="index.html#contact">CONTACT</a></li>
-
+                    <li>
+                        <a href=" " title="Coming Soon">SHOP</a>
+                    </li>
+                    <li>
+                        <a href="index.html#contact">CONTACT</a>
+                    </li>
+    
                 </ul>
             </div>
             <!-- phone menu -->
             <div class="hidden-sm phone-menu">
                 <div>
-                    <a href="index.html"><img src="img/logo-main.svg" alt="" style="width:50px"></a>
+                    <a href="index.html">
+                        <img src="img/logo-main.svg" alt="" style="width:50px">
+                    </a>
                 </div>
                 <div class="toggle-buttom">
                     <img src="img/toggle1.svg" alt="" style="width:27px">
                 </div>
                 <ul class="d-flex toggle-menu">
-
-                    <!--<li><a href="islander.html">islander</a></li> -->
-                    <!-- <li><a href="story.html">STORY</a></li> -->
-                    <!-- <li><a href="brand.html">Coffee Academy</a></li> -->
-                    <li><a href=" " title="Coming Soon">SHOP</a></li>
-                    <li><a href="index.html#contact">CONTACT</a></li>
-                    <li class="hidden-sm">
-                        <a href=""><img src="img/lang-b.svg" alt="" style="width:30px"></a>
-                        <a href=""><img src="img/instagram-b.svg" alt="" style="width:30px"></a>
-                        <a href=""><img src="img/fb-b.svg" alt="" style="width:30px"></a>
+    
+                    <li>
+                        <a href=" " title="Coming Soon">SHOP</a>
                     </li>
-
+                    <li>
+                        <a href="index.html#contact">CONTACT</a>
+                    </li>
+                    <li class="hidden-sm">
+                        <a href="">
+                            <img src="img/lang-b.svg" alt="" style="width:30px">
+                        </a>
+                        <a href="">
+                            <img src="img/instagram-b.svg" alt="" style="width:30px">
+                        </a>
+                        <a href="">
+                            <img src="img/fb-b.svg" alt="" style="width:30px">
+                        </a>
+                    </li>
                 </ul>
             </div>
-
+    
         </nav>
     </header>
     <div id="wrap" class="inner-page">
 
-        <div class="section pd-head pb-3" style="background-image:url('img/page2.png');">
-            <div class="container">
-                <div class="align-left">
-                    <h2 class="mb-3">夏威夷咖啡的故事
-                    </h2>
-                    <p class="mb-3">
-                        夏威夷地理環境與氣候得天獨厚，是幅員廣大的美國唯一能種植咖啡的州。<br> 受惠海拔1200公尺以上特殊氣候環境，面海的火山坡，早上陽光燦爛，下午雲霧繚繞氣豐富，入夜後涼爽怡人，咖啡樹果實圓潤飽滿且帶有獨特香氣。
-                        <br> 可那咖啡（Kona coffee）歷史悠久，品質優良且產量稀少，美國法令規定只有真正種植於夏威夷大島Kona地區的咖啡才可以稱為「可那咖啡」。 <br> 夏威夷可那咖啡（Kona coffee）素來與牙買加的藍山咖啡 (Jamaican Blue Mountain Coffee)齊名，被公認為是世界上兩種最為高貴價昂的優質咖啡。<br> 卡霧咖啡（Ka’u coffee）是夏威夷大島咖啡中的後起新秀。已連續獲得美國SCAA年度咖啡競賽大賞而備受矚目。近年全美Coffee
-                        Review中評價甚至超越可那咖啡。
-                    </p>
-                    <a href="index.html" class="vdo-link mb-5" data-src="https://www.youtube.com/embed/i4xTz_OwlSQ?rel=0&amp;controls=0&amp;showinfo=0">
-                        <img src="img/video.svg" alt="" style="width:2rem">
-                        <p>觀看影片</p>
-                    </a>
-                    <div class="align-left mt-3 mb-3">
-                        <div class="islander-row">
+        <div id="fullpage">
+            <div class="section" style="background-image:url('img/section4.png');">
+                <div class="container">
+                    <div class="">
+                        <h2 class="mb-3">夏威夷咖啡物語
+    
+                        </h2>
+                        <p class="mb-3">夏威夷是美國唯一出產咖啡地區
+                            <br>咖啡植物最初是在Kamehameha國王時期，首任西班牙顧問， Don Francisco de Paula Marin於1817年時引進夏威夷。當初種植並未成功，1825年Oahu市長Chie
+                            Boki從巴西引進咖啡種植於Manoa Valley成功。自此之後島上各地開始種植咖啡。目前，在Kauai, Oahu, Maui, Mokokai及大島，各地約有950座農場種植咖啡，其中多數為家族經營小農事業，總面積達7,900英畝。
+                        </p>
+    
+                    </div>
+                </div>
+    
+            </div>
+            <div class="section" style="background-image:url('img/bgs.png');">
+                <div class="container">
+                    <div class="">
+                        <h2 class="mb-3">可那地區
+            
+                        </h2>
+                        <div class="islander-row mb-3">
                             <div class="islander-6">
-                                <img src="img/pic2.png" alt="" class="img-fluid box-shadow "> p
+                                <img src="img/storyImg.png" alt="" class="img-fluid img-shadow">
                             </div>
+                            <div class="islander-6 align-left">
+                                <p>提到夏威夷咖啡，人們腦海中多半浮現KONA，可那咖啡。 1828年，傳教士Samuel Ruggles首次於大島Kona地區種植咖啡。 至今，KONA可那咖啡產量約佔夏威夷咖啡總產量的一半，約有六百座獨立農場，座落於可那的北境與南境。可那咖啡多種植於Manua
+                                Loa西側及Hualailai火山邊坡上，多種植於中低海拔，約3000-2000英呎左右的高度。火山區向來以黑土聞名，黑土酸鹼性適中，更富含礦物質，且有助於保持土壤含水量。可那地區清晨陽光充足，中午開始雲霧浮現，恰巧讓咖啡樹苗躲開午後毒辣的陽光，因此被稱為適合咖啡授粉開花，有助於咖啡櫻桃結實的氣候。</p>
+                            </div>
+                        </div>
+                        <div class="islander-row mb-3">
                             <div class="islander-6">
-                                <h3 class="mb-1">
-                                    緣起
-                                </h3>
-                                <p>充滿熱帶島嶼的奔放陽光、洋溢著家一般的歡樂溫馨，彼此扶持，分享愛與勇敢！充滿熱帶島嶼的奔放陽光、洋溢著家一般的歡樂溫馨，彼此扶持，分享愛與勇敢！ 充滿熱帶島嶼的奔放陽光、洋溢著家一般的歡樂溫馨，彼此扶持，分享愛與勇敢！充滿熱帶島嶼的奔放陽光、洋溢著家一般的歡樂溫馨，彼此扶持，分享愛與勇敢！
-
+                                <img src="img/storyImg_1.png" alt="" class="img-fluid img-shadow">
+                            </div>
+                            <div class="islander-6 align-left">
+                                <p>美國文豪馬克吐溫曾於1866年七月於Letters from Hawaii提到， “Kona coffee has a richer flavor than any other, be it grown where it may and call
+                                it by what name you please.”。相傳自此，可那咖啡成為其最愛。咖啡專家認為可那咖啡與牙買加藍山咖啡齊名，口感優雅醇厚，略帶果酸，隨著培度的調整，可以是一杯清徹回甘的茶，也可以是一杯爽朗的果汁。
                                 </p>
                             </div>
-
                         </div>
-
+            
                     </div>
-
-
-
                 </div>
+            
             </div>
-
+            <div class="section" style="background-image:url('img/bgs_1.png');">
+                <div class="container">
+                    <div class="">
+                        <h2 class="mb-3">卡霧地區
+            
+                        </h2>
+                        <div class="islander-row mb-3">
+                            <div class="islander-6">
+                                <img src="img/storyImg_2.png" alt="" class="img-fluid img-shadow">
+                            </div>
+                            <div class="islander-6 align-left">
+                                <p>近年來美國當地開始關注的夏威夷KAU卡霧咖啡。 種植於Manua Loa山坡東側海拔約3000-2000英呎左右的高度。 得獎莊園多位於大島KA’U地區最南端的Pahala鎮。KA’U地區地形變化大，咖啡種植在該區向陽坡面，清晨充足日曬結合午後多雲霧的氣候條件，加上世界上最大的Manua
+                                Loa火山富含礦物質的黑土不僅酸鹼適中，多孔性質地有助於保持土壤適度含水。為咖啡樹創造最佳生長環境。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="islander-row mb-3">
+                            <div class="islander-6">
+                                <img src="img/storyImg_3.png" alt="" class="img-fluid img-shadow">
+                            </div>
+                            <div class="islander-6 align-left">
+                                <p>卡霧地區原以種植甘蔗為主，1894年亦開始少量種植咖啡，直至1996年糖價大跌，卡霧地區便積極由蔗糖轉型，重啟咖啡種植，在農人的努力下，憑藉優異的土壤條件與精耕技術急起直追，並開始參與地區性及全國性杯測大賽，從此屢獲佳評。2011年於SCAA所舉辦的杯測大賽中，卡霧咖啡不僅贏得夏威夷區首獎，更榮獲世界頂級咖啡殊榮。卡霧咖啡被專家譽為，口感豐富厚實，具香氣獨特，如漫步花園般，入口如絲般滑順，世界知名咖啡品牌亦紛紛搶購，為夏威夷精品咖啡後起之秀。
+                                </p>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            
+            </div>
+            <div class="section" style="background-image:url('img/bgs_2.png');">
+                <div class="container">
+                    <div class="">
+                        <h2 class="mb-3 py-5">Flavored 風味咖啡
+            
+                        </h2>
+                        <div class="islander-row mb-3">
+                            <div class="islander-6">
+                                <img src="img/storyImg_4.png" alt="" class="img-fluid img-shadow">
+                            </div>
+                            <div class="islander-6 align-left">
+                                <p>食用咖啡的起源據說最早源自於衣索比亞牧羊人Kaldi，某日發現平日懶散的羊群突然對著運送的貨物興奮地咩咩叫，與鄰近的僧侶幾經實驗之後，意外發現，麻袋中的紅色神奇之果，可泡出神賜飲料，提振精神。傳入中東之後，由於中東人對香料的喜愛，自數百年前起即在咖啡中加入香料或堅果。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="islander-row mb-3">
+                            <div class="islander-6">
+                                <img src="img/storyImg_5.png" alt="" class="img-fluid img-shadow">
+                            </div>
+                            <div class="islander-6 align-left">
+                                <p>至今，為滿足人們對風味的喜好，除了在咖啡飲品中添加風味糖漿之外，另一種做法就是在咖啡烘製的過程中，將各式風味直接烘焙入味。夏威夷因為觀光產業盛行，為滿足世界各地消費者對口味的想像與需求，風味咖啡十分盛行。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="islander-row mb-3">
+                            <div class="islander-6">
+                                <img src="img/storyImg_6.png" alt="" class="img-fluid img-shadow">
+                            </div>
+                            <div class="islander-6 align-left">
+                                <p>如同煙燻茶鵝一般，看是簡單，如何讓不同香氣與咖啡豆本身的香味不突兀的結合，如何保有咖啡本身的味道，又利用香氣讓味覺無限延伸，如食神電影台詞所說：表面上看來平凡無奇， 實則精雕細琢，高深莫測，烘豆大師功力，不容小覷啊。
+                                </p>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <!-- 右側scorll bar -->
+        <div id="dots" class="d-sm-none">
+            <div data-menuanchor="mainPage" class="dot dot0 active">
+                <a href="#mainPage"></a>
+                <span>夏威夷咖啡物語</span>
+            </div>
+            <div data-menuanchor="firstPage" class="dot dot1">
+                <a href="#firstPage"></a>
+                <span>可那地區</span>
+            </div>
+            <div data-menuanchor="secondPage" class="dot dot2">
+                <a href="#secondPage"></a>
+                <span>卡霧地區</span>
+            </div>
+            <div data-menuanchor="3rdPage" class="dot dot3">
+                <a href="#3rdPage"></a>
+                <span>Flavored 風味咖啡</span>
+            </div>
         </div>
         <footer class="hidden-xs">
             <ul>
                 <li>
-                    <a href=""><img src="img/lang.svg" alt="" class=""></a>
+                    <a href="">
+                        <img src="img/lang.svg" alt="" class="">
+                    </a>
                 </li>
                 <li>
-                    <a href=""><img src="img/instagram.svg" alt="" class=""></a>
+                    <a href="">
+                        <img src="img/instagram.svg" alt="" class="">
+                    </a>
                 </li>
                 <li>
-                    <a href=""><img src="img/fb.svg" alt="" class=""></a>
+                    <a href="">
+                        <img src="img/fb.svg" alt="" class="">
+                    </a>
                 </li>
             </ul>
         </footer>
@@ -117,9 +234,37 @@
 
         </div>
     </div>
-    <!-- jQuery JS 1.12.4 -->
+    <!-- jQuery JS 3.1.0 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/all.js">
+    </script>
+    <script src="js/jquery.fullpage.min.js"></script>
+    <script src="js/jquery.fullpage.extensions.min.js"></script>
+    <script src="js/scrolloverflow.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                anchors: ['mainPage', 'firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
+                menu: '#dots',
+              recordHistory: false,
+                keyboardScrolling: true,
+                animateAnchor: true,
+                responsiveWidth: 768,
+                   scrollOverflow: true,
+                onLeave: function (index, nextIndex, direction) {
+                    var windowWidth = $(window).width();
+                    var leavingSection = $(this);
+                    // if (windowWidth > 768) {
+                    //     if (nextIndex > 1) {
+                    //         $('#dots').fadeIn();
+                    //     } else if (nextIndex == 1) {
+                    //         $('#dots').fadeOut();
+                    //     }
+                    // }
+
+                }
+            });
+        });
     </script>
 </body>
 
