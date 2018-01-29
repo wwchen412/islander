@@ -60,11 +60,11 @@
 
     <div id="wrap" class="inner-page">
         <!-- 第二區塊 -->
-        <div class="news-bg">
+        <div class="news-bg" style="position:relative">
             <div class="container">
 
                 <div class="buy">
-                    <div class="container">
+                    <div class="container" >
                         <h2 class="mb-3 py">最新消息
 
                         </h2>
@@ -72,7 +72,7 @@
 
                             <ul>
                                 <li>
-                                    <a href="news-detail.html">
+                                    <a href="" class="linkNewsDetiail">
                                         <div class="img-wrap">
                                             <img src="img/news.png" alt="" class="img-fluid">
                                         </div>
@@ -87,7 +87,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="news-detail.html">
+                                    <a href="" class="linkNewsDetiail">
                                         <div class="img-wrap">
                                             <img src="img/news_2.png" alt="" class="img-fluid">
                                         </div>
@@ -101,7 +101,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="news-detail.html">
+                                    <a href="" class="linkNewsDetiail">
                                         <div class="img-wrap">
                                             <img src="img/news_1.png" alt="" class="img-fluid">
                                         </div>
@@ -115,7 +115,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="news-detail.html">
+                                    <a href="" class="linkNewsDetiail">
                                         <div class="img-wrap">
                                             <img src="img/news_1.png" alt="" class="img-fluid">
                                         </div>
@@ -129,7 +129,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="news-detail.html">
+                                    <a href="" class="linkNewsDetiail">
                                         <div class="img-wrap">
                                             <img src="img/news.png" alt="" class="img-fluid">
                                         </div>
@@ -143,7 +143,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="news-detail.html">
+                                    <a href="" class="linkNewsDetiail">
                                         <div class="img-wrap">
                                             <img src="img/news.png" alt="" class="img-fluid">
                                         </div>
@@ -158,7 +158,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="news-detail.html">
+                                    <a href="" class="linkNewsDetiail">
                                         <div class="img-wrap">
                                             <img src="img/news_2.png" alt="" class="img-fluid">
                                         </div>
@@ -172,7 +172,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="news-detail.html">
+                                    <a href="" class="linkNewsDetiail">
                                         <div class="img-wrap">
                                             <img src="img/news_1.png" alt="" class="img-fluid">
                                         </div>
@@ -185,27 +185,34 @@
 
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="news-detail.html">
-                                        <div class="img-wrap">
-                                            <img src="img/news.png" alt="" class="img-fluid">
-                                        </div>
-                                        <article>
-                                            <h4 class="mb-3">NEWS</h4>
-                                            <p>
-                                                Born to Dare! Brave to Challenge We are paradiser, adventure lover and fun goer...
-                                            </p>
-                                        </article>
-
-                                    </a>
-                                </li>
+                                
                             </ul>
                         </div>
-
+                        
                     </div>
 
                 </div>
 
+            </div>
+        </div>
+        <div class="newsLightbox">
+            <div class="container">
+                <div class="whiteBlock mb-3">
+                    <h3>Oahu Island Enjoy every moment Joyful moment !</h3>
+                    <p>ISLANDER的發源地Hilo，是大島的首府。最讓人著迷的，是當地人們的善良，熱情，與生活態度。各式各樣的種族面孔，各種不同的口音，一樣不變的笑容，這就是故事的開始！ISLANDER的發源地Hilo，是大島的首府。最讓人著迷的，是當地人們的善良，熱情，與生活態度。各式各樣的種族面孔，各種不同的口音，一樣不變的笑容，這就是故事的開始！</p>
+                
+                     <div class="islander-row">
+                    <div class="islander-6">
+                        <img src="img/joyful.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="islander-6">
+                        <p>人們口中的夏威夷，是夏威夷州的簡稱，屬於美國的一州，由132個島嶼組成。大島，又名夏威夷島，是其中最大的島嶼。 除了大家印象中的沙灘椰林，浪漫風情外，豐富的地理變化，活躍的火山運動，不僅孕育出自然美景，更帶來豐饒的物產。</p>
+                    </div>
+                    <div class="close align-center">
+                        <p> X關閉</p>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
         <footer class="hidden-xs">
@@ -229,6 +236,17 @@
     <script src="js/all.js">
     </script>
     <script>
+        $(function(){
+            $('.linkNewsDetiail').each(function(){
+                $(this).click(function(e){
+                    e.preventDefault();
+                    $('.newsLightbox').css('display','block');
+                })
+            })
+            $('.close').click(function(){
+                 $('.newsLightbox').css('display', 'none');
+            })
+        })
     </script>
 </body>
 
