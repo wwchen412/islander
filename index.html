@@ -22,29 +22,29 @@
                 </div>
                 <!-- pc menu -->
                 <div class="hidden-xs">
-                    <ul class="d-flex ">
+                    <ul class="d-flex my-menu">
                         <li>
                             <a href="index.html">
                                 <img src="img/logo-main.svg" alt="" style="width:50px">
                             </a>
                         </li>
-                        <li>
-                            <a href="index.html#islander">Latest news</a>
+                        <li data-menuanchor="firstPage">
+                            <a href="#firstPage">Latest news</a>
                         </li>
-                        <li>
-                            <a href="index.html#islander">islander</a>
+                        <li data-menuanchor="secondPage">
+                            <a href="#secondPage">islander</a>
                         </li>
-                        <li>
-                            <a href="index.html#story">STORY</a>
+                        <li data-menuanchor="3rdPage">
+                            <a href="#3rdPage">STORY</a>
                         </li>
-                        <li>
-                            <a href="index.html#brand">Coffee Academy</a>
+                        <li data-menuanchor="4thPage">
+                            <a href="#4thPage">Coffee Academy</a>
                         </li>
-                        <li>
-                            <a href="index.html#shop">SHOP</a>
+                        <li data-menuanchor="5thPage">
+                            <a href="#5thPage">SHOP</a>
                         </li>
-                        <li>
-                            <a href="index.html#contact">CONTACT</a>
+                        <li data-menuanchor="6thPage">
+                            <a href="#6thPage">CONTACT</a>
                         </li>
 
                     </ul>
@@ -302,7 +302,7 @@
                         </h2>
                         <p class="mb-3">想試試什麼樣的口味呢？
                             <br> 讓咖啡的香醇與風味點綴日常的每一天！
-                            <br> COMING SOON!</p>
+                            <!-- <br> COMING SOON!</p> -->
                         <a href="shop-index.html" class="more">
                             <img src="img/more.svg" alt="">
                         </a>
@@ -340,7 +340,7 @@
             </div>
         </div>
         <!-- 右側scorll bar -->
-        <div id="dots" class="d-sm-none">
+        <div id="dots" class="d-sm-none my-menu">
             <div data-menuanchor="mainPage" class="dot dot0">
                 <a href="#mainPage"></a>
 
@@ -402,7 +402,7 @@
         $(document).ready(function () {
             $('#fullpage').fullpage({
                 anchors: ['mainPage', 'firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
-                menu: '#dots',
+                menu: '.my-menu',
                 keyboardScrolling: true,
                 animateAnchor: true,
                 responsiveWidth: 768,

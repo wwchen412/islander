@@ -238,13 +238,21 @@
     <script>
         $(function(){
             $('.linkNewsDetiail').each(function(){
-                $(this).click(function(e){
-                    e.preventDefault();
+                $(this).click(function(){
+                    event.preventDefault();
                     $('.newsLightbox').css('display','block');
                 })
             })
+            $('.whiteBlock').click(function () {
+                //阻止泡泡往外找
+                event.stopPropagation();
+                
+            })
             $('.close').click(function(){
                  $('.newsLightbox').css('display', 'none');
+            })
+            $('.newsLightbox').click(function () {
+                $('.newsLightbox').css('display', 'none');
             })
         })
     </script>
