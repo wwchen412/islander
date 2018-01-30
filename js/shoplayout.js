@@ -11,12 +11,13 @@ shop header load
 
 
 $(function() {
-  if ($("header").hasClass("header-index") === false) {
-    $("header").load("shop-index.html header");
+  
+    $("header").load("shop-index.html header nav");
     console.log("load header");
     // menu toggle
     $("body").on("click", ".toggle-buttom", function() {
       $(".toggle-menu").slideToggle();
     });
   }
-});
+  
+);
