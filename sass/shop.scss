@@ -19,7 +19,11 @@ body {
 p {
   color: #000;
 }
-
+.blue-svg{
+  .cls-1{
+    fill: #004b87;
+  }
+}
 .text-center {
   text-align: center;
 }
@@ -146,6 +150,7 @@ section {
     // min-height: 100vh;
   }
   &.section3 {
+    padding: 100px 0;
     background-image: url("../img/section_2.png");
     .section-content {
       min-height: 450px;
@@ -265,7 +270,7 @@ section {
         width: 80%;
         text-align: center;
         max-width: 500px;
-        margin: 50px auto;
+        margin: 0 auto;
       }
     }
     .table {
@@ -348,7 +353,7 @@ section {
 .sgsbtn {
   cursor: pointer;
   position: relative;
-  margin: 40px 0;
+  padding: 40px 0;
   &:hover {
     filter: drop-shadow(0 0 10px rgba(#fff, 0.5));
   }
