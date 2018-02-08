@@ -73,6 +73,8 @@ header {
       a {
         color: #000;
         text-decoration: none;
+        display: inline-block;
+        position: relative;
         &:visited {
           color: #000;
         }
@@ -108,4 +110,21 @@ header {
     display: inline-block;
     vertical-align: middle;
   }
+}
+// 購物車數字
+.cartNum{
+  font-size: 12px;
+  font-family: sans-serif;
+  background: #fff;
+  color:#f00;
+  border: 1px solid #75C8CA;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  display: block;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: -5px;bottom: 0;
+  transform: scale(.9);
 }

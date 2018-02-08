@@ -78,7 +78,12 @@ a {
 .pb-3 {
     padding-bottom: 1rem;
 }
-
+.py-big{
+    @include range-width(769px,0){
+        padding: 100px 0;
+    }
+    padding: 50px 0;
+}
 .border-bottom {
     border-bottom: 1px solid $gray;
 }
@@ -250,11 +255,11 @@ a {
 }
 
 .btn-red {
-    background-color: $red;
+    background-color: $green;
     color: #fff;
     &:hover,
     &:active {
-        background-color: darken($red, 5%);
+        background-color: darken($green, 5%);
     }
 }
 
@@ -277,13 +282,23 @@ a {
     flex: 0 0 66%;
 }
  .makecoffee{
-     img{
+   
+     &>div>img{
          max-width: 60px;
-         margin: 0 auto 1.5rem;
+         margin: -40px auto 1.5rem;
      }
      &>div{
          flex-direction: column;
          justify-content: center;
          text-align: center;
+     }
+       @include range-width(300px,768px){
+         flex-direction: column;
+         &>div>img{
+              margin: 1.5rem auto;
+         }
+         .flex-8{
+             margin: 1rem 0;
+         }
      }
  }

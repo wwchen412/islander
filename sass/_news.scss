@@ -1,6 +1,6 @@
   // 最新消息
   .news-block {
-      margin-top: 100px;
+      margin-top: 30px;
       ul {
           font-size: 0;
           letter-spacing: 0;
@@ -11,6 +11,7 @@
               box-sizing: border-box;
               margin-right: 15px;
               margin-bottom: 15px;
+              vertical-align: top;
               @include range-width(300px, 768px) {
                   width: calc(100% / 2 - (15px / 2));
                   &:nth-child(2n) {

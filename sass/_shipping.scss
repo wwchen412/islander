@@ -220,19 +220,19 @@ font-family: noto sans;
       & + .pay-block {
         background-color: #f2f2f2;
         border: 2px solid transparent;
-        color: $maincolor;
+        color: $green;
         svg,
         .cls-1 {
-          fill: $maincolor;
+          fill: $green;
         }
       }
       &:checked {
         & + .pay-block {
           background-color: #fff;
-          border: 2px solid $maincolor;
+          border: 2px solid $green;
           svg,
           .cls-1 {
-            fill: $maincolor;
+            fill: $green;
           }
         }
       }

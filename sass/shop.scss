@@ -19,8 +19,8 @@ body {
 p {
   color: #000;
 }
-.blue-svg{
-  .cls-1{
+.blue-svg {
+  .cls-1 {
     fill: #004b87;
   }
 }
@@ -49,6 +49,8 @@ p {
   ul {
     padding-bottom: 10px;
     border-bottom: 2px solid $maincolor;
+    display: flex;
+    flex-wrap: wrap;
   }
   li {
     display: inline-block;
@@ -123,6 +125,17 @@ a.btn {
   border-radius: 20px;
   padding: 5px 25px;
   margin: 15px 0;
+  &.outline {
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+    svg {
+      .cls-1 {
+        fill: #fff !important;
+      }
+    }
+  }
   svg {
     width: 13px;
     margin-right: 15px;
@@ -135,28 +148,27 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 50%;
+
   &.section1 {
     margin-top: 100px;
     background-image: url("../img/section.png");
     text-align: center;
-    .section-content {
-      min-height: 400px;
+    .section-contentBlock {
+      min-height: 600px;
       flex-direction: column;
     }
-  }
-  &.section2 {
     background-image: url("../img/section_1.png");
-    background-color: #1b886d;
+    // background-color: #1b886d;
     // min-height: 100vh;
-  }
-  &.section3 {
-    padding: 100px 0;
-    background-image: url("../img/section_2.png");
-    .section-content {
-      min-height: 450px;
-      flex-direction: column;
+    .itemBLock {
+      padding: 100px 0;
+      .section-content {
+        min-height: 450px;
+        flex-direction: column;
+      }
     }
   }
+
   &.section4 {
     background-image: url("../img/section_3.png");
     .section-content {
@@ -265,11 +277,10 @@ section {
         }
       }
       &.more-item {
-        display: block;
         padding: 10px;
-        width: 80%;
+
         text-align: center;
-        max-width: 500px;
+
         margin: 0 auto;
       }
     }
@@ -379,3 +390,16 @@ section {
 .sgs-list {
   display: none;
 }
+.shopindex-footer {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  li {
+    display: inline-block;
+    img {
+      width: 30px;
+    }
+  }
+}
+
+
