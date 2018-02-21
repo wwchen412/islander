@@ -1,4 +1,4 @@
-  @import '_mixin.scss';
+@import "_mixin.scss";
 
 .shop-banner {
   margin-top: -110px;
@@ -333,15 +333,29 @@
       p {
         color: #000;
         // height: 32px;
-        
+
         width: calc(100% - 37px);
-       
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -moz-box;
+        -moz-line-clamp: 2;
+        -moz-box-orient: vertical;
+        display: box;
+        line-clamp: 2;
+        box-orient: vertical;
+        overflow: hidden;
       }
       .btn {
         width: 32px;
         height: 32px;
         // float: right;
         padding: 0;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+
         img {
           position: static;
           width: 100%;
