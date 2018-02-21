@@ -78,6 +78,13 @@ p {
       }
     }
   }
+  &.faq-bread{
+    a{
+      &.active,&:hover{
+         color:$green;
+      }
+    }
+  }
 }
 
 .footer {
