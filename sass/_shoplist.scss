@@ -1,3 +1,5 @@
+  @import '_mixin.scss';
+
 .shop-banner {
   margin-top: -110px;
   max-height: 450px;
@@ -38,7 +40,7 @@
         cursor: pointer;
       }
       ul {
-          border-top: 1px solid $maincolor;
+        border-top: 1px solid $maincolor;
         padding-left: 30px;
         display: none;
       }
@@ -66,15 +68,15 @@
     color: $maincolor;
     display: block;
   }
-  
-  .islander-row .islander-3{
+
+  .islander-row .islander-3 {
     margin-bottom: 60px;
   }
-  .islander-row{
-    @include range-width(300px,768px){
+  .islander-row {
+    @include range-width(300px,768px) {
       display: flex;
       flex-wrap: wrap;
-      .islander-3{
+      .islander-3 {
         order: 2;
       }
     }
@@ -82,9 +84,7 @@
 }
 // 單品頁面
 .singleItem {
-   font-family: Arial,
-   Helvetica,
-   sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   .title {
     margin-bottom: 30px;
   }
@@ -92,12 +92,12 @@
     margin: 15px 0;
   }
   .price {
-   img{
-     width: 30px;
-     display: inline-block;
-     vertical-align: middle;
-     margin-right: 5px;
-   }
+    img {
+      width: 30px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
     input {
       display: inline-block;
       -webkit-appearance: none;
@@ -113,27 +113,26 @@
       height: auto;
     }
   }
- 
 }
-.single-title{
+.single-title {
   padding: 10px;
   border-bottom: 1px solid $maincolor;
   margin-bottom: 15px;
   cursor: pointer;
-  img{
+  img {
     width: 30px;
-    display: inline-block;vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
     margin-right: 15px;
   }
 }
-.single-advice{
+.single-advice {
   cursor: pointer;
 }
- .item-editor {
-   padding: 20px 50px;
-   display: none;
-   
- }
+.item-editor {
+  padding: 20px 50px;
+  display: none;
+}
 .items {
   .btn-cart {
     border-radius: 50%;
@@ -322,24 +321,26 @@
     }
     .listInfo {
       padding: 5px 10px;
-      background-color: rgba(#fff,.8);
+      background-color: rgba(#fff, 0.8);
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
       & > * {
         display: inline-block;
-        vertical-align: bottom;
+        vertical-align: middle;
       }
       p {
         color: #000;
-        height: 32px;
-        max-width: calc(100% - 37px);
+        // height: 32px;
+        
+        width: calc(100% - 37px);
+       
       }
       .btn {
         width: 32px;
         height: 32px;
-        float: right;
+        // float: right;
         padding: 0;
         img {
           position: static;
