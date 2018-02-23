@@ -301,4 +301,10 @@ a {
              margin: 1rem 0;
          }
      }
+     .mt-4way{
+         margin-top: -40px;
+         @include range-width(300px,768px){
+             margin-top: 20px;
+         }
+     }
  }
