@@ -132,6 +132,20 @@
 .item-editor {
   padding: 20px 50px;
   display: none;
+  list-style: initial;
+  font-size: 1rem;
+  ul{
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+  }
+  li{
+    list-style-type: disc;
+  }
 }
 .items {
   .btn-cart {
